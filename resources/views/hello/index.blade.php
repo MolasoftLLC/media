@@ -21,10 +21,15 @@
         <li><input type="submit" ></li>
      </ul>
   </form>
-  <ol>
+     <ul>
+         @foreach ($data as $item)
+             <li>{!!$item!!}</li>
+         @endforeach
+     </ul>
+  {{-- <ol>
      @for($i = 0; $i < count($keys); $i++)
         <li>{{$keys[$i]}}:{{$values[$i]}}</li>
      @endfor
-  </ol>
+  </ol> --}}
 </body>
 </html>

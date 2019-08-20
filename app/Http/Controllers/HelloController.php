@@ -2,8 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\MyClass\MyServiceInterface;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use App\Facades\MyService;
+use App\Jobs\Myjob;
+
+// use App\MyClass\MyService;
 
 class HelloController extends Controller
 {
@@ -14,13 +19,15 @@ class HelloController extends Controller
         $this->fname = 'sample.txt';
     }
 
-    public function index(Request $request)
+    public function index(MyServiceInterface $myservice , int $id = -1)
     {
-        $sample_msg = $this->fname;
-        $sample_data = Storage::get($this->fname);
+    
+        // $myservice = app()->make('App\MyClass\MyService');
+        Myjob::dispatch();
+        MyService::setId($id);
         $data = [
-            'msg' => $sample_msg,
-            'data' => explode(PHP_EOL,$sample_data)
+            'msg' => MyService::say(),
+            'data' => MyService::alldata()
         ];
         return view('hello.index', $data);
     }
