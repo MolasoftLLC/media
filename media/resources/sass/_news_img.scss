@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css?family=Caveat&display=swap');
+
+.news_img {
+  width: 32%;
+  float: left;
+ overflow: hidden;
+ margin: 0.5%;
+ display: block;
+ object-fit: cover;
+ position: relative;
+ border: solid 4px  #424242;
+ border-bottom: none;
+ background-color: #424242;
+ }
+
+ p.ontext{
+  position: absolute;
+  bottom: 0px;
+  border: solid 4px #424242;
+  display: block;
+  width: 94%;
+  left: 16px;
+  bottom: 10px;
+  margin: 0 auto;
+  color: #424242;
+  font-weight: bold;
+  line-height: 5em;
+  text-align: center;
+  background: rgba(255, 255, 255, 1);
+  white-space: nowrap; /* 横幅のMAXに達しても改行しない */
+  overflow: hidden; /* ハミ出した部分を隠す */
+  text-overflow: ellipsis; /* 「…」と省略 */
+  -webkit-text-overflow: ellipsis; /* Safari */
+  -o-text-overflow: ellipsis; /* Opera */
+
+  }
+
+  p.on_name{
+    font-family: 'Caveat', cursive;
+    position: absolute;
+    bottom: 90px;
+    display: block;
+    font-weight: bold;
+    left: 16px;
+    font-size: 2em;
+    color: #fefefe;
+    text-shadow: 2px 2px 2px #000;
+  }
+
+ .news_img img {
+  transition: 0.3s;
+ -webkit-transition: 0.3s;
+ overflow: hidden;
+
+ }
+
+.news_img img:hover{transform: scale(1.1);opacity: 0.4; overflow: hidden; z-index: 2;  cursor:pointer;}
+
+
+.clear{clear: both;}
+
+p.read_more{
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  font-family: 'Caveat', cursive;
+  position: absolute;
+  top: 40%;
+  display: block;
+  font-weight: bold;
+  left: 33%;
+  font-size: 2em;
+  color: #fefefe;
+  text-shadow: 2px 2px 2px #000;
+  opacity: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.news_img img:hover + p.read_more{opacity: 1;}
+
+.on_category{
+
+  position: absolute;
+  bottom: 88px;
+  right: 4px;
+  background:  #d47615;
+  display: block;
+  width: 44%;
+  color: #fefefe;
+  font-weight: bold;
+  line-height: 2em;
+  text-align: center;
+  z-index: 1;
+  white-space: nowrap; /* 横幅のMAXに達しても改行しない */
+  overflow: hidden; /* ハミ出した部分を隠す */
+  text-overflow: ellipsis; /* 「…」と省略 */
+  -webkit-text-overflow: ellipsis; /* Safari */
+  -o-text-overflow: ellipsis; /* Opera */
+
+
+}
+
+h1.free{font-family: 'Caveat', cursive; font-size: 3em;}
+
+ul.talk_event{margin: 84px 0px 52px;}
+li.talk_event{margin-top: 32px; font-size: 1.1em;}
+p.talk_event{margin-top: 8px; line-height: 1.8em; padding: 42px 42px 0px;}
+h2.talk{font-size: 1.4em; font-weight: bold;}
+h2.speaker{font-size: 1.4em; font-weight: bold; text-align: center; padding: 32px 16px 16px;}

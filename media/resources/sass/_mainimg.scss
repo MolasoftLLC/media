@@ -1,0 +1,17 @@
+.mainimg_container{
+  background-color: #282828;
+  position: relative;
+}
+
+.mainimg{
+  width:100%; opacity:0.6; 
+}
+
+.mainimg_on{
+  position: absolute;
+  top: 50%;
+  left: 33%;
+  width:80%;  max-width: 600px;
+  filter: drop-shadow(0 0 0.75rem #585858);
+  margin: 0 auto;
+}
