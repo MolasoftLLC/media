@@ -73,15 +73,19 @@
 
 <div class="panel" v-show="tab === 2">
   
-   <div class="news_img">
-  <img src="../assets/person/mukae.jpg" width="100%"  />
-    <p class="read_more">Read more</p>
-    <p class="on_name">Seigo Mukae</p>
-    <p class="on_category">イベントプランナー</p>
-  <p class="ontext">楽しいことは探さず、作る派。</p>
-  </div>
+    <div v-for="(lancer, id) in lancers" v-bind:key="id">
+        <div class="news_img">
+            <RouterLink :to="'/lancer/' + lancer.id">
+                <img src="../assets/person/kenta.jpg" width="100%" />
+                <p class="read_more">Read more</p>
+            </RouterLink>
 
-  <div class="clear"></div>
+          <p class="on_name">{{ lancer.title }}</p>
+          <p class="on_category">{{ lancer.content }}</p>
+          <p class="ontext">コミュ二ティの運営で鬱病の無い社会を目指す。</p>
+        </div>
+        <div v-if="id===2||id===5" class="clear"></div>
+    </div>
 </div>
 
 <div class="panel" v-show="tab === 3">

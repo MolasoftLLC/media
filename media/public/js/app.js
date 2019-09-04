@@ -2440,6 +2440,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     created: function created() {
@@ -4785,7 +4789,42 @@ var render = function() {
         ],
         staticClass: "panel"
       },
-      [_vm._m(0), _vm._v(" "), _c("div", { staticClass: "clear" })]
+      _vm._l(_vm.lancers, function(lancer, id) {
+        return _c("div", { key: id }, [
+          _c(
+            "div",
+            { staticClass: "news_img" },
+            [
+              _c("RouterLink", { attrs: { to: "/lancer/" + lancer.id } }, [
+                _c("img", {
+                  attrs: {
+                    src: __webpack_require__("./resources/js/assets/person/kenta.jpg"),
+                    width: "100%"
+                  }
+                }),
+                _vm._v(" "),
+                _c("p", { staticClass: "read_more" }, [_vm._v("Read more")])
+              ]),
+              _vm._v(" "),
+              _c("p", { staticClass: "on_name" }, [
+                _vm._v(_vm._s(lancer.title))
+              ]),
+              _vm._v(" "),
+              _c("p", { staticClass: "on_category" }, [
+                _vm._v(_vm._s(lancer.content))
+              ]),
+              _vm._v(" "),
+              _c("p", { staticClass: "ontext" }, [
+                _vm._v("コミュ二ティの運営で鬱病の無い社会を目指す。")
+              ])
+            ],
+            1
+          ),
+          _vm._v(" "),
+          id === 2 || id === 5 ? _c("div", { staticClass: "clear" }) : _vm._e()
+        ])
+      }),
+      0
     ),
     _vm._v(" "),
     _c(
@@ -4801,7 +4840,7 @@ var render = function() {
         ],
         staticClass: "panel"
       },
-      [_vm._m(1), _vm._v(" "), _c("div", { staticClass: "clear" })]
+      [_vm._m(0), _vm._v(" "), _c("div", { staticClass: "clear" })]
     ),
     _vm._v(" "),
     _c(
@@ -4817,7 +4856,7 @@ var render = function() {
         ],
         staticClass: "panel"
       },
-      [_vm._m(2), _vm._v(" "), _c("div", { staticClass: "clear" })]
+      [_vm._m(1), _vm._v(" "), _c("div", { staticClass: "clear" })]
     ),
     _vm._v(" "),
     _c(
@@ -4833,31 +4872,11 @@ var render = function() {
         ],
         staticClass: "panel"
       },
-      [_vm._m(3), _vm._v(" "), _c("div", { staticClass: "clear" })]
+      [_vm._m(2), _vm._v(" "), _c("div", { staticClass: "clear" })]
     )
   ])
 }
 var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "news_img" }, [
-      _c("img", {
-        attrs: { src: __webpack_require__("./resources/js/assets/person/mukae.jpg"), width: "100%" }
-      }),
-      _vm._v(" "),
-      _c("p", { staticClass: "read_more" }, [_vm._v("Read more")]),
-      _vm._v(" "),
-      _c("p", { staticClass: "on_name" }, [_vm._v("Seigo Mukae")]),
-      _vm._v(" "),
-      _c("p", { staticClass: "on_category" }, [_vm._v("イベントプランナー")]),
-      _vm._v(" "),
-      _c("p", { staticClass: "ontext" }, [
-        _vm._v("楽しいことは探さず、作る派。")
-      ])
-    ])
-  },
   function() {
     var _vm = this
     var _h = _vm.$createElement
