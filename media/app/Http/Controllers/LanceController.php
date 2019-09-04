@@ -10,7 +10,7 @@ class LanceController extends Controller
 {
     public function index()
     {
-        $lancer = Lancer::all()->take(3);
+        $lancer = Lancer::all()->take(6);
         return $lancer;
     }
 

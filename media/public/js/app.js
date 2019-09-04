@@ -2429,13 +2429,41 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-  data: function data() {
-    return {
-      tab: 1
-    };
-  }
+    created: function created() {
+        this.fetchLancers();
+    },
+    data: function data() {
+        return {
+            lancers: [],
+            tab: 1
+        };
+    },
+
+    methods: {
+        fetchLancers: function fetchLancers() {
+            var _this = this;
+
+            // var id = this.$route.params['id']
+            // var id = this.$route.query.itemId
+            return axios.get('/api/lancer/').then(function (res) {
+                console.log(res.data);
+                _this.lancers = res.data;
+            });
+        }
+    }
 });
 
 /***/ }),
@@ -4701,90 +4729,47 @@ var render = function() {
         staticClass: "panel"
       },
       [
-        _c(
-          "div",
-          { staticClass: "news_img" },
-          [
-            _c("RouterLink", { attrs: { to: "/lancer/1" } }, [
-              _c("img", {
-                attrs: {
-                  src: __webpack_require__("./resources/js/assets/person/kenta.jpg"),
-                  width: "100%"
-                }
-              }),
-              _vm._v(" "),
-              _c("p", { staticClass: "read_more" }, [_vm._v("Read more")])
-            ]),
+        _vm._l(_vm.lancers, function(lancer, id) {
+          return _c("div", { key: id }, [
+            _c(
+              "div",
+              { staticClass: "news_img" },
+              [
+                _c("RouterLink", { attrs: { to: "/lancer/" + lancer.id } }, [
+                  _c("img", {
+                    attrs: {
+                      src: __webpack_require__("./resources/js/assets/person/kenta.jpg"),
+                      width: "100%"
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c("p", { staticClass: "read_more" }, [_vm._v("Read more")])
+                ]),
+                _vm._v(" "),
+                _c("p", { staticClass: "on_name" }, [
+                  _vm._v(_vm._s(lancer.title))
+                ]),
+                _vm._v(" "),
+                _c("p", { staticClass: "on_category" }, [
+                  _vm._v(_vm._s(lancer.content))
+                ]),
+                _vm._v(" "),
+                _c("p", { staticClass: "ontext" }, [
+                  _vm._v("コミュ二ティの運営で鬱病の無い社会を目指す。")
+                ])
+              ],
+              1
+            ),
             _vm._v(" "),
-            _c("p", { staticClass: "on_name" }, [_vm._v("Kenta Kitanaka")]),
-            _vm._v(" "),
-            _c("p", { staticClass: "on_category" }, [
-              _vm._v("ミュージックバー運営")
-            ]),
-            _vm._v(" "),
-            _c("p", { staticClass: "ontext" }, [
-              _vm._v("コミュ二ティの運営で鬱病の無い社会を目指す。")
-            ])
-          ],
-          1
-        ),
-        _vm._v(" "),
-        _c(
-          "div",
-          { staticClass: "news_img" },
-          [
-            _c("RouterLink", { attrs: { to: "/lancer/2" } }, [
-              _c("img", {
-                attrs: {
-                  src: __webpack_require__("./resources/js/assets/person/mukae.jpg"),
-                  width: "100%"
-                }
-              }),
-              _vm._v(" "),
-              _c("p", { staticClass: "read_more" }, [_vm._v("Read more")])
-            ]),
-            _vm._v(" "),
-            _c("p", { staticClass: "on_name" }, [_vm._v("Seigo Mukae")]),
-            _vm._v(" "),
-            _c("p", { staticClass: "on_category" }, [
-              _vm._v("イベントプランナー")
-            ]),
-            _vm._v(" "),
-            _c("p", { staticClass: "ontext" }, [
-              _vm._v("楽しいことは探さず、作る派。")
-            ])
-          ],
-          1
-        ),
-        _vm._v(" "),
-        _c(
-          "div",
-          { staticClass: "news_img" },
-          [
-            _c("RouterLink", { attrs: { to: "/interview3" } }, [
-              _c("img", {
-                attrs: {
-                  src: __webpack_require__("./resources/js/assets/person/yukigao.jpg"),
-                  width: "100%"
-                }
-              }),
-              _vm._v(" "),
-              _c("p", { staticClass: "read_more" }, [_vm._v("Read more")])
-            ]),
-            _vm._v(" "),
-            _c("p", { staticClass: "on_name" }, [_vm._v("Yukigao")]),
-            _vm._v(" "),
-            _c("p", { staticClass: "on_category" }, [_vm._v("陶芸家")]),
-            _vm._v(" "),
-            _c("p", { staticClass: "ontext" }, [
-              _vm._v("29歳で会社員を辞めて陶芸の道へ。")
-            ])
-          ],
-          1
-        ),
+            id === 2 || id === 5
+              ? _c("div", { staticClass: "clear" })
+              : _vm._e()
+          ])
+        }),
         _vm._v(" "),
         _c("div", { staticClass: "clear" })
-      ]
+      ],
+      2
     ),
     _vm._v(" "),
     _c(
