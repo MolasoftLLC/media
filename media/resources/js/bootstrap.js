@@ -16,3 +16,5 @@ window.axios.interceptors.response.use(
     response => response,
     error => error.response || error
   )
+
+  // Vue.prototype.$http = window.axios

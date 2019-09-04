@@ -1988,13 +1988,35 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-  data: function data() {
-    return {
-      tab: 1
-    };
-  }
+    created: function created() {
+        this.fetchLancers();
+    },
+    data: function data() {
+        return {
+            lancers: []
+        };
+    },
+
+    methods: {
+        fetchLancers: function fetchLancers() {
+            var _this = this;
+
+            return axios.get('/api/lancer').then(function (res) {
+                console.log(res.data);
+                _this.lancers = res.data;
+            });
+        }
+    }
 });
 
 /***/ }),
@@ -2081,6 +2103,73 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
       tab: 1
     };
   }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?{\"cacheDirectory\":true,\"presets\":[[\"env\",{\"modules\":false,\"targets\":{\"browsers\":[\"> 2%\"],\"uglify\":true}}]],\"plugins\":[\"transform-object-rest-spread\",[\"transform-runtime\",{\"polyfill\":false,\"helpers\":false}]]}!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./resources/js/pages/lancer.vue":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    created: function created() {
+        this.fetchLancers();
+    },
+    data: function data() {
+        return {
+            lancers: []
+        };
+    },
+
+    methods: {
+        fetchLancers: function fetchLancers() {
+            var _this = this;
+
+            var id = this.$route.params['id'];
+            // var id = this.$route.query.itemId
+            return axios.get('/api/lancer/' + id).then(function (res) {
+                console.log(res.data);
+                _this.lancers = res.data;
+            });
+        }
+    }
 });
 
 /***/ }),
@@ -3736,14 +3825,10 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
-}
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { attrs: { id: "app" } }, [
+  return _c(
+    "div",
+    { attrs: { id: "app" } },
+    [
       _c("a", { attrs: { name: "interview" } }),
       _vm._v(" "),
       _c("div", { staticClass: "header_adjust" }),
@@ -3754,22 +3839,49 @@ var staticRenderFns = [
       _vm._v(" "),
       _c("p", [_vm._v("店舗経営/カメラマン")]),
       _vm._v(" "),
-      _c("div", { staticClass: "panel" }, [
-        _c("div", { staticClass: "interview_img" }, [
-          _c("img", {
-            attrs: { src: __webpack_require__("./resources/js/assets/person/kenta.jpg"), width: "100%" }
-          })
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "clear" }),
-        _vm._v(" "),
-        _c("h2", { staticClass: "free big" }, [_vm._v("about")]),
-        _vm._v(" "),
-        _c("p", { staticClass: "interview_p" }, [
-          _vm._v(
-            "1992年生、和歌山県出身。5年勤めた部品商社を退職後、飲食未経験からミュージック&ゲームバーをオープン。\n店舗経営を行いながらクリエイターとしても活動し、現在は写真撮影と映像制作を中心に活動中。\nまた、社会人のうつ病を防ぐための活動として500人規模のコミュニティ運営も行う。"
-          )
+      _vm._m(0),
+      _vm._v(" "),
+      _vm._l(_vm.lancers, function(lancer, id) {
+        return _c("div", { key: id }, [
+          _c(
+            "h1",
+            [
+              _c("router-link", { attrs: { to: "/lancer/" + lancer.id } }, [
+                _vm._v(_vm._s(lancer.title))
+              ])
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c("p", [
+            _vm._v("\n            " + _vm._s(lancer.content) + "\n        ")
+          ])
         ])
+      })
+    ],
+    2
+  )
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "panel" }, [
+      _c("div", { staticClass: "interview_img" }, [
+        _c("img", {
+          attrs: { src: __webpack_require__("./resources/js/assets/person/kenta.jpg"), width: "100%" }
+        })
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "clear" }),
+      _vm._v(" "),
+      _c("h2", { staticClass: "free big" }, [_vm._v("about")]),
+      _vm._v(" "),
+      _c("p", { staticClass: "interview_p" }, [
+        _vm._v(
+          "1992年生、和歌山県出身。5年勤めた部品商社を退職後、飲食未経験からミュージック&ゲームバーをオープン。\n店舗経営を行いながらクリエイターとしても活動し、現在は写真撮影と映像制作を中心に活動中。\nまた、社会人のうつ病を防ぐための活動として500人規模のコミュニティ運営も行う"
+        )
       ])
     ])
   }
@@ -3892,6 +4004,85 @@ if (false) {
   module.hot.accept()
   if (module.hot.data) {
     require("vue-hot-reload-api")      .rerender("data-v-274cabfb", module.exports)
+  }
+}
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/template-compiler/index.js?{\"id\":\"data-v-2d655f40\",\"hasScoped\":false,\"buble\":{\"transforms\":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./resources/js/pages/lancer.vue":
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    { attrs: { id: "app" } },
+    [
+      _c("a", { attrs: { name: "interview" } }),
+      _vm._v(" "),
+      _c("div", { staticClass: "header_adjust" }),
+      _vm._v(" "),
+      _c("h1", { staticClass: "free" }, [
+        _vm._v("Freelance file.1   Kenta Kitanaka")
+      ]),
+      _vm._v(" "),
+      _c("p", [_vm._v("店舗経営/カメラマン")]),
+      _vm._v(" "),
+      _vm._m(0),
+      _vm._v(" "),
+      _vm._l(_vm.lancers, function(lancer, id) {
+        return _c("div", { key: id }, [
+          _c(
+            "h1",
+            [
+              _c("router-link", { attrs: { to: "/lancer/" + lancer.id } }, [
+                _vm._v(_vm._s(lancer.title))
+              ])
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c("p", [
+            _vm._v("\n            " + _vm._s(lancer.content) + "\n        ")
+          ])
+        ])
+      })
+    ],
+    2
+  )
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "panel" }, [
+      _c("div", { staticClass: "interview_img" }, [
+        _c("img", {
+          attrs: { src: __webpack_require__("./resources/js/assets/person/kenta.jpg"), width: "100%" }
+        })
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "clear" }),
+      _vm._v(" "),
+      _c("h2", { staticClass: "free big" }, [_vm._v("about")]),
+      _vm._v(" "),
+      _c("p", { staticClass: "interview_p" }, [
+        _vm._v(
+          "1992年生、和歌山県出身。5年勤めた部品商社を退職後、飲食未経験からミュージック&ゲームバーをオープン。\n店舗経営を行いながらクリエイターとしても活動し、現在は写真撮影と映像制作を中心に活動中。\nまた、社会人のうつ病を防ぐための活動として500人規模のコミュニティ運営も行う"
+        )
+      ])
+    ])
+  }
+]
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-2d655f40", module.exports)
   }
 }
 
@@ -4514,7 +4705,7 @@ var render = function() {
           "div",
           { staticClass: "news_img" },
           [
-            _c("RouterLink", { attrs: { to: "/interview1" } }, [
+            _c("RouterLink", { attrs: { to: "/lancer/1" } }, [
               _c("img", {
                 attrs: {
                   src: __webpack_require__("./resources/js/assets/person/kenta.jpg"),
@@ -4542,7 +4733,7 @@ var render = function() {
           "div",
           { staticClass: "news_img" },
           [
-            _c("RouterLink", { attrs: { to: "/interview2" } }, [
+            _c("RouterLink", { attrs: { to: "/lancer/2" } }, [
               _c("img", {
                 attrs: {
                   src: __webpack_require__("./resources/js/assets/person/mukae.jpg"),
@@ -21283,6 +21474,8 @@ window.axios.interceptors.response.use(function (response) {
   return error.response || error;
 });
 
+// Vue.prototype.$http = window.axios
+
 /***/ }),
 
 /***/ "./resources/js/components/Footer.vue":
@@ -21717,6 +21910,54 @@ module.exports = Component.exports
 
 /***/ }),
 
+/***/ "./resources/js/pages/lancer.vue":
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var normalizeComponent = __webpack_require__("./node_modules/vue-loader/lib/component-normalizer.js")
+/* script */
+var __vue_script__ = __webpack_require__("./node_modules/babel-loader/lib/index.js?{\"cacheDirectory\":true,\"presets\":[[\"env\",{\"modules\":false,\"targets\":{\"browsers\":[\"> 2%\"],\"uglify\":true}}]],\"plugins\":[\"transform-object-rest-spread\",[\"transform-runtime\",{\"polyfill\":false,\"helpers\":false}]]}!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./resources/js/pages/lancer.vue")
+/* template */
+var __vue_template__ = __webpack_require__("./node_modules/vue-loader/lib/template-compiler/index.js?{\"id\":\"data-v-2d655f40\",\"hasScoped\":false,\"buble\":{\"transforms\":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./resources/js/pages/lancer.vue")
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/js/pages/lancer.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-2d655f40", Component.options)
+  } else {
+    hotAPI.reload("data-v-2d655f40", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+
 /***/ "./resources/js/pages/talk.vue":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -21826,21 +22067,24 @@ module.exports = Component.exports
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pages_Login_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__pages_Login_vue__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_interview1_vue__ = __webpack_require__("./resources/js/pages/interview1.vue");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_interview1_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__pages_interview1_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_interview2_vue__ = __webpack_require__("./resources/js/pages/interview2.vue");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_interview2_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5__pages_interview2_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_interview3_vue__ = __webpack_require__("./resources/js/pages/interview3.vue");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_interview3_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6__pages_interview3_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_top_vue__ = __webpack_require__("./resources/js/pages/top.vue");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_top_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7__pages_top_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_talk_vue__ = __webpack_require__("./resources/js/pages/talk.vue");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_talk_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8__pages_talk_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__store__ = __webpack_require__("./resources/js/store/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_errors_System_vue__ = __webpack_require__("./resources/js/pages/errors/System.vue");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_errors_System_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_10__pages_errors_System_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_lancer_vue__ = __webpack_require__("./resources/js/pages/lancer.vue");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_lancer_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5__pages_lancer_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_interview2_vue__ = __webpack_require__("./resources/js/pages/interview2.vue");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_interview2_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6__pages_interview2_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_interview3_vue__ = __webpack_require__("./resources/js/pages/interview3.vue");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_interview3_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7__pages_interview3_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_top_vue__ = __webpack_require__("./resources/js/pages/top.vue");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_top_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8__pages_top_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_talk_vue__ = __webpack_require__("./resources/js/pages/talk.vue");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_talk_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9__pages_talk_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__store__ = __webpack_require__("./resources/js/store/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_errors_System_vue__ = __webpack_require__("./resources/js/pages/errors/System.vue");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_errors_System_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_11__pages_errors_System_vue__);
 
 
 
 // ページコンポーネントをインポートする
+
 
 
 
@@ -21859,35 +22103,35 @@ __WEBPACK_IMPORTED_MODULE_0_vue___default.a.use(__WEBPACK_IMPORTED_MODULE_1_vue_
 var routes = [{
   path: '/',
   components: {
-    default: __WEBPACK_IMPORTED_MODULE_7__pages_top_vue___default.a,
-    talkComponents: __WEBPACK_IMPORTED_MODULE_8__pages_talk_vue___default.a }
+    default: __WEBPACK_IMPORTED_MODULE_8__pages_top_vue___default.a,
+    talkComponents: __WEBPACK_IMPORTED_MODULE_9__pages_talk_vue___default.a }
 }, {
   path: '/login',
   components: {
     default: __WEBPACK_IMPORTED_MODULE_3__pages_Login_vue___default.a,
-    talkComponents: __WEBPACK_IMPORTED_MODULE_7__pages_top_vue___default.a
+    talkComponents: __WEBPACK_IMPORTED_MODULE_8__pages_top_vue___default.a
   }
 }, {
-  path: '/interview1',
+  path: '/lancers',
   components: {
     default: __WEBPACK_IMPORTED_MODULE_4__pages_interview1_vue___default.a,
-    talkComponents: __WEBPACK_IMPORTED_MODULE_7__pages_top_vue___default.a
+    talkComponents: __WEBPACK_IMPORTED_MODULE_8__pages_top_vue___default.a
   }
 }, {
-  path: '/interview2',
+  path: '/lancer/:id',
   components: {
-    default: __WEBPACK_IMPORTED_MODULE_5__pages_interview2_vue___default.a,
-    talkComponents: __WEBPACK_IMPORTED_MODULE_7__pages_top_vue___default.a
+    default: __WEBPACK_IMPORTED_MODULE_5__pages_lancer_vue___default.a,
+    talkComponents: __WEBPACK_IMPORTED_MODULE_8__pages_top_vue___default.a
   }
 }, {
   path: '/interview3',
   components: {
-    default: __WEBPACK_IMPORTED_MODULE_6__pages_interview3_vue___default.a,
-    talkComponents: __WEBPACK_IMPORTED_MODULE_7__pages_top_vue___default.a
+    default: __WEBPACK_IMPORTED_MODULE_7__pages_interview3_vue___default.a,
+    talkComponents: __WEBPACK_IMPORTED_MODULE_8__pages_top_vue___default.a
   }
 }, {
   path: '/500',
-  component: __WEBPACK_IMPORTED_MODULE_10__pages_errors_System_vue___default.a
+  component: __WEBPACK_IMPORTED_MODULE_11__pages_errors_System_vue___default.a
 }];
 
 // VueRouterインスタンスを作成する

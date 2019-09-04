@@ -45,7 +45,9 @@
         },
         methods: {
             fetchLancers() {
-                return axios.get('/api/lancer')
+                var id = this.$route.params['id']
+                // var id = this.$route.query.itemId
+                return axios.get('/api/lancer/'+id)
                 .then(res =>  {
                     console.log(res.data);
                     this.lancers = res.data

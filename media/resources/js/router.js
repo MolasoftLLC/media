@@ -5,6 +5,7 @@ import VueRouter from 'vue-router'
 import PhotoList from './pages/PhotoList.vue'
 import Login from './pages/Login.vue'
 import interview1 from './pages/interview1.vue'
+import lancer from './pages/lancer.vue'
 import interview2 from './pages/interview2.vue'
 import interview3 from './pages/interview3.vue'
 import Top from './pages/top.vue'
@@ -32,16 +33,16 @@ const routes = [
     }
 },
 {
-    path: '/interview1',
+    path: '/lancers',
     components:{
       default: interview1,
       talkComponents:Top,
     }
 },
 {
-    path: '/interview2',
+    path: '/lancer/:id',
     components:{
-      default: interview2,
+      default: lancer,
       talkComponents:Top,
     }
 },
@@ -52,10 +53,10 @@ const routes = [
       talkComponents:Top,
     }
 },
-  {
+{
     path: '/500',
     component: SystemError
-  }
+}
 ]
 
 // VueRouterインスタンスを作成する

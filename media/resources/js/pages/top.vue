@@ -35,7 +35,7 @@
 　<div class="panel" v-show="tab === 1">
   
    <div class="news_img">
-  <RouterLink to="/interview1">
+  <RouterLink to="/lancer/1">
   <img src="../assets/person/kenta.jpg" width="100%" />
     <p class="read_more">Read more</p>
   </RouterLink>
@@ -45,7 +45,7 @@
   <p class="ontext">コミュ二ティの運営で鬱病の無い社会を目指す。</p>
   </div>
    <div class="news_img">
-  <RouterLink to="/interview2">
+  <RouterLink to="/lancer/2">
     <img src="../assets/person/mukae.jpg" width="100%"  />
     <p class="read_more">Read more</p>
   </RouterLink>
