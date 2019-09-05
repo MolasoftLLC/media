@@ -2148,8 +2148,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 
+
 /* harmony default export */ __webpack_exports__["default"] = ({
-    created: function created() {
+    mounted: function mounted() {
         this.fetchLancers();
     },
     data: function data() {
@@ -2169,7 +2170,126 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 _this.lancers = res.data;
             });
         }
+    },
+    watch: {
+        '$route': function $route(to, from) {
+            var _this2 = this;
+
+            if (to.path !== from.path) {
+
+                var id = this.$route.params['id'];
+                return axios.get('/api/lancer/' + id).then(function (res) {
+                    console.log(res.data);
+                    _this2.lancers = res.data;
+                    // this.$set(this.lancers, res.data);
+                });
+            }
+        }
     }
+
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?{\"cacheDirectory\":true,\"presets\":[[\"env\",{\"modules\":false,\"targets\":{\"browsers\":[\"> 2%\"],\"uglify\":true}}]],\"plugins\":[\"transform-object-rest-spread\",[\"transform-runtime\",{\"polyfill\":false,\"helpers\":false}]]}!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./resources/js/pages/more.vue":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    mounted: function mounted() {
+        this.fetchLancers();
+    },
+    data: function data() {
+        return {
+            lancers: [],
+            tab: 1
+        };
+    },
+
+    methods: {
+        fetchLancers: function fetchLancers() {
+            var _this = this;
+
+            // var id = this.$route.params['id']
+            // var id = this.$route.query.itemId
+            return axios.get('/api/lancer/').then(function (res) {
+                console.log(res.data);
+                _this.lancers = res.data;
+            });
+        }
+    }
+
 });
 
 /***/ }),
@@ -2446,7 +2566,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-    created: function created() {
+    mounted: function mounted() {
         this.fetchLancers(), this.fetchLancers_it();
     },
     data: function data() {
@@ -5000,6 +5120,108 @@ if (false) {
   module.hot.accept()
   if (module.hot.data) {
     require("vue-hot-reload-api")      .rerender("data-v-6dde423b", module.exports)
+  }
+}
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/template-compiler/index.js?{\"id\":\"data-v-9b9e6084\",\"hasScoped\":false,\"buble\":{\"transforms\":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./resources/js/pages/more.vue":
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { attrs: { id: "app" } }, [
+    _c("a", { attrs: { name: "interview" } }),
+    _vm._v(" "),
+    _c("div", { staticClass: "header_adjust" }),
+    _vm._v(" "),
+    _c("h1", { staticClass: "free" }, [_vm._v("Freelance Intaview")]),
+    _vm._v(" "),
+    _c("ul", { staticClass: "tab" }, [
+      _c(
+        "li",
+        {
+          staticClass: "tab__item",
+          class: { "tab__item--active": _vm.tab === 1 },
+          on: {
+            click: function($event) {
+              _vm.tab = 1
+            }
+          }
+        },
+        [_vm._v("最新記事")]
+      )
+    ]),
+    _vm._v(" "),
+    _c(
+      "div",
+      {
+        directives: [
+          {
+            name: "show",
+            rawName: "v-show",
+            value: _vm.tab === 1,
+            expression: "tab === 1"
+          }
+        ],
+        staticClass: "panel"
+      },
+      [
+        _vm._l(_vm.lancers, function(lancer, id) {
+          return _c("div", { key: id }, [
+            _c(
+              "div",
+              { staticClass: "news_img" },
+              [
+                _c("RouterLink", { attrs: { to: "/lancer/" + lancer.id } }, [
+                  _c("img", {
+                    attrs: {
+                      src: __webpack_require__("./resources/js/assets/person/kenta.jpg"),
+                      width: "100%"
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c("p", { staticClass: "read_more" }, [_vm._v("Read more")])
+                ]),
+                _vm._v(" "),
+                _c("p", { staticClass: "on_name" }, [
+                  _vm._v(_vm._s(lancer.title))
+                ]),
+                _vm._v(" "),
+                _c("p", { staticClass: "on_category" }, [
+                  _vm._v(_vm._s(lancer.content))
+                ]),
+                _vm._v(" "),
+                _c("p", { staticClass: "ontext" }, [
+                  _vm._v("コミュ二ティの運営で鬱病の無い社会を目指す。")
+                ])
+              ],
+              1
+            ),
+            _vm._v(" "),
+            id === 2 || id === 5
+              ? _c("div", { staticClass: "clear" })
+              : _vm._e()
+          ])
+        }),
+        _vm._v(" "),
+        _c("div", { staticClass: "clear" })
+      ],
+      2
+    ),
+    _vm._v(" "),
+    _c("div", { staticClass: "clear" })
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-9b9e6084", module.exports)
   }
 }
 
@@ -21974,6 +22196,54 @@ module.exports = Component.exports
 
 /***/ }),
 
+/***/ "./resources/js/pages/more.vue":
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var normalizeComponent = __webpack_require__("./node_modules/vue-loader/lib/component-normalizer.js")
+/* script */
+var __vue_script__ = __webpack_require__("./node_modules/babel-loader/lib/index.js?{\"cacheDirectory\":true,\"presets\":[[\"env\",{\"modules\":false,\"targets\":{\"browsers\":[\"> 2%\"],\"uglify\":true}}]],\"plugins\":[\"transform-object-rest-spread\",[\"transform-runtime\",{\"polyfill\":false,\"helpers\":false}]]}!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./resources/js/pages/more.vue")
+/* template */
+var __vue_template__ = __webpack_require__("./node_modules/vue-loader/lib/template-compiler/index.js?{\"id\":\"data-v-9b9e6084\",\"hasScoped\":false,\"buble\":{\"transforms\":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./resources/js/pages/more.vue")
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/js/pages/more.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-9b9e6084", Component.options)
+  } else {
+    hotAPI.reload("data-v-9b9e6084", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+
 /***/ "./resources/js/pages/talk.vue":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -22093,13 +22363,16 @@ module.exports = Component.exports
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_top_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8__pages_top_vue__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_talk_vue__ = __webpack_require__("./resources/js/pages/talk.vue");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_talk_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9__pages_talk_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__store__ = __webpack_require__("./resources/js/store/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_errors_System_vue__ = __webpack_require__("./resources/js/pages/errors/System.vue");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_errors_System_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_11__pages_errors_System_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_more_vue__ = __webpack_require__("./resources/js/pages/more.vue");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_more_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_10__pages_more_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__store__ = __webpack_require__("./resources/js/store/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_errors_System_vue__ = __webpack_require__("./resources/js/pages/errors/System.vue");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_errors_System_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_12__pages_errors_System_vue__);
 
 
 
 // ページコンポーネントをインポートする
+
 
 
 
@@ -22137,7 +22410,7 @@ var routes = [{
   path: '/lancer/:id',
   components: {
     default: __WEBPACK_IMPORTED_MODULE_5__pages_lancer_vue___default.a,
-    talkComponents: __WEBPACK_IMPORTED_MODULE_8__pages_top_vue___default.a
+    talkComponents: __WEBPACK_IMPORTED_MODULE_10__pages_more_vue___default.a
   }
 }, {
   path: '/interview3',
@@ -22147,13 +22420,21 @@ var routes = [{
   }
 }, {
   path: '/500',
-  component: __WEBPACK_IMPORTED_MODULE_11__pages_errors_System_vue___default.a
+  component: __WEBPACK_IMPORTED_MODULE_12__pages_errors_System_vue___default.a
 }];
 
 // VueRouterインスタンスを作成する
 var router = new __WEBPACK_IMPORTED_MODULE_1_vue_router__["a" /* default */]({
   mode: 'history', // ★ 追加
-  routes: routes
+  routes: routes,
+  scrollBehavior: function scrollBehavior(to, from, savedPosition) {
+    //スクロール時の挙動
+    if (savedPosition) {
+      return savedPosition;
+    } else {
+      return { x: 0, y: 0 };
+    }
+  }
 });
 
 // VueRouterインスタンスをエクスポートする

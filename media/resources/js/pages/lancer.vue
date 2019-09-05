@@ -34,8 +34,9 @@
 </template>
 
 <script>
+　　 
     export default {
-        created() {
+        mounted() {
             this.fetchLancers()
         },
         data() {
@@ -53,6 +54,24 @@
                     this.lancers = res.data
                 })
             }
+        },
+        watch: {
+            '$route': function (to, from) {
+                if (to.path !== from.path) {
+                    
+                    var id = this.$route.params['id']
+                    return axios.get('/api/lancer/'+id)
+                   .then(res =>  {
+                        console.log(res.data);
+                        this.lancers = res.data　
+                        // this.$set(this.lancers, res.data);
+                    }) 
+                    
+                    
+                }
+            
+            }
         }
+
     }
 </script>

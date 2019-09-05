@@ -138,7 +138,7 @@
 </script>
 <script>
     export default {
-        created() {
+        mounted() {
             this.fetchLancers(),
             this.fetchLancers_it()
         },
