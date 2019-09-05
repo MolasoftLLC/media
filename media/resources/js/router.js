@@ -10,6 +10,7 @@ import interview2 from './pages/interview2.vue'
 import interview3 from './pages/interview3.vue'
 import Top from './pages/top.vue'
 import talk from './pages/talk.vue'
+import more from './pages/more.vue'
 import store from './store' //
 import SystemError from './pages/errors/System.vue'
 
@@ -43,7 +44,7 @@ const routes = [
     path: '/lancer/:id',
     components:{
       default: lancer,
-      talkComponents:Top,
+      talkComponents: more,
     }
 },
 {
@@ -62,8 +63,16 @@ const routes = [
 // VueRouterインスタンスを作成する
 const router = new VueRouter({
   mode: 'history', // ★ 追加
-  routes
+  routes,
+  scrollBehavior (to, from, savedPosition) { //スクロール時の挙動
+    if (savedPosition) {
+      return savedPosition
+    } else {
+      return { x: 0, y: 0 }
+    }
+  }
 })
+
 
 // VueRouterインスタンスをエクスポートする
 // app.jsでインポートするため
