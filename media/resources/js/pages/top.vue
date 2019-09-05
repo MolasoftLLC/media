@@ -1,8 +1,14 @@
 <template>
-  <div id="app">
+<div>
+    <div class="mainimg_container" style="">
+    <img class="mainimg" src="../assets/etc/lance_main.jpg" />
+    <img class="mainimg_on" src="../assets/etc/logo.png" />
+  </div>
+  <div id="app" class="container">
        <a name="interview" ></a>
     <div class="header_adjust"></div>
-   
+ 
+
   <h1 class="free">Freelance Intaview</h1>
       <ul class="tab">
       <li
@@ -35,10 +41,12 @@
 　<div class="panel" v-show="tab === 1">
     <div v-for="(lancer, id) in lancers" v-bind:key="id">
         <div class="news_img">
-            <RouterLink :to="'/lancer/' + lancer.id">
-                <img src="../assets/person/kenta.jpg" width="100%" />
-                <p class="read_more">Read more</p>
-            </RouterLink>
+      
+                <RouterLink :to="'/lancer/' + lancer.id">
+                   <img src="../assets/person/kenta.jpg" width="100%" />
+                   <p class="read_more">Read more</p>
+                </RouterLink>
+
 
           <p class="on_name">{{ lancer.title }}</p>
           <p class="on_category">{{ lancer.content }}</p>
@@ -125,6 +133,7 @@
 </div>
 
   </div>
+</div>
 </template>
 
  <script>

@@ -10,10 +10,6 @@
     <div class="clear"></div>
       
   </nav>
-  <div class="mainimg_container" style="">
-    <img class="mainimg" src="../assets/etc/lance_main.jpg" />
-    <img class="mainimg_on" src="../assets/etc/logo.png" />
-  </div>
   </div>
 </template>
 

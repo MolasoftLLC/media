@@ -1,3 +1,14 @@
+<style>
+
+.v-enter-active, .v-leave-active {
+  transition: opacity .3s;
+}
+.v-enter, .v-leave-to {
+  opacity: 0;
+}
+
+</style>
+
 <template>
   <div>
     <header>
@@ -7,12 +18,16 @@
 
     <main>
 
-      <div class="container" >
-         <RouterView />
+      <div  >
+        <transition mode="out-in">
+            <RouterView />
+        </transition>
       </div>
 
       <div class="container">
-        <RouterView name="talkComponents"/>
+      <transition mode="out-in">
+           <RouterView name="talkComponents"/>
+      </transition>
       </div>
 
       
