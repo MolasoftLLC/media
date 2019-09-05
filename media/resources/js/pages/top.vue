@@ -73,15 +73,15 @@
 
 <div class="panel" v-show="tab === 2">
   
-    <div v-for="(lancer, id) in lancers" v-bind:key="id">
+    <div v-for="(lancer_it, id) in lancers_it" v-bind:key="id">
         <div class="news_img">
-            <RouterLink :to="'/lancer/' + lancer.id">
+            <RouterLink :to="'/lancer/' + lancer_it.id">
                 <img src="../assets/person/kenta.jpg" width="100%" />
                 <p class="read_more">Read more</p>
             </RouterLink>
 
-          <p class="on_name">{{ lancer.title }}</p>
-          <p class="on_category">{{ lancer.content }}</p>
+          <p class="on_name">{{ lancer_it.title }}</p>
+          <p class="on_category">{{ lancer_it.content }}</p>
           <p class="ontext">コミュ二ティの運営で鬱病の無い社会を目指す。</p>
         </div>
         <div v-if="id===2||id===5" class="clear"></div>
@@ -139,11 +139,13 @@
 <script>
     export default {
         created() {
-            this.fetchLancers()
+            this.fetchLancers(),
+            this.fetchLancers_it()
         },
         data() {
             return {
                 lancers: [],
+                lancers_it: [],
                 tab: 1,
             }
         },
@@ -155,6 +157,16 @@
                 .then(res =>  {
                     console.log(res.data);
                     this.lancers = res.data
+                })
+            },
+            fetchLancers_it() {
+                // var id = this.$route.params['id']
+                // var id = this.$route.query.itemId
+                return axios.get('/api/lancer/')
+                .then(resd =>  {
+                 　  console.log('動いてる');
+                    console.log(resd.data);
+                    this.lancers_it = resd.data
                 })
             }
         }

@@ -19,3 +19,6 @@ Route::group(['middleware' => 'api'], function() {
 Route::group(['middleware' => 'api'], function() {
 Route::get('/lancer/{id?}', 'LanceController@lancer');
 });
+Route::group(['middleware' => 'api'], function() {
+Route::get('/lancer/it', 'LanceController@it');
+});

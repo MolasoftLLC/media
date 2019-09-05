@@ -1,0 +1,70 @@
+SPAサイトの流れ
+
+①表示用のコンポーネントから
+<script>
+    export default {
+        created() {
+            this.fetchLancers(),
+            this.fetchLancers_it()
+        },
+        data() {
+            return {
+                lancers: [],
+                lancers_it: [],
+                tab: 1,
+            }
+        },
+        methods: {
+            fetchLancers() {
+                // var id = this.$route.params['id']
+                // var id = this.$route.query.itemId
+                return axios.get('/api/lancer/')
+                .then(res =>  {
+                    console.log(res.data);
+                    this.lancers = res.data
+                })
+            },
+            fetchLancers_it() {
+                // var id = this.$route.params['id']
+                // var id = this.$route.query.itemId
+                return axios.get('/api/lancer/')
+                .then(resd =>  {
+                 　  console.log('動いてる');
+                    console.log(resd.data);
+                    this.lancers_it = resd.data
+                })
+            }
+        }
+    }
+</script>
+
+こんな感じでlaravelのroot/api/~へリクエストを飛ばす、
+
+
+②肝心な非同期通信のためのaxiosの情報はjs/bootstrap.jsに登録しておく
+
+window.axios = require('axios')
+
+// Ajaxリクエストであることを示すヘッダーを付与する
+window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest'
+
+window.axios.interceptors.request.use(config => {
+  // クッキーからトークンを取り出してヘッダーに添付する
+  config.headers['X-XSRF-TOKEN'] = getCookieValue('XSRF-TOKEN')
+
+  return config
+})
+
+window.axios.interceptors.response.use(
+    response => response,
+    error => error.response || error
+  )
+
+  // Vue.prototype.$http = window.axios
+  ↑別の奴のせいで動かなくなるので入れてないが、、、、
+
+
+
+❸api.php の記述とコントローラーの記述（Eloquantモデル作成）
+
+❹リターンでjsonファイルで情報が入り、配列なのでそれをv-forでまわしてOK

@@ -2447,11 +2447,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     created: function created() {
-        this.fetchLancers();
+        this.fetchLancers(), this.fetchLancers_it();
     },
     data: function data() {
         return {
             lancers: [],
+            lancers_it: [],
             tab: 1
         };
     },
@@ -2465,6 +2466,17 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             return axios.get('/api/lancer/').then(function (res) {
                 console.log(res.data);
                 _this.lancers = res.data;
+            });
+        },
+        fetchLancers_it: function fetchLancers_it() {
+            var _this2 = this;
+
+            // var id = this.$route.params['id']
+            // var id = this.$route.query.itemId
+            return axios.get('/api/lancer/').then(function (resd) {
+                console.log('動いてる');
+                console.log(resd.data);
+                _this2.lancers_it = resd.data;
             });
         }
     }
@@ -4789,13 +4801,13 @@ var render = function() {
         ],
         staticClass: "panel"
       },
-      _vm._l(_vm.lancers, function(lancer, id) {
+      _vm._l(_vm.lancers_it, function(lancer_it, id) {
         return _c("div", { key: id }, [
           _c(
             "div",
             { staticClass: "news_img" },
             [
-              _c("RouterLink", { attrs: { to: "/lancer/" + lancer.id } }, [
+              _c("RouterLink", { attrs: { to: "/lancer/" + lancer_it.id } }, [
                 _c("img", {
                   attrs: {
                     src: __webpack_require__("./resources/js/assets/person/kenta.jpg"),
@@ -4807,11 +4819,11 @@ var render = function() {
               ]),
               _vm._v(" "),
               _c("p", { staticClass: "on_name" }, [
-                _vm._v(_vm._s(lancer.title))
+                _vm._v(_vm._s(lancer_it.title))
               ]),
               _vm._v(" "),
               _c("p", { staticClass: "on_category" }, [
-                _vm._v(_vm._s(lancer.content))
+                _vm._v(_vm._s(lancer_it.content))
               ]),
               _vm._v(" "),
               _c("p", { staticClass: "ontext" }, [
