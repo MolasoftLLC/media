@@ -10,6 +10,7 @@ class LanceController extends Controller
 {
     public function index()
     {
+        
         $lancer = Lancer::all()->take(6);
         return $lancer;
     }
@@ -19,6 +20,14 @@ class LanceController extends Controller
         // $lancer = Lancer::all()->take(1);
         $lancer = Lancer::where('id',$id)->get();
         return $lancer;
+    }
+
+    public function it()
+    {
+        // $lancer = Lancer::all()->take(1);
+        // $lancer_it = Lancer::where('occupation','it')->get();
+        $lancerit = Lancer::all()->take(6);
+        return 1;
     }
 
 }

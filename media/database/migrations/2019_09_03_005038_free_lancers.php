@@ -17,6 +17,7 @@ class FreeLancers extends Migration
             $table->increments('id');
             $table->text('content');
             $table->string('title');
+            $table->string('occupation');
             $table->timestamps();
         });
     }
