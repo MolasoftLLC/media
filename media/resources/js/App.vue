@@ -10,31 +10,27 @@
 </style>
 
 <template>
-  <div>
-    <header>
-      <Navbar />
-      <Linkbar />
-    </header>
+    <div>
+        <header>
+            <Navbar  />
+            <Linkbar />
+        </header>
 
-    <main>
+        <main>
+            <div>
+                <transition mode="out-in">
+                     <RouterView />
+                </transition>
+            </div>
 
-      <div  >
-        <transition mode="out-in">
-            <RouterView />
-        </transition>
-      </div>
-
-      <div class="container">
-      <transition mode="out-in">
-           <RouterView name="talkComponents"/>
-      </transition>
-      </div>
-
-      
-    </main>
-    
-    <Footer />
-  </div>
+            <div class="container">
+                <transition mode="out-in">
+                    <RouterView name="talkComponents"/>
+                </transition>
+            </div>
+        </main>
+        <Footer />
+     </div>
 </template>
 
 
