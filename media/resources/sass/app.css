@@ -35,7 +35,7 @@ body {
   background-color: #f1faff; }
 
 .container {
-  margin: 42px auto 0;
+  margin: 52px auto 0;
   max-width: 1200px;
   padding: 3% 3% 3%;
   background-color: #fefefe;
@@ -325,8 +325,8 @@ img.main_logo {
   text-align: right; }
 
 .panel {
-  margin-top: 2rem;
-  padding: 1.5rem; }
+  margin-top: 2rem; }
+
 
 .title {
   font-size: 1.25rem;
@@ -690,3 +690,7 @@ h2.speaker {
   max-width: 600px;
   filter: drop-shadow(0 0 0.75rem #585858);
   margin: 0 auto; }
+
+
+
+  

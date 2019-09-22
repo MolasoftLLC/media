@@ -23,7 +23,7 @@
                 </transition>
             </div>
 
-            <div class="container">
+            <div >
                 <transition mode="out-in">
                     <RouterView name="talkComponents"/>
                 </transition>

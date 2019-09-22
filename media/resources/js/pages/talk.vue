@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" class="container">
     <a name="session" ></a>
     <div class="header_adjust"></div>
   <h1 class="free">Talk session<span style="font-size:0.3em;">　フリーランサー・起業家の生の声を聴く</span></h1>

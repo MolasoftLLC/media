@@ -2172,11 +2172,54 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     mounted: function mounted() {
-        this.fetchLancers();
+        this.fetchLancers(), this.firstMove();
     },
     data: function data() {
         return {
@@ -2194,6 +2237,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 console.log(res.data);
                 _this.lancers = res.data;
             });
+        },
+        firstMove: function firstMove() {
+            var person = document.getElementById('person');
+            person.classList.add("person_anima");
         }
     },
     watch: {
@@ -2221,6 +2268,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
 //
 //
 //
@@ -4284,63 +4332,108 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    { attrs: { id: "app" } },
-    [
-      _c("a", { attrs: { name: "interview" } }),
-      _vm._v(" "),
-      _c("div", { staticClass: "header_adjust" }),
-      _vm._v(" "),
-      _c("h1", { staticClass: "free" }, [
-        _vm._v("Freelance file.1   Kenta Kitanaka")
-      ]),
-      _vm._v(" "),
-      _c("p", [_vm._v("店舗経営/カメラマン")]),
-      _vm._v(" "),
-      _vm._m(0),
-      _vm._v(" "),
-      _vm._l(_vm.lancers, function(lancer, id) {
-        return _c("div", { key: id }, [
-          _c(
-            "h1",
-            [
-              _c("router-link", { attrs: { to: "/lancer/" + lancer.id } }, [
-                _vm._v(_vm._s(lancer.title))
-              ])
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c("p", [
-            _vm._v("\n            " + _vm._s(lancer.content) + "\n        ")
-          ])
-        ])
-      })
-    ],
-    2
-  )
+  return _vm._m(0)
 }
 var staticRenderFns = [
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "panel" }, [
-      _c("div", { staticClass: "interview_img" }, [
+    return _c("div", [
+      _c("div", { staticClass: "mainimg_container_person" }, [
         _c("img", {
-          attrs: { src: __webpack_require__("./resources/js/assets/person/kenta.jpg"), width: "100%" }
-        })
+          staticClass: "mainimg_person",
+          attrs: { src: __webpack_require__("./resources/js/assets/etc/lance_main.jpg") }
+        }),
+        _vm._v(" "),
+        _c("div", { staticClass: "on_profile" }, [
+          _c("img", {
+            staticClass: "mainimg_on_person",
+            attrs: { id: "person", src: __webpack_require__("./resources/js/assets/person/kenta.jpg") }
+          })
+        ])
       ]),
       _vm._v(" "),
-      _c("div", { staticClass: "clear" }),
-      _vm._v(" "),
-      _c("h2", { staticClass: "free big" }, [_vm._v("about")]),
-      _vm._v(" "),
-      _c("p", { staticClass: "interview_p" }, [
-        _vm._v(
-          "1992年生、和歌山県出身。5年勤めた部品商社を退職後、飲食未経験からミュージック&ゲームバーをオープン。\n店舗経営を行いながらクリエイターとしても活動し、現在は写真撮影と映像制作を中心に活動中。\nまた、社会人のうつ病を防ぐための活動として500人規模のコミュニティ運営も行う"
-        )
+      _c("div", { staticClass: "container", attrs: { id: "app" } }, [
+        _c("div", { staticClass: "interview_grid" }, [
+          _c("section", { staticClass: "grid_main" }, [
+            _c("div", { staticClass: "interview_page" }, [
+              _c("a", { attrs: { name: "interview" } }),
+              _vm._v(" "),
+              _c("div", { staticClass: "panel" }, [
+                _c("div", { staticClass: "clear" }),
+                _vm._v(" "),
+                _c("h2", { staticClass: "free big" }, [_vm._v("About")]),
+                _vm._v(" "),
+                _c("p", { staticClass: "interview_p" }, [
+                  _vm._v(
+                    "1992年生、和歌山県出身。5年勤めた部品商社を退職後、飲食未経験からミュージック&ゲームバーをオープン。\n                  店舗経営を行いながらクリエイターとしても活動し、現在は写真撮影と映像制作を中心に活動中。\n                  また、社会人のうつ病を防ぐための活動として500人規模のコミュニティ運営も行う"
+                  )
+                ])
+              ]),
+              _vm._v(" "),
+              _c("h2", { staticClass: "free big" }, [_vm._v("Career")]),
+              _vm._v(" "),
+              _c("div", { staticClass: "career" }, [
+                _c("div", { staticClass: "career_grid" }, [
+                  _c("section", { staticClass: "age" }, [_vm._v("年度")]),
+                  _vm._v(" "),
+                  _c("section", { staticClass: "age_content" }, [
+                    _vm._v("内容")
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "career_grid" }, [
+                  _c("section", { staticClass: "age" }, [_vm._v("2018年")]),
+                  _vm._v(" "),
+                  _c("section", { staticClass: "age_content" }, [
+                    _vm._v("起業しました")
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("h2", { staticClass: "free big" }, [_vm._v("Schedule")]),
+              _vm._v(" "),
+              _c("div", { staticClass: "schedule" }, [
+                _c("img", {
+                  attrs: { src: __webpack_require__("./resources/js/assets/etc/sce.png"), alt: "" }
+                })
+              ])
+            ])
+          ]),
+          _vm._v(" "),
+          _c("section", { staticClass: "want" }, [
+            _c("img", {
+              attrs: { src: __webpack_require__("./resources/js/assets/etc/clip.png"), alt: "" }
+            }),
+            _vm._v(" "),
+            _c("p", { staticClass: "button_fix" }, [_vm._v("講演を聴きたい")])
+          ]),
+          _vm._v(" "),
+          _c("section", { staticClass: "good want" }, [
+            _c("img", {
+              attrs: { src: __webpack_require__("./resources/js/assets/etc/star.png"), alt: "" }
+            }),
+            _vm._v(" "),
+            _c("p", { staticClass: "button_fix" }, [_vm._v("お気に入り")])
+          ]),
+          _vm._v(" "),
+          _c("section", { staticClass: "contact" }, [
+            _c("img", {
+              attrs: { src: __webpack_require__("./resources/js/assets/etc/talk.png"), alt: "" }
+            }),
+            _vm._v(" "),
+            _c("p", { staticClass: "button_fix" }, [_vm._v("相談したい")])
+          ]),
+          _vm._v(" "),
+          _c("section", { staticClass: "contact mail" }, [
+            _c("img", {
+              attrs: { src: __webpack_require__("./resources/js/assets/etc/mail.png"), alt: "" }
+            }),
+            _vm._v(" "),
+            _c("p", { staticClass: "button_fix" }, [_vm._v("問い合わせ")])
+          ])
+        ])
       ])
     ])
   }
@@ -5246,87 +5339,99 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { attrs: { id: "app" } }, [
-    _c("a", { attrs: { name: "interview" } }),
-    _vm._v(" "),
-    _c("div", { staticClass: "header_adjust" }),
-    _vm._v(" "),
-    _c("h1", { staticClass: "free" }, [_vm._v("Freelance Intaview")]),
-    _vm._v(" "),
-    _c("ul", { staticClass: "tab" }, [
-      _c(
-        "li",
-        {
-          staticClass: "tab__item",
-          class: { "tab__item--active": _vm.tab === 1 },
-          on: {
-            click: function($event) {
-              _vm.tab = 1
-            }
-          }
-        },
-        [_vm._v("最新記事")]
-      )
-    ]),
-    _vm._v(" "),
+  return _c("div", { staticClass: "more_container" }, [
     _c(
       "div",
-      {
-        directives: [
-          {
-            name: "show",
-            rawName: "v-show",
-            value: _vm.tab === 1,
-            expression: "tab === 1"
-          }
-        ],
-        staticClass: "panel"
-      },
+      { staticClass: "container container_sub", attrs: { id: "app" } },
       [
-        _vm._l(_vm.lancers, function(lancer, id) {
-          return _c("div", { key: id }, [
-            _c(
-              "div",
-              { staticClass: "news_img" },
-              [
-                _c("RouterLink", { attrs: { to: "/lancer/" + lancer.id } }, [
-                  _c("img", {
-                    attrs: {
-                      src: __webpack_require__("./resources/js/assets/person/kenta.jpg"),
-                      width: "100%"
-                    }
-                  }),
-                  _vm._v(" "),
-                  _c("p", { staticClass: "read_more" }, [_vm._v("Read more")])
-                ]),
+        _c("a", { attrs: { name: "interview" } }),
+        _vm._v(" "),
+        _c("div", { staticClass: "header_adjust" }),
+        _vm._v(" "),
+        _c("h1", { staticClass: "free" }, [_vm._v("Freelance Intaview")]),
+        _vm._v(" "),
+        _c("ul", { staticClass: "tab" }, [
+          _c(
+            "li",
+            {
+              staticClass: "tab__item",
+              class: { "tab__item--active": _vm.tab === 1 },
+              on: {
+                click: function($event) {
+                  _vm.tab = 1
+                }
+              }
+            },
+            [_vm._v("最新記事")]
+          )
+        ]),
+        _vm._v(" "),
+        _c(
+          "div",
+          {
+            directives: [
+              {
+                name: "show",
+                rawName: "v-show",
+                value: _vm.tab === 1,
+                expression: "tab === 1"
+              }
+            ],
+            staticClass: "panel"
+          },
+          [
+            _vm._l(_vm.lancers, function(lancer, id) {
+              return _c("div", { key: id }, [
+                _c(
+                  "div",
+                  { staticClass: "news_img" },
+                  [
+                    _c(
+                      "RouterLink",
+                      { attrs: { to: "/lancer/" + lancer.id } },
+                      [
+                        _c("img", {
+                          attrs: {
+                            src: __webpack_require__("./resources/js/assets/person/kenta.jpg"),
+                            width: "100%"
+                          }
+                        }),
+                        _vm._v(" "),
+                        _c("p", { staticClass: "read_more" }, [
+                          _vm._v("Read more")
+                        ])
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c("p", { staticClass: "on_name" }, [
+                      _vm._v(_vm._s(lancer.title))
+                    ]),
+                    _vm._v(" "),
+                    _c("p", { staticClass: "on_category" }, [
+                      _vm._v(_vm._s(lancer.content))
+                    ]),
+                    _vm._v(" "),
+                    _c("p", { staticClass: "ontext" }, [
+                      _vm._v("コミュ二ティの運営で鬱病の無い社会を目指す。")
+                    ])
+                  ],
+                  1
+                ),
                 _vm._v(" "),
-                _c("p", { staticClass: "on_name" }, [
-                  _vm._v(_vm._s(lancer.title))
-                ]),
-                _vm._v(" "),
-                _c("p", { staticClass: "on_category" }, [
-                  _vm._v(_vm._s(lancer.content))
-                ]),
-                _vm._v(" "),
-                _c("p", { staticClass: "ontext" }, [
-                  _vm._v("コミュ二ティの運営で鬱病の無い社会を目指す。")
-                ])
-              ],
-              1
-            ),
+                id === 2 || id === 5
+                  ? _c("div", { staticClass: "clear" })
+                  : _vm._e()
+              ])
+            }),
             _vm._v(" "),
-            id === 2 || id === 5
-              ? _c("div", { staticClass: "clear" })
-              : _vm._e()
-          ])
-        }),
+            _c("div", { staticClass: "clear" })
+          ],
+          2
+        ),
         _vm._v(" "),
         _c("div", { staticClass: "clear" })
-      ],
-      2
-    ),
-    _vm._v(" "),
-    _c("div", { staticClass: "clear" })
+      ]
+    )
   ])
 }
 var staticRenderFns = []
@@ -5348,7 +5453,7 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { attrs: { id: "app" } }, [
+  return _c("div", { staticClass: "container", attrs: { id: "app" } }, [
     _c("a", { attrs: { name: "session" } }),
     _vm._v(" "),
     _c("div", { staticClass: "header_adjust" }),
@@ -5717,7 +5822,6 @@ var render = function() {
         _vm._v(" "),
         _c(
           "div",
-          { staticClass: "container" },
           [
             _c(
               "transition",
@@ -22057,6 +22161,13 @@ createApp();
 
 /***/ }),
 
+/***/ "./resources/js/assets/etc/clip.png":
+/***/ (function(module, exports) {
+
+module.exports = "/images/clip.png?e7f2acb5556f4c1ddff2c8ffa4e76ae8";
+
+/***/ }),
+
 /***/ "./resources/js/assets/etc/lance_main.jpg":
 /***/ (function(module, exports) {
 
@@ -22071,10 +22182,38 @@ module.exports = "/images/logo.png?736eb1c5a29e766c4faa3e251e79e377";
 
 /***/ }),
 
+/***/ "./resources/js/assets/etc/mail.png":
+/***/ (function(module, exports) {
+
+module.exports = "/images/mail.png?97bc3be8fbb783f7ff3c1f86a4b64a58";
+
+/***/ }),
+
+/***/ "./resources/js/assets/etc/sce.png":
+/***/ (function(module, exports) {
+
+module.exports = "/images/sce.png?0b85371722ad4a8b81a228e8541d6143";
+
+/***/ }),
+
+/***/ "./resources/js/assets/etc/star.png":
+/***/ (function(module, exports) {
+
+module.exports = "/images/star.png?1dd444eec47532e5444bd6764b3f9b34";
+
+/***/ }),
+
 /***/ "./resources/js/assets/etc/startupcafe.png":
 /***/ (function(module, exports) {
 
 module.exports = "/images/startupcafe.png?a94f77c8cfaeed3fdf73beefa27c0a32";
+
+/***/ }),
+
+/***/ "./resources/js/assets/etc/talk.png":
+/***/ (function(module, exports) {
+
+module.exports = "/images/talk.png?be7f0943f8af797c8f4c774af88b170b";
 
 /***/ }),
 

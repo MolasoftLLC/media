@@ -1,5 +1,6 @@
 <template>
-  <div id="app">
+  <div class="more_container">
+  <div id="app" class="container container_sub">
        <a name="interview" ></a>
     <div class="header_adjust"></div>
    
@@ -55,7 +56,7 @@
 
   <div class="clear"></div>
 </div>
-
+</div>
 </template>
 
  <script>
