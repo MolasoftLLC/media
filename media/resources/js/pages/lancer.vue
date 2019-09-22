@@ -4,9 +4,23 @@
         <img class="mainimg_person" src="../assets/etc/lance_main.jpg" />
         <div class="on_profile">
             <img id="person" class="mainimg_on_person" src="../assets/person/kenta.jpg" />
+            <div class="profile_desc">
+                <div class="inline"><h1 >北中 健太</h1><img src="../assets/icon/twitter.png" alt=""><img style="margin-left:8px;" src="../assets/icon/instagram.png" alt=""></div>
+                <p>カメラマン/バー店主/コミュニティ運営</p>
+                <p>1992年生、和歌山県出身。5年勤めた部品商社を退職後、飲食未経験からミュージック&ゲームバーをオープン。
+                    店舗経営を行いながらクリエイターとしても活動し、現在は写真撮影と映像制作を中心に活動中。
+                    また、社会人のうつ病を防ぐための活動として500人規模のコミュニティ運営も行う
+                </p>
+                <div class="in">
+                    <p><a href="#">店舗運営</a></p>
+                    <p><a href="#">クリエイティブ</a></p>
+                </div>
+            </div>
         </div>
   </div>
   <div id="app" class="container">
+    <div class="container_crip"><img src="../assets/etc/clip.png" alt=""></div>
+
     <div class="interview_grid">
         <section class="grid_main">
 
@@ -19,10 +33,7 @@
 
                     <div class="clear"></div>
 
-                    <h2 class="free big">About</h2>
-                    <p class="interview_p">1992年生、和歌山県出身。5年勤めた部品商社を退職後、飲食未経験からミュージック&ゲームバーをオープン。
-                    店舗経営を行いながらクリエイターとしても活動し、現在は写真撮影と映像制作を中心に活動中。
-                    また、社会人のうつ病を防ぐための活動として500人規模のコミュニティ運営も行う</p>
+               
                 </div>
 
                 <h2 class="free big">Career</h2>

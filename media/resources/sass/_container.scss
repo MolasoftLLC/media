@@ -1,5 +1,5 @@
 body{
-  background-color: #f1faff;
+  background-color: #3e84a8;
 }
 
 .container {
@@ -7,11 +7,20 @@ body{
   max-width: 1200px;
   padding: 3% 3% 3%;
   background-color: #fefefe;
-  border-radius: 8px;
-  box-shadow: 4px 4px 4px #ccc;
+  position: relative;
+
 
   &--small {
     margin: 0 auto;
     max-width: 600px;
   }
+}
+
+.container_crip{
+  position:absolute;
+  top:-12px;
+  left:-4px;
+  width:80px;
+  height: 80px;
+  
 }

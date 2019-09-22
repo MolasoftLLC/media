@@ -2215,6 +2215,17 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -4350,26 +4361,55 @@ var staticRenderFns = [
           _c("img", {
             staticClass: "mainimg_on_person",
             attrs: { id: "person", src: __webpack_require__("./resources/js/assets/person/kenta.jpg") }
-          })
+          }),
+          _vm._v(" "),
+          _c("div", { staticClass: "profile_desc" }, [
+            _c("div", { staticClass: "inline" }, [
+              _c("h1", [_vm._v("北中 健太")]),
+              _c("img", {
+                attrs: { src: __webpack_require__("./resources/js/assets/icon/twitter.png"), alt: "" }
+              }),
+              _c("img", {
+                staticStyle: { "margin-left": "8px" },
+                attrs: { src: __webpack_require__("./resources/js/assets/icon/instagram.png"), alt: "" }
+              })
+            ]),
+            _vm._v(" "),
+            _c("p", [_vm._v("カメラマン/バー店主/コミュニティ運営")]),
+            _vm._v(" "),
+            _c("p", [
+              _vm._v(
+                "1992年生、和歌山県出身。5年勤めた部品商社を退職後、飲食未経験からミュージック&ゲームバーをオープン。\n                  店舗経営を行いながらクリエイターとしても活動し、現在は写真撮影と映像制作を中心に活動中。\n                  また、社会人のうつ病を防ぐための活動として500人規模のコミュニティ運営も行う\n              "
+              )
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "in" }, [
+              _c("p", [
+                _c("a", { attrs: { href: "#" } }, [_vm._v("店舗運営")])
+              ]),
+              _vm._v(" "),
+              _c("p", [
+                _c("a", { attrs: { href: "#" } }, [_vm._v("クリエイティブ")])
+              ])
+            ])
+          ])
         ])
       ]),
       _vm._v(" "),
       _c("div", { staticClass: "container", attrs: { id: "app" } }, [
+        _c("div", { staticClass: "container_crip" }, [
+          _c("img", {
+            attrs: { src: __webpack_require__("./resources/js/assets/etc/clip.png"), alt: "" }
+          })
+        ]),
+        _vm._v(" "),
         _c("div", { staticClass: "interview_grid" }, [
           _c("section", { staticClass: "grid_main" }, [
             _c("div", { staticClass: "interview_page" }, [
               _c("a", { attrs: { name: "interview" } }),
               _vm._v(" "),
               _c("div", { staticClass: "panel" }, [
-                _c("div", { staticClass: "clear" }),
-                _vm._v(" "),
-                _c("h2", { staticClass: "free big" }, [_vm._v("About")]),
-                _vm._v(" "),
-                _c("p", { staticClass: "interview_p" }, [
-                  _vm._v(
-                    "1992年生、和歌山県出身。5年勤めた部品商社を退職後、飲食未経験からミュージック&ゲームバーをオープン。\n                  店舗経営を行いながらクリエイターとしても活動し、現在は写真撮影と映像制作を中心に活動中。\n                  また、社会人のうつ病を防ぐための活動として500人規模のコミュニティ運営も行う"
-                  )
-                ])
+                _c("div", { staticClass: "clear" })
               ]),
               _vm._v(" "),
               _c("h2", { staticClass: "free big" }, [_vm._v("Career")]),
@@ -22224,10 +22264,24 @@ module.exports = "/images/file_wh.png?2b322cb6ec096e282c7bf0a56e56f70f";
 
 /***/ }),
 
+/***/ "./resources/js/assets/icon/instagram.png":
+/***/ (function(module, exports) {
+
+module.exports = "/images/instagram.png?856881df03a43ba9712612fb9ca89098";
+
+/***/ }),
+
 /***/ "./resources/js/assets/icon/mic_wh.png":
 /***/ (function(module, exports) {
 
 module.exports = "/images/mic_wh.png?28edded4d55cd6aa99df3935bff60f8e";
+
+/***/ }),
+
+/***/ "./resources/js/assets/icon/twitter.png":
+/***/ (function(module, exports) {
+
+module.exports = "/images/twitter.png?963f0d7e0a0703fb67ae34fba7f7be8a";
 
 /***/ }),
 
