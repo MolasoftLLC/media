@@ -455,9 +455,20 @@ body {
   text-align: center;
 }
 
+.tag_grid a {
+  color: #64b7e3;
+}
+
 .tag_serch {
   text-align: center;
   color: #64b7e3;
+  margin: 82px auto;
+  padding-top: 2px;
+  width: 200px;
+  -webkit-transform: skewX(150deg);
+  transform: skewX(150deg);
+  border-right: 2px solid #64b7e3;
+  border-left: 2px solid #64b7e3;
 }
 
 .grid {
@@ -475,7 +486,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   color: #fefefe;
-  background: #3e84a8;
+  background: #064869;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1284,7 +1295,17 @@ li.talk_event {
 p.talk_event {
   margin-top: 8px;
   line-height: 1.8em;
-  padding: 42px 42px 0px;
+  padding: 12px 112px 0px;
+  color: #64b7e3;
+}
+
+h2.talk_event {
+  font-size: 1.2em;
+  color: #1d7eb1;
+  font-weight: bold;
+  border-bottom: solid 1px #1d7eb1;
+  margin: 82px 112px 0px;
+  text-align: center;
 }
 
 h2.talk {

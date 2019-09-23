@@ -69,9 +69,20 @@ body{
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   color: #64b7e3;
   text-align: center;
+  a{
+    color: #64b7e3;
+  }
 }
 
 .tag_serch{
   text-align: center;
   color: #64b7e3;
+  margin: 82px auto;
+  padding-top: 2px;
+  width: 200px;
+  -webkit-transform: skewX(150deg);
+-moz-transform: skewX(150deg);
+transform: skewX(150deg);
+border-right: 2px solid #64b7e3;
+border-left: 2px solid #64b7e3;
 }

@@ -65,11 +65,11 @@
   <div class="clear"></div>
   　<p class="tag_serch">タグで絞り込む</p>
 　  <ul class="tag_grid">
-      <li>サービス業</li>
-      <li>店舗運営</li>
-      <li>クリエイティブ</li>
-      <li>テクノロジー</li>
-      <li>その他</li>
+      <li><a href="">サービス業</a></li>
+      <li><a href="">店舗運営</a></li>
+      <li><a href="">クリエイティブ</a></li>
+      <li><a href="">テクノロジー</a></li>
+      <li><a href="">その他</a></li>
     </ul>
 </div>
 

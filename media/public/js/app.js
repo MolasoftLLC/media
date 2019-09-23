@@ -2449,77 +2449,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -5316,15 +5245,15 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("ul", { staticClass: "tag_grid" }, [
-      _c("li", [_vm._v("サービス業")]),
+      _c("li", [_c("a", { attrs: { href: "" } }, [_vm._v("サービス業")])]),
       _vm._v(" "),
-      _c("li", [_vm._v("店舗運営")]),
+      _c("li", [_c("a", { attrs: { href: "" } }, [_vm._v("店舗運営")])]),
       _vm._v(" "),
-      _c("li", [_vm._v("クリエイティブ")]),
+      _c("li", [_c("a", { attrs: { href: "" } }, [_vm._v("クリエイティブ")])]),
       _vm._v(" "),
-      _c("li", [_vm._v("テクノロジー")]),
+      _c("li", [_c("a", { attrs: { href: "" } }, [_vm._v("テクノロジー")])]),
       _vm._v(" "),
-      _c("li", [_vm._v("その他")])
+      _c("li", [_c("a", { attrs: { href: "" } }, [_vm._v("その他")])])
     ])
   },
   function() {
@@ -5570,344 +5499,114 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "container", attrs: { id: "app" } }, [
-    _vm._m(0),
-    _vm._v(" "),
-    _c("a", { attrs: { name: "session" } }),
-    _vm._v(" "),
-    _c("div", { staticClass: "header_adjust" }),
-    _vm._v(" "),
-    _vm._m(1),
-    _vm._v(" "),
-    _c("ul", { staticClass: "tab" }, [
-      _c(
-        "li",
-        {
-          staticClass: "tab__item",
-          class: { "tab__item--active": _vm.tab === 1 },
-          on: {
-            click: function($event) {
-              _vm.tab = 1
-            }
-          }
-        },
-        [_vm._v("直近開催")]
-      ),
-      _vm._v(" "),
-      _c(
-        "li",
-        {
-          staticClass: "tab__item",
-          class: { "tab__item--active": _vm.tab === 2 },
-          on: {
-            click: function($event) {
-              _vm.tab = 2
-            }
-          }
-        },
-        [_vm._v("2019.8")]
-      ),
-      _vm._v(" "),
-      _c(
-        "li",
-        {
-          staticClass: "tab__item",
-          class: { "tab__item--active": _vm.tab === 3 },
-          on: {
-            click: function($event) {
-              _vm.tab = 3
-            }
-          }
-        },
-        [_vm._v("2019.7")]
-      )
-    ]),
-    _vm._v(" "),
-    _c(
-      "div",
-      {
-        directives: [
-          {
-            name: "show",
-            rawName: "v-show",
-            value: _vm.tab === 1,
-            expression: "tab === 1"
-          }
-        ],
-        staticClass: "panel"
-      },
-      [
-        _c("h2", { staticClass: "talk" }, [
-          _vm._v(
-            "Freelance Talk Session Kansai -フリーで働くライフスタイル- Vol.1"
-          )
-        ]),
-        _vm._v(" "),
-        _vm._m(2),
-        _vm._v(" "),
-        _c("h2", { staticClass: "speaker" }, [_vm._v("今回の登壇予定者")]),
-        _vm._v(" "),
-        _vm._m(3),
-        _vm._v(" "),
-        _vm._m(4),
-        _vm._v(" "),
-        _vm._m(5),
-        _vm._v(" "),
-        _c("div", { staticClass: "clear" }),
-        _vm._v(" "),
-        _c(
-          "p",
-          {
-            staticClass: "talk_event",
-            staticStyle: { "padding-top": "112px" }
-          },
-          [
-            _vm._v(
-              "働き方に迷っている方や、何かしたいけど踏み出せない方のきっかけ作りになればと思い、\n今現在関西で活動しているフリーランサーの生活やバックグラウンドなどを知ることができる座談会を企画しました。"
-            )
-          ]
-        ),
-        _vm._v(" "),
-        _c("p", { staticClass: "talk_event" }, [
-          _vm._v(
-            " フリーランスに憧れているあなたや、働き方を変えようと思っているあなた。\n「雇われずに働く」という新時代のライフスタイルの実現に向けて、\nまずはフリーランスで活躍されている方のリアルの声に耳を傾けてみませんか。"
-          )
-        ])
-      ]
-    ),
-    _vm._v(" "),
-    _c(
-      "div",
-      {
-        directives: [
-          {
-            name: "show",
-            rawName: "v-show",
-            value: _vm.tab === 2,
-            expression: "tab === 2"
-          }
-        ],
-        staticClass: "panel"
-      },
-      [
-        _c("h1", { staticClass: "free" }, [_vm._v("comming soon")]),
-        _vm._v(" "),
-        _c("p", [_vm._v("8/24 12:00~13:00@関西大学梅田キャンパス")]),
-        _vm._v(" "),
-        _c("div", { staticClass: "clear" })
-      ]
-    ),
-    _vm._v(" "),
-    _c(
-      "div",
-      {
-        directives: [
-          {
-            name: "show",
-            rawName: "v-show",
-            value: _vm.tab === 3,
-            expression: "tab === 3"
-          }
-        ],
-        staticClass: "panel"
-      },
-      [
-        _vm._m(6),
-        _vm._v(" "),
-        _vm._m(7),
-        _vm._v(" "),
-        _vm._m(8),
-        _vm._v(" "),
-        _c("div", { staticClass: "clear" })
-      ]
-    ),
-    _vm._v(" "),
-    _vm._m(9)
-  ])
+  return _vm._m(0)
 }
 var staticRenderFns = [
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "container_crip" }, [
-      _c("img", { attrs: { src: __webpack_require__("./resources/js/assets/etc/clip.png"), alt: "" } })
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("h1", { staticClass: "free" }, [
-      _vm._v("Talk session"),
-      _c("span", { staticStyle: { "font-size": "0.3em" } }, [
-        _vm._v("　フリーランサー・起業家の生の声を聴く")
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("ul", { staticClass: "talk_event" }, [
-      _c("li", { staticClass: "talk_event" }, [
-        _vm._v("2019年7月27日 12:00~13:00")
+    return _c("div", { staticClass: "container", attrs: { id: "app" } }, [
+      _c("div", { staticClass: "container_crip" }, [
+        _c("img", {
+          attrs: { src: __webpack_require__("./resources/js/assets/etc/clip.png"), alt: "" }
+        })
       ]),
       _vm._v(" "),
-      _c("li", { staticClass: "talk_event" }, [
-        _vm._v("関西大学梅田キャンパス スタートアップカフェ大阪")
-      ]),
+      _c("a", { attrs: { name: "session" } }),
+      _vm._v(" "),
+      _c("div", { staticClass: "header_adjust" }),
+      _vm._v(" "),
+      _c("h1", { staticClass: "free" }, [_vm._v("Talk session")]),
       _vm._v(" "),
       _c(
-        "li",
+        "p",
+        { staticClass: "free", staticStyle: { "padding-bottom": "12px" } },
+        [_vm._v("フリーランサー・起業家の生の声を聴く")]
+      ),
+      _vm._v(" "),
+      _c("img", {
+        attrs: { src: __webpack_require__("./resources/js/assets/etc/Freelancesession.jpg"), alt: "" }
+      }),
+      _vm._v(" "),
+      _c(
+        "div",
         {
-          staticClass: "talk_event session_entry",
-          staticStyle: { "margin-top": "64px" }
+          staticStyle: { width: "180px", margin: "32px auto", display: "block" }
         },
         [
           _c(
-            "a",
-            {
-              staticStyle: { "text-decoration": "none", color: "#fefefe" },
-              attrs: { href: "https://0727-2.peatix.com/", target: "blank" }
-            },
-            [_vm._v("お申込みはこちらより")]
-          )
+            "p",
+            { staticStyle: { "text-align": "center", padding: "24px" } },
+            [_vm._v("協賛・協力")]
+          ),
+          _vm._v(" "),
+          _c("img", {
+            staticStyle: { "padding-right": "24px" },
+            attrs: {
+              src: __webpack_require__("./resources/js/assets/etc/startupcafe.png"),
+              width: "100%"
+            }
+          })
         ]
-      )
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "news_img" }, [
-      _c("img", {
-        attrs: { src: __webpack_require__("./resources/js/assets/person/kenta.jpg"), width: "100%" }
-      }),
+      ),
       _vm._v(" "),
-      _c("p", { staticClass: "on_name" }, [_vm._v("Kenta Kitanaka")]),
+      _c("h2", { staticClass: "talk_event" }, [
+        _vm._v("毎月大阪で開催されるフリーランサーと直接話せる企画")
+      ]),
       _vm._v(" "),
-      _c("p", { staticClass: "on_category" }, [_vm._v("ミュージックバー運営")]),
+      _c("p", { staticClass: "talk_event" }, [
+        _vm._v(
+          "働き方に迷っている方や、何かしたいけど踏み出せない方のきっかけ作りになればと思い、\n      今現在関西で活動しているフリーランサーの生活やバックグラウンドなどを知ることができる座談会を企画しました。"
+        )
+      ]),
       _vm._v(" "),
-      _c("p", { staticClass: "ontext" }, [
-        _vm._v("コミュ二ティの運営で鬱病の無い社会を目指す。")
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "news_img" }, [
-      _c("img", {
-        attrs: { src: __webpack_require__("./resources/js/assets/person/mukae.jpg"), width: "100%" }
-      }),
+      _c("h2", { staticClass: "talk_event" }, [
+        _vm._v("多種多様な働き方を知り、新しいきっかけを。")
+      ]),
       _vm._v(" "),
-      _c("p", { staticClass: "on_name" }, [_vm._v("Seigo Mukae")]),
+      _c("p", { staticClass: "talk_event" }, [
+        _vm._v(
+          " フリーランスに憧れているあなたや、働き方を変えようと思っているあなた。\n      「雇われずに働く」という新時代のライフスタイルの実現に向けて、\n      まずはフリーランスで活躍されている方のリアルの声に耳を傾けてみませんか。"
+        )
+      ]),
       _vm._v(" "),
-      _c("p", { staticClass: "on_category" }, [_vm._v("イベントプランナー")]),
-      _vm._v(" "),
-      _c("p", { staticClass: "ontext" }, [
-        _vm._v("楽しいことは探さず、作る派。")
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "news_img" }, [
-      _c("img", {
-        attrs: { src: __webpack_require__("./resources/js/assets/person/yukigao.jpg"), width: "100%" }
-      }),
-      _vm._v(" "),
-      _c("p", { staticClass: "on_name" }, [_vm._v("Yukigao")]),
-      _vm._v(" "),
-      _c("p", { staticClass: "on_category" }, [_vm._v("陶芸家")]),
-      _vm._v(" "),
-      _c("p", { staticClass: "ontext" }, [
-        _vm._v("29歳で会社員を辞めて陶芸の道へ。")
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "news_img" }, [
-      _c("img", {
-        attrs: { src: __webpack_require__("./resources/js/assets/person/kenta.jpg"), width: "100%" }
-      }),
-      _vm._v(" "),
-      _c("p", { staticClass: "on_name" }, [_vm._v("Kenta Kitanaka")]),
-      _vm._v(" "),
-      _c("p", { staticClass: "on_category" }, [_vm._v("ミュージックバー運営")]),
-      _vm._v(" "),
-      _c("p", { staticClass: "ontext" }, [
-        _vm._v("コミュ二ティの運営で鬱病の無い社会を目指す。")
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "news_img" }, [
-      _c("img", {
-        attrs: { src: __webpack_require__("./resources/js/assets/person/mukae.jpg"), width: "100%" }
-      }),
-      _vm._v(" "),
-      _c("p", { staticClass: "on_name" }, [_vm._v("Seigo Mukae")]),
-      _vm._v(" "),
-      _c("p", { staticClass: "on_category" }, [_vm._v("イベントプランナー")]),
-      _vm._v(" "),
-      _c("p", { staticClass: "ontext" }, [
-        _vm._v("楽しいことは探さず、作る派。")
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "news_img" }, [
-      _c("img", {
-        attrs: { src: __webpack_require__("./resources/js/assets/person/yukigao.jpg"), width: "100%" }
-      }),
-      _vm._v(" "),
-      _c("p", { staticClass: "on_name" }, [_vm._v("Yukigao")]),
-      _vm._v(" "),
-      _c("p", { staticClass: "on_category" }, [_vm._v("陶芸家")]),
-      _vm._v(" "),
-      _c("p", { staticClass: "ontext" }, [
-        _vm._v("29歳で会社員を辞めて陶芸の道へ。")
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      {
-        staticStyle: { width: "180px", margin: "32px auto", display: "block" }
-      },
-      [
-        _c("p", { staticStyle: { "text-align": "center", padding: "24px" } }, [
-          _vm._v("協賛・協力")
+      _c("div", { staticClass: "panel" }, [
+        _c("h2", { staticClass: "talk" }, [
+          _vm._v(
+            "Freelance Talk Session Kansai -フリーで働くライフスタイル- Vol.1"
+          )
         ]),
         _vm._v(" "),
-        _c("img", {
-          staticStyle: { "padding-right": "24px" },
-          attrs: {
-            src: __webpack_require__("./resources/js/assets/etc/startupcafe.png"),
-            width: "100%"
-          }
-        })
-      ]
-    )
+        _c("ul", { staticClass: "talk_event" }, [
+          _c("li", { staticClass: "talk_event" }, [
+            _vm._v("2019年7月27日 12:00~13:00")
+          ]),
+          _vm._v(" "),
+          _c("li", { staticClass: "talk_event" }, [
+            _vm._v("関西大学梅田キャンパス スタートアップカフェ大阪")
+          ]),
+          _vm._v(" "),
+          _c(
+            "li",
+            {
+              staticClass: "talk_event session_entry",
+              staticStyle: { "margin-top": "64px" }
+            },
+            [
+              _c(
+                "a",
+                {
+                  staticStyle: { "text-decoration": "none", color: "#fefefe" },
+                  attrs: { href: "https://0727-2.peatix.com/", target: "blank" }
+                },
+                [_vm._v("お申込みはこちらより")]
+              )
+            ]
+          )
+        ])
+      ])
+    ])
   }
 ]
 render._withStripped = true
@@ -22285,6 +21984,13 @@ var createApp = function () {
 }();
 
 createApp();
+
+/***/ }),
+
+/***/ "./resources/js/assets/etc/Freelancesession.jpg":
+/***/ (function(module, exports) {
+
+module.exports = "/images/Freelancesession.jpg?c00afcbbfd88bfdab0dbfc07eb0f8783";
 
 /***/ }),
 
