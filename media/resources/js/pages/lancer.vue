@@ -13,8 +13,19 @@
                 <p class="desc">{{ profile.about }}
                 </p>
                 <div class="in">
-                    <p><a href="#">{{ profile.title }}</a></p>
-                    <p><a href="#">{{ profile.title }}</a></p>
+                    <p><a href="#">{{ profile.content }}</a></p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="box">
+            <p>Scroll</p> 
+            <div class="arrowWrap">
+                <div class="arrow1">
+                    <span></span>
+                </div>
+                <div class="arrow2">
+                    <span></span>
                 </div>
             </div>
         </div>
@@ -31,6 +42,7 @@
                 <div class="movie">
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/kZj0mYHnhlw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
+                <p class="evis">撮影・編集：Studio EVIS <a href="https://studio-evis.net" target="blank">公式HP</a></p>
                 <div class="interview_talk">
                     <h2 class="question">北中さんはなぜこの事業を始めようと思ったんですか？</h2>
                     <p class="answer">北中：おで…、、お…、、お…、、お…、、お…、、お…、、</p>
@@ -64,18 +76,17 @@
                         {{ lancer.content }}
                     </p>
                 </div> -->
-             <h2 class="free big">Interviewer</h2>
-            <section class="interviewer">
-                
-                <div class="interview_container">
-                    <img src="../assets/person/kenta.jpg" alt="">
-                    <div>
-                        <p>記事の作者</p>
-                        <p>記事を書いている人の情報を載せます</p>
-                    </div>
-                </div>
-            </section>
+       
             </div>
+         <section class="interviewer">
+            <div class="interview_container">
+                <img src="../assets/person/kenta.jpg" alt="">
+                <div class="interview_desc">
+                    <p>記事の作者</p>
+                    <p>記事を書いている人の情報を載せます</p>
+                </div>
+            </div>
+        </section>
         
         </section>
         

@@ -17,7 +17,7 @@ class LancerSeeder extends Seeder
             'tags' => 'プロレスラー、総合格闘技',
             'img' => 'mukae.jpg',
             'about' => '試合中に何度もレフリーに対して「よ 滑るよ!掴めないよ!」と抗議する も、レフリーは無視。',
-            'content' => '000',
+            'content' => 'サービス業',
             'title' => '111'
         ]);
         $lancer->save();
@@ -29,7 +29,7 @@ class LancerSeeder extends Seeder
             'tags' => '陶芸家',
             'img' => 'yukigao.jpg',
             'about' => '29歳で会社員を辞めて陶芸の道へ。人 のぬくもりがこもった器で、お客様の 生活を温めたい。',
-            'content' => '000',
+            'content' => 'サービス業',
             'title' => '111'
         ]);
         $lancer->save();
@@ -42,7 +42,7 @@ class LancerSeeder extends Seeder
             'img' => 'kenta.jpg',
             'about' => '楽しいことは探さず作る派。諦めたら
             そこで試合終了ですよね。',
-            'content' => '000',
+            'content' => '店舗運営',
             'title' => '111'
         ]);
         $lancer->save();

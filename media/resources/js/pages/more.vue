@@ -24,10 +24,7 @@
                 <img :src="'/images/'+lancer.img" width="100%" />
                 <p class="read_more">Read more</p>
             </RouterLink>
-
-          <p class="on_name">{{ lancer.name }}</p>
-          <p class="on_category">{{ lancer.tags }}</p>
-          <p class="ontext">{{ lancer.about }}</p>
+          <p class="ontext">{{ lancer.tags }}</p>
         </div>
         </div>
         <div v-if="id===2||id===5" class="clear"></div>

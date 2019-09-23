@@ -1,11 +1,6 @@
-<template>
-  <footer class="footer">
-<button v-if="isLogin" class="button button--link" @click="logout">
-  Logout
-</button>
-<RouterLink v-else class="button button--link" to="/login">
-  Login / Register
-</RouterLink>
+<template v-cloak>
+  <footer class="footer" style="color:#fefefe;">
+  LanceClip
   </footer>
 </template>
 

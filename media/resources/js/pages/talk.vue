@@ -1,5 +1,7 @@
 <template>
   <div id="app" class="container">
+    <div class="container_crip"><img src="../assets/etc/clip.png" alt=""></div>
+    
     <a name="session" ></a>
     <div class="header_adjust"></div>
   <h1 class="free">Talk session<span style="font-size:0.3em;">　フリーランサー・起業家の生の声を聴く</span></h1>

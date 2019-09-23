@@ -1,10 +1,11 @@
 <style>
 
 .v-enter-active, .v-leave-active {
-  transition: opacity .3s;
+  transition: all .5s ease;
 }
 .v-enter, .v-leave-to {
   opacity: 0;
+  transform: translateY(30px);
 }
 
 </style>

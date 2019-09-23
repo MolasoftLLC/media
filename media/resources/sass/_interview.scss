@@ -73,29 +73,19 @@ p.read_more{
 
 .news_img img:hover + p.read_more{opacity: 1;}
 
-.on_category{
-
-  position: absolute;
-  bottom: 88px;
-  right: 4px;
-  background:  #d47615;
-  display: block;
-  width: 44%;
-  color: #fefefe;
-  font-weight: bold;
-  line-height: 2em;
+h1.free{
+  font-family: 'Caveat', cursive; 
+  color: #80c9f0;
   text-align: center;
-  z-index: 1;
-  white-space: nowrap; /* 横幅のMAXに達しても改行しない */
-  overflow: hidden; /* ハミ出した部分を隠す */
-  text-overflow: ellipsis; /* 「…」と省略 */
-  -webkit-text-overflow: ellipsis; /* Safari */
-  -o-text-overflow: ellipsis; /* Opera */
-
-
+  padding-top: 62px;
 }
 
-h1.free{font-family: 'Caveat', cursive; }
+p.free{
+  color: #80c9f0;
+  text-align: center;
+  font-size: 0.8em;
+  padding-bottom: 62px;
+}
 
 ul.talk_event{margin: 84px 0px 52px;}
 li.talk_event{margin-top: 32px; font-size: 1.1em;}
@@ -202,13 +192,18 @@ h2.speaker{font-size: 1.4em; font-weight: bold; text-align: center; padding: 32p
 }
 
 .interviewer{
-  max-width: 600px;
+  max-width: 990px;
   margin: 0 auto;
+  padding:16px;
+  background-color: #f3f3f3;
+  margin-top: 120px;
   
 
 }
 
 .interview_container{
+  max-width: 600px;
+  margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 2fr;
 }
@@ -217,6 +212,9 @@ h2.speaker{font-size: 1.4em; font-weight: bold; text-align: center; padding: 32p
   max-height: 140px;
   object-fit: cover;
 
+}
+.interview_desc{
+  padding-top: 12px;
 }
 
 .movie{

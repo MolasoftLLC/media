@@ -1638,6 +1638,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
 
 
 
@@ -1671,11 +1672,6 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
 
 function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, arguments); return new Promise(function (resolve, reject) { function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { return Promise.resolve(value).then(function (value) { step("next", value); }, function (err) { step("throw", err); }); } } return step("next"); }); }; }
 
-//
-//
-//
-//
-//
 //
 //
 //
@@ -2241,6 +2237,17 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -2366,9 +2373,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     mounted: function mounted() {
@@ -2403,6 +2407,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
 //
 //
 //
@@ -2664,19 +2670,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     mounted: function mounted() {
@@ -2733,7 +2726,7 @@ exports = module.exports = __webpack_require__("./node_modules/css-loader/lib/cs
 
 
 // module
-exports.push([module.i, "\n.v-enter-active, .v-leave-active {\n  -webkit-transition: opacity .3s;\n  transition: opacity .3s;\n}\n.v-enter, .v-leave-to {\n  opacity: 0;\n}\n\n", ""]);
+exports.push([module.i, "\n.v-enter-active, .v-leave-active {\n  -webkit-transition: all .5s ease;\n  transition: all .5s ease;\n}\n.v-enter, .v-leave-to {\n  opacity: 0;\n  -webkit-transform: translateY(30px);\n          transform: translateY(30px);\n}\n\n", ""]);
 
 // exports
 
@@ -4404,27 +4397,37 @@ var render = function() {
               _c("div", { staticClass: "in" }, [
                 _c("p", [
                   _c("a", { attrs: { href: "#" } }, [
-                    _vm._v(_vm._s(profile.title))
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("p", [
-                  _c("a", { attrs: { href: "#" } }, [
-                    _vm._v(_vm._s(profile.title))
+                    _vm._v(_vm._s(profile.content))
                   ])
                 ])
               ])
             ])
-          ])
+          ]),
+          _vm._v(" "),
+          _vm._m(0, true)
         ]),
         _vm._v(" "),
-        _vm._m(0, true)
+        _vm._m(1, true)
       ])
     }),
     0
   )
 }
 var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "box" }, [
+      _c("p", [_vm._v("Scroll")]),
+      _vm._v(" "),
+      _c("div", { staticClass: "arrowWrap" }, [
+        _c("div", { staticClass: "arrow1" }, [_c("span")]),
+        _vm._v(" "),
+        _c("div", { staticClass: "arrow2" }, [_c("span")])
+      ])
+    ])
+  },
   function() {
     var _vm = this
     var _h = _vm.$createElement
@@ -4455,6 +4458,15 @@ var staticRenderFns = [
                   allowfullscreen: ""
                 }
               })
+            ]),
+            _vm._v(" "),
+            _c("p", { staticClass: "evis" }, [
+              _vm._v("撮影・編集：Studio EVIS "),
+              _c(
+                "a",
+                { attrs: { href: "https://studio-evis.net", target: "blank" } },
+                [_vm._v("公式HP")]
+              )
             ]),
             _vm._v(" "),
             _c("div", { staticClass: "interview_talk" }, [
@@ -4501,21 +4513,19 @@ var staticRenderFns = [
               _c("img", {
                 attrs: { src: __webpack_require__("./resources/js/assets/etc/sce.png"), alt: "" }
               })
-            ]),
-            _vm._v(" "),
-            _c("h2", { staticClass: "free big" }, [_vm._v("Interviewer")]),
-            _vm._v(" "),
-            _c("section", { staticClass: "interviewer" }, [
-              _c("div", { staticClass: "interview_container" }, [
-                _c("img", {
-                  attrs: { src: __webpack_require__("./resources/js/assets/person/kenta.jpg"), alt: "" }
-                }),
+            ])
+          ]),
+          _vm._v(" "),
+          _c("section", { staticClass: "interviewer" }, [
+            _c("div", { staticClass: "interview_container" }, [
+              _c("img", {
+                attrs: { src: __webpack_require__("./resources/js/assets/person/kenta.jpg"), alt: "" }
+              }),
+              _vm._v(" "),
+              _c("div", { staticClass: "interview_desc" }, [
+                _c("p", [_vm._v("記事の作者")]),
                 _vm._v(" "),
-                _c("div", [
-                  _c("p", [_vm._v("記事の作者")]),
-                  _vm._v(" "),
-                  _c("p", [_vm._v("記事を書いている人の情報を載せます")])
-                ])
+                _c("p", [_vm._v("記事を書いている人の情報を載せます")])
               ])
             ])
           ])
@@ -5039,21 +5049,8 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "footer",
-    { staticClass: "footer" },
-    [
-      _vm.isLogin
-        ? _c(
-            "button",
-            { staticClass: "button button--link", on: { click: _vm.logout } },
-            [_vm._v("\n  Logout\n")]
-          )
-        : _c(
-            "RouterLink",
-            { staticClass: "button button--link", attrs: { to: "/login" } },
-            [_vm._v("\n  Login / Register\n")]
-          )
-    ],
-    1
+    { staticClass: "footer", staticStyle: { color: "#fefefe" } },
+    [_vm._v("\nLanceClip\n")]
   )
 }
 var staticRenderFns = []
@@ -5079,83 +5076,21 @@ var render = function() {
     _vm._m(0),
     _vm._v(" "),
     _c("div", { staticClass: "container", attrs: { id: "app" } }, [
+      _vm._m(1),
+      _vm._v(" "),
+      _vm._m(2),
+      _vm._v(" "),
+      _vm._m(3),
+      _vm._v(" "),
       _c("a", { attrs: { name: "interview" } }),
       _vm._v(" "),
       _c("div", { staticClass: "header_adjust" }),
       _vm._v(" "),
-      _c("h1", { staticClass: "free" }, [_vm._v("Freelance Intaview")]),
+      _c("h1", { staticClass: "free" }, [_vm._v("Freelance Interview")]),
       _vm._v(" "),
-      _c("ul", { staticClass: "tab" }, [
-        _c(
-          "li",
-          {
-            staticClass: "tab__item",
-            class: { "tab__item--active": _vm.tab === 1 },
-            on: {
-              click: function($event) {
-                _vm.tab = 1
-              }
-            }
-          },
-          [_vm._v("最新記事")]
-        ),
-        _vm._v(" "),
-        _c(
-          "li",
-          {
-            staticClass: "tab__item",
-            class: { "tab__item--active": _vm.tab === 2 },
-            on: {
-              click: function($event) {
-                _vm.tab = 2
-              }
-            }
-          },
-          [_vm._v("IT系")]
-        ),
-        _vm._v(" "),
-        _c(
-          "li",
-          {
-            staticClass: "tab__item",
-            class: { "tab__item--active": _vm.tab === 3 },
-            on: {
-              click: function($event) {
-                _vm.tab = 3
-              }
-            }
-          },
-          [_vm._v("クリエイティブ系")]
-        ),
-        _vm._v(" "),
-        _c(
-          "li",
-          {
-            staticClass: "tab__item",
-            class: { "tab__item--active": _vm.tab === 4 },
-            on: {
-              click: function($event) {
-                _vm.tab = 4
-              }
-            }
-          },
-          [_vm._v("店舗運営")]
-        ),
-        _vm._v(" "),
-        _c(
-          "li",
-          {
-            staticClass: "tab__item",
-            class: { "tab__item--active": _vm.tab === 5 },
-            on: {
-              click: function($event) {
-                _vm.tab = 5
-              }
-            }
-          },
-          [_vm._v("その他サービス")]
-        )
-      ]),
+      _c("p", { staticClass: "free" }, [_vm._v("多種多様な生き方を知る")]),
+      _vm._v(" "),
+      _c("img", { attrs: { src: __webpack_require__("./resources/js/assets/etc/nami.png"), alt: "" } }),
       _vm._v(" "),
       _c(
         "div",
@@ -5179,25 +5114,14 @@ var render = function() {
                 [
                   _c("RouterLink", { attrs: { to: "/lancer/" + lancer.id } }, [
                     _c("img", {
-                      attrs: {
-                        src: __webpack_require__("./resources/js/assets/person/kenta.jpg"),
-                        width: "100%"
-                      }
+                      attrs: { src: "/images/" + lancer.img, width: "100%" }
                     }),
                     _vm._v(" "),
                     _c("p", { staticClass: "read_more" }, [_vm._v("Read more")])
                   ]),
                   _vm._v(" "),
-                  _c("p", { staticClass: "on_name" }, [
-                    _vm._v(_vm._s(lancer.title))
-                  ]),
-                  _vm._v(" "),
-                  _c("p", { staticClass: "on_category" }, [
-                    _vm._v(_vm._s(lancer.content))
-                  ]),
-                  _vm._v(" "),
                   _c("p", { staticClass: "ontext" }, [
-                    _vm._v("コミュ二ティの運営で鬱病の無い社会を目指す。")
+                    _vm._v(_vm._s(lancer.tags))
                   ])
                 ],
                 1
@@ -5280,7 +5204,7 @@ var render = function() {
           ],
           staticClass: "panel"
         },
-        [_vm._m(1), _vm._v(" "), _c("div", { staticClass: "clear" })]
+        [_vm._m(4), _vm._v(" "), _c("div", { staticClass: "clear" })]
       ),
       _vm._v(" "),
       _c(
@@ -5296,7 +5220,7 @@ var render = function() {
           ],
           staticClass: "panel"
         },
-        [_vm._m(2), _vm._v(" "), _c("div", { staticClass: "clear" })]
+        [_vm._m(5), _vm._v(" "), _c("div", { staticClass: "clear" })]
       ),
       _vm._v(" "),
       _c(
@@ -5312,7 +5236,7 @@ var render = function() {
           ],
           staticClass: "panel"
         },
-        [_vm._m(3), _vm._v(" "), _c("div", { staticClass: "clear" })]
+        [_vm._m(6), _vm._v(" "), _c("div", { staticClass: "clear" })]
       )
     ])
   ])
@@ -5331,7 +5255,49 @@ var staticRenderFns = [
       _c("img", {
         staticClass: "mainimg_on",
         attrs: { src: __webpack_require__("./resources/js/assets/etc/logo.png") }
-      })
+      }),
+      _vm._v(" "),
+      _c("h1", { staticClass: "main_catch" }, [
+        _vm._v("関西のフリーランスを見つけるメディアサイト")
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "box" }, [
+        _c("p", [_vm._v("Scroll")]),
+        _vm._v(" "),
+        _c("div", { staticClass: "arrowWrap" }, [
+          _c("div", { staticClass: "arrow1" }, [_c("span")]),
+          _vm._v(" "),
+          _c("div", { staticClass: "arrow2" }, [_c("span")])
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "container_crip" }, [
+      _c("img", { attrs: { src: __webpack_require__("./resources/js/assets/etc/clip.png"), alt: "" } })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "more_left" }, [
+      _c("span", [_vm._v("◀︎")]),
+      _c("br"),
+      _vm._v("more")
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "more_right" }, [
+      _c("span", [_vm._v("▶︎")]),
+      _c("br"),
+      _vm._v("more")
     ])
   },
   function() {
@@ -5524,16 +5490,8 @@ var render = function() {
                             ]
                           ),
                           _vm._v(" "),
-                          _c("p", { staticClass: "on_name" }, [
-                            _vm._v(_vm._s(lancer.name))
-                          ]),
-                          _vm._v(" "),
-                          _c("p", { staticClass: "on_category" }, [
-                            _vm._v(_vm._s(lancer.tags))
-                          ]),
-                          _vm._v(" "),
                           _c("p", { staticClass: "ontext" }, [
-                            _vm._v(_vm._s(lancer.about))
+                            _vm._v(_vm._s(lancer.tags))
                           ])
                         ],
                         1
@@ -5586,11 +5544,13 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "container", attrs: { id: "app" } }, [
+    _vm._m(0),
+    _vm._v(" "),
     _c("a", { attrs: { name: "session" } }),
     _vm._v(" "),
     _c("div", { staticClass: "header_adjust" }),
     _vm._v(" "),
-    _vm._m(0),
+    _vm._m(1),
     _vm._v(" "),
     _c("ul", { staticClass: "tab" }, [
       _c(
@@ -5656,15 +5616,15 @@ var render = function() {
           )
         ]),
         _vm._v(" "),
-        _vm._m(1),
+        _vm._m(2),
         _vm._v(" "),
         _c("h2", { staticClass: "speaker" }, [_vm._v("今回の登壇予定者")]),
-        _vm._v(" "),
-        _vm._m(2),
         _vm._v(" "),
         _vm._m(3),
         _vm._v(" "),
         _vm._m(4),
+        _vm._v(" "),
+        _vm._m(5),
         _vm._v(" "),
         _c("div", { staticClass: "clear" }),
         _vm._v(" "),
@@ -5725,20 +5685,28 @@ var render = function() {
         staticClass: "panel"
       },
       [
-        _vm._m(5),
-        _vm._v(" "),
         _vm._m(6),
         _vm._v(" "),
         _vm._m(7),
+        _vm._v(" "),
+        _vm._m(8),
         _vm._v(" "),
         _c("div", { staticClass: "clear" })
       ]
     ),
     _vm._v(" "),
-    _vm._m(8)
+    _vm._m(9)
   ])
 }
 var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "container_crip" }, [
+      _c("img", { attrs: { src: __webpack_require__("./resources/js/assets/etc/clip.png"), alt: "" } })
+    ])
+  },
   function() {
     var _vm = this
     var _h = _vm.$createElement
@@ -22318,6 +22286,13 @@ module.exports = "/images/logo.png?736eb1c5a29e766c4faa3e251e79e377";
 /***/ (function(module, exports) {
 
 module.exports = "/images/mail.png?97bc3be8fbb783f7ff3c1f86a4b64a58";
+
+/***/ }),
+
+/***/ "./resources/js/assets/etc/nami.png":
+/***/ (function(module, exports) {
+
+module.exports = "/images/nami.png?fd96b4942dd59ccef800e75613e1debd";
 
 /***/ }),
 

@@ -3,54 +3,41 @@
     <div class="mainimg_container" style="">
     <img class="mainimg" src="../assets/etc/lance_main.jpg" />
     <img class="mainimg_on" src="../assets/etc/logo.png" />
+    <h1 class="main_catch">関西のフリーランスを見つけるメディアサイト</h1>
+          <div class="box">
+            <p>Scroll</p> 
+            <div class="arrowWrap">
+                <div class="arrow1">
+                    <span></span>
+                </div>
+                <div class="arrow2">
+                    <span></span>
+                </div>
+            </div>
+        </div>
   </div>
   <div id="app" class="container">
+    <div class="container_crip"><img src="../assets/etc/clip.png" alt=""></div>
+    <div class="more_left"><span>◀︎</span><br>more</div>
+    <div class="more_right"><span>▶︎</span><br>more</div>
+
        <a name="interview" ></a>
     <div class="header_adjust"></div>
  
 
-  <h1 class="free">Freelance Intaview</h1>
-      <ul class="tab">
-      <li
-        class="tab__item"
-        :class="{'tab__item--active': tab === 1 }"
-        @click="tab = 1"
-      >最新記事</li>
-      <li
-        class="tab__item"
-         :class="{'tab__item--active': tab === 2 }"
-        @click="tab = 2"
-      >IT系</li>
-      <li
-        class="tab__item"
-         :class="{'tab__item--active': tab === 3 }"
-        @click="tab = 3"
-      >クリエイティブ系</li>
-      <li
-        class="tab__item"
-         :class="{'tab__item--active': tab === 4 }"
-        @click="tab = 4"
-      >店舗運営</li>
-      <li
-        class="tab__item"
-         :class="{'tab__item--active': tab === 5 }"
-        @click="tab = 5"
-      >その他サービス</li>
-    </ul>
+  <h1 class="free">Freelance Interview</h1>
+  <p class="free">多種多様な生き方を知る</p>
+  <img src="../assets/etc/nami.png" alt="">
 
 　<div class="panel" v-show="tab === 1">
     <div v-for="(lancer, id) in lancers" v-bind:key="id">
         <div class="news_img">
       
                 <RouterLink :to="'/lancer/' + lancer.id">
-                   <img src="../assets/person/kenta.jpg" width="100%" />
+                   <img :src="'/images/'+lancer.img" width="100%" />
                    <p class="read_more">Read more</p>
                 </RouterLink>
-
-
-          <p class="on_name">{{ lancer.title }}</p>
-          <p class="on_category">{{ lancer.content }}</p>
-          <p class="ontext">コミュ二ティの運営で鬱病の無い社会を目指す。</p>
+          <p class="ontext">{{ lancer.tags }}</p>
         </div>
         <div v-if="id===2||id===5" class="clear"></div>
     </div>

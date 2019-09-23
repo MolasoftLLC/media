@@ -1,11 +1,10 @@
 body{
-  background-color: #3e84a8;
+  background-color: #64b7e3;
 }
 
 .container {
   margin: 42px auto 0;
-  max-width: 1200px;
-  padding: 3% 3% 3%;
+  padding: 3% 20% 3%;
   background-color: #fefefe;
   position: relative;
 
@@ -23,4 +22,44 @@ body{
   width:80px;
   height: 80px;
   
+
+}
+
+
+.container_husen{
+  position:absolute;
+  top:224px;
+  left:-4px;
+  width:80px;
+  height: 120px;
+  background-color: #3e84a8;
+  color: #fefefe;
+  p{
+    -moz-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+  }
+}
+
+.more_left{
+  position: absolute;
+  left: 10%;
+  top:55%;
+  text-align: center;
+  color: #64b7e3;
+  span{
+    font-size: 4em;
+  }
+}
+
+.more_right{
+  position: absolute;
+  right: 10%;
+  top:55%;
+  text-align: center;
+  color: #64b7e3;
+  span{
+    font-size: 4em;
+  }
 }
