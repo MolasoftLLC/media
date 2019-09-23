@@ -23,14 +23,12 @@
       
 
 　<div class="panel">
-  <h2 class="talk">Freelance Talk Session Kansai -フリーで働くライフスタイル- Vol.1</h2>
-  <ul class="talk_event">
-  <li  class="talk_event">2019年7月27日 12:00~13:00</li>
-  <li  class="talk_event">関西大学梅田キャンパス スタートアップカフェ大阪</li>
-  <li  class="talk_event session_entry" style="margin-top:64px;"><a href="https://0727-2.peatix.com/" target="blank" style="    text-decoration: none;
-    color: #fefefe;">お申込みはこちらより</a></li>
-
-  </ul>
+    <h2 class="talk">Freelance Talk Session Kansai -フリーで働くライフスタイル- Vol.1</h2>
+        <ul class="talk_event">
+            <li  class="talk_event">2019年7月27日 12:00~13:00</li>
+            <li  class="talk_event">関西大学梅田キャンパス スタートアップカフェ大阪</li>
+            <li  class="talk_event session_entry" style="margin-top:64px;"><a href="https://0727-2.peatix.com/" target="blank" style="    text-decoration: none;color: #fefefe;">お申込みはこちらより</a></li>
+         </ul>
 
 
 </div>
