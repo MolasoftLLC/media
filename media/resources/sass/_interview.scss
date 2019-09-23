@@ -88,7 +88,7 @@ p.free{
 }
 
 ul.talk_event{margin: 84px 0px 52px;}
-li.talk_event{margin-top: 32px;  font-size: 1.4em; text-align: center; color: #217fb2;}
+li.talk_event{margin-top: 32px;  font-size: 1.2em; text-align: center; color: #217fb2;}
 p.talk_event{margin-top: 8px; line-height: 1.8em; padding: 12px 112px 0px; color:#64b7e3;}
 h2.talk_event{font-size: 1.2em; color: #1d7eb1; font-weight: bold; border-bottom: solid 1px #1d7eb1; margin:82px 112px 0px; text-align: center;}
 h2.talk{font-size: 1.4em; font-weight: bold;}
@@ -97,10 +97,12 @@ h2.speaker{font-size: 1.4em; font-weight: bold; text-align: center; padding: 32p
 .session_entry{    text-align: center;
   line-height: 3em;
   width: 200px;
-  height: 50px;
-  background-color: #46cdcf;
+  background-color: #64b7e3;
+  border:solid 1px #fefefe;
   color: #fefefe;
   text-decoration: none;
+  border-radius: 12px;
+  font-size: 0.9em;
   margin: 82px auto 42px;}
 
 

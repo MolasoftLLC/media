@@ -30,4 +30,12 @@ class LanceController extends Controller
         return 1;
     }
 
+
+    public function speaker()
+    {
+        // $lancer = Lancer::all()->take(1);
+        // $lancer_it = Lancer::where('occupation','it')->get();
+        $speaker = Lancer::all()->take(3);
+        return $speaker;
+    }
 }

@@ -1293,7 +1293,7 @@ ul.talk_event {
 
 li.talk_event {
   margin-top: 32px;
-  font-size: 1.4em;
+  font-size: 1.2em;
   text-align: center;
   color: #217fb2;
 }
@@ -1330,10 +1330,12 @@ h2.speaker {
   text-align: center;
   line-height: 3em;
   width: 200px;
-  height: 50px;
-  background-color: #46cdcf;
+  background-color: #64b7e3;
+  border: solid 1px #fefefe;
   color: #fefefe;
   text-decoration: none;
+  border-radius: 12px;
+  font-size: 0.9em;
   margin: 82px auto 42px;
 }
 
