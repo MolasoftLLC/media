@@ -8,6 +8,11 @@
         <p class="free" style="padding-bottom: 12px;">フリーランサー・起業家の生の声を聴く</p>
 
         <img src="../assets/etc/Freelancesession.jpg" alt="">
+          <ul class="talk_event">
+            <li  class="talk_event">2019年9月29日(日) 12:30~13:30</li>
+            <li  class="talk_event">関西大学梅田キャンパス スタートアップカフェ大阪</li>
+            <li  class="talk_event session_entry" style="margin-top:64px;"><a href="https://0727-2.peatix.com/" target="blank" style="    text-decoration: none;color: #fefefe;">詳細/申込はこちらより</a></li>
+         </ul>
         <div style="width: 180px;margin: 32px auto;display: block;">
           <p style="text-align:center; padding:24px;">協賛・協力</p>
           <img src="../assets/etc/startupcafe.png" width="100%" style="padding-right: 24px;"/>
@@ -21,14 +26,6 @@
       「雇われずに働く」という新時代のライフスタイルの実現に向けて、
       まずはフリーランスで活躍されている方のリアルの声に耳を傾けてみませんか。</p>
       
-
-　<div class="panel">
-    <h2 class="talk">Freelance Talk Session Kansai -フリーで働くライフスタイル- Vol.1</h2>
-        <ul class="talk_event">
-            <li  class="talk_event">2019年7月27日 12:00~13:00</li>
-            <li  class="talk_event">関西大学梅田キャンパス スタートアップカフェ大阪</li>
-            <li  class="talk_event session_entry" style="margin-top:64px;"><a href="https://0727-2.peatix.com/" target="blank" style="    text-decoration: none;color: #fefefe;">お申込みはこちらより</a></li>
-         </ul>
 
 
 </div>

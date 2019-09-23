@@ -459,6 +459,10 @@ body {
   color: #64b7e3;
 }
 
+.tag_grid img {
+  width: 60px;
+}
+
 .tag_serch {
   text-align: center;
   color: #64b7e3;
@@ -1289,7 +1293,9 @@ ul.talk_event {
 
 li.talk_event {
   margin-top: 32px;
-  font-size: 1.1em;
+  font-size: 1.4em;
+  text-align: center;
+  color: #217fb2;
 }
 
 p.talk_event {

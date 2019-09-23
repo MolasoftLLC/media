@@ -2444,9 +2444,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -5243,15 +5240,55 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("ul", { staticClass: "tag_grid" }, [
-      _c("li", [_c("a", { attrs: { href: "" } }, [_vm._v("サービス業")])]),
+      _c("li", [
+        _c("a", { attrs: { href: "" } }, [
+          _c("img", {
+            attrs: { src: __webpack_require__("./resources/js/assets/etc/ser.png"), alt: "" }
+          }),
+          _c("br"),
+          _vm._v("サービス業")
+        ])
+      ]),
       _vm._v(" "),
-      _c("li", [_c("a", { attrs: { href: "" } }, [_vm._v("店舗運営")])]),
+      _c("li", [
+        _c("a", { attrs: { href: "" } }, [
+          _c("img", {
+            attrs: { src: __webpack_require__("./resources/js/assets/etc/shop.png"), alt: "" }
+          }),
+          _c("br"),
+          _vm._v("店舗運営")
+        ])
+      ]),
       _vm._v(" "),
-      _c("li", [_c("a", { attrs: { href: "" } }, [_vm._v("クリエイティブ")])]),
+      _c("li", [
+        _c("a", { attrs: { href: "" } }, [
+          _c("img", {
+            attrs: { src: __webpack_require__("./resources/js/assets/etc/pen.png"), alt: "" }
+          }),
+          _c("br"),
+          _vm._v("クリエイティブ")
+        ])
+      ]),
       _vm._v(" "),
-      _c("li", [_c("a", { attrs: { href: "" } }, [_vm._v("テクノロジー")])]),
+      _c("li", [
+        _c("a", { attrs: { href: "" } }, [
+          _c("img", {
+            attrs: { src: __webpack_require__("./resources/js/assets/etc/it.png"), alt: "" }
+          }),
+          _c("br"),
+          _vm._v("テクノロジー")
+        ])
+      ]),
       _vm._v(" "),
-      _c("li", [_c("a", { attrs: { href: "" } }, [_vm._v("その他")])])
+      _c("li", [
+        _c("a", { attrs: { href: "" } }, [
+          _c("img", {
+            attrs: { src: __webpack_require__("./resources/js/assets/etc/ques.png"), alt: "" }
+          }),
+          _c("br"),
+          _vm._v("その他")
+        ])
+      ])
     ])
   },
   function() {
@@ -5527,6 +5564,34 @@ var staticRenderFns = [
         attrs: { src: __webpack_require__("./resources/js/assets/etc/Freelancesession.jpg"), alt: "" }
       }),
       _vm._v(" "),
+      _c("ul", { staticClass: "talk_event" }, [
+        _c("li", { staticClass: "talk_event" }, [
+          _vm._v("2019年9月29日(日) 12:30~13:30")
+        ]),
+        _vm._v(" "),
+        _c("li", { staticClass: "talk_event" }, [
+          _vm._v("関西大学梅田キャンパス スタートアップカフェ大阪")
+        ]),
+        _vm._v(" "),
+        _c(
+          "li",
+          {
+            staticClass: "talk_event session_entry",
+            staticStyle: { "margin-top": "64px" }
+          },
+          [
+            _c(
+              "a",
+              {
+                staticStyle: { "text-decoration": "none", color: "#fefefe" },
+                attrs: { href: "https://0727-2.peatix.com/", target: "blank" }
+              },
+              [_vm._v("詳細/申込はこちらより")]
+            )
+          ]
+        )
+      ]),
+      _vm._v(" "),
       _c(
         "div",
         {
@@ -5567,42 +5632,6 @@ var staticRenderFns = [
         _vm._v(
           " フリーランスに憧れているあなたや、働き方を変えようと思っているあなた。\n      「雇われずに働く」という新時代のライフスタイルの実現に向けて、\n      まずはフリーランスで活躍されている方のリアルの声に耳を傾けてみませんか。"
         )
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "panel" }, [
-        _c("h2", { staticClass: "talk" }, [
-          _vm._v(
-            "Freelance Talk Session Kansai -フリーで働くライフスタイル- Vol.1"
-          )
-        ]),
-        _vm._v(" "),
-        _c("ul", { staticClass: "talk_event" }, [
-          _c("li", { staticClass: "talk_event" }, [
-            _vm._v("2019年7月27日 12:00~13:00")
-          ]),
-          _vm._v(" "),
-          _c("li", { staticClass: "talk_event" }, [
-            _vm._v("関西大学梅田キャンパス スタートアップカフェ大阪")
-          ]),
-          _vm._v(" "),
-          _c(
-            "li",
-            {
-              staticClass: "talk_event session_entry",
-              staticStyle: { "margin-top": "64px" }
-            },
-            [
-              _c(
-                "a",
-                {
-                  staticStyle: { "text-decoration": "none", color: "#fefefe" },
-                  attrs: { href: "https://0727-2.peatix.com/", target: "blank" }
-                },
-                [_vm._v("お申込みはこちらより")]
-              )
-            ]
-          )
-        ])
       ])
     ])
   }
@@ -21999,6 +22028,13 @@ module.exports = "/images/clip.png?e7f2acb5556f4c1ddff2c8ffa4e76ae8";
 
 /***/ }),
 
+/***/ "./resources/js/assets/etc/it.png":
+/***/ (function(module, exports) {
+
+module.exports = "/images/it.png?59cac4aeac3377b80d3c37312161d3ac";
+
+/***/ }),
+
 /***/ "./resources/js/assets/etc/lance_main.jpg":
 /***/ (function(module, exports) {
 
@@ -22027,10 +22063,38 @@ module.exports = "/images/nami.png?fd96b4942dd59ccef800e75613e1debd";
 
 /***/ }),
 
+/***/ "./resources/js/assets/etc/pen.png":
+/***/ (function(module, exports) {
+
+module.exports = "/images/pen.png?cb035a1957bbe2f4ed24cdd29139bdb2";
+
+/***/ }),
+
+/***/ "./resources/js/assets/etc/ques.png":
+/***/ (function(module, exports) {
+
+module.exports = "/images/ques.png?5e3b9c2bcb9cfaa8bf6ba73291e50152";
+
+/***/ }),
+
 /***/ "./resources/js/assets/etc/sce.png":
 /***/ (function(module, exports) {
 
 module.exports = "/images/sce.png?0b85371722ad4a8b81a228e8541d6143";
+
+/***/ }),
+
+/***/ "./resources/js/assets/etc/ser.png":
+/***/ (function(module, exports) {
+
+module.exports = "/images/ser.png?dfeb4c423983542ba954998c4a03cd09";
+
+/***/ }),
+
+/***/ "./resources/js/assets/etc/shop.png":
+/***/ (function(module, exports) {
+
+module.exports = "/images/shop.png?cbfaba34c601703f3b133301cc9f1514";
 
 /***/ }),
 

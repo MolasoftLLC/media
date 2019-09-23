@@ -65,11 +65,11 @@
   <div class="clear"></div>
   　<p class="tag_serch">タグで絞り込む</p>
 　  <ul class="tag_grid">
-      <li><a href="">サービス業</a></li>
-      <li><a href="">店舗運営</a></li>
-      <li><a href="">クリエイティブ</a></li>
-      <li><a href="">テクノロジー</a></li>
-      <li><a href="">その他</a></li>
+      <li><a href=""><img src="../assets/etc/ser.png" alt=""><br>サービス業</a></li>
+      <li><a href=""><img src="../assets/etc/shop.png" alt=""><br>店舗運営</a></li>
+      <li><a href=""><img src="../assets/etc/pen.png" alt=""><br>クリエイティブ</a></li>
+      <li><a href=""><img src="../assets/etc/it.png" alt=""><br>テクノロジー</a></li>
+      <li><a href=""><img src="../assets/etc/ques.png" alt=""><br>その他</a></li>
     </ul>
 </div>
 
