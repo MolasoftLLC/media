@@ -63,3 +63,15 @@ body{
     font-size: 4em;
   }
 }
+
+.tag_grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  color: #64b7e3;
+  text-align: center;
+}
+
+.tag_serch{
+  text-align: center;
+  color: #64b7e3;
+}

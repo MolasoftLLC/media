@@ -63,7 +63,14 @@
   </div> -->
 
   <div class="clear"></div>
-
+  　<p class="tag_serch">タグで絞り込む</p>
+　  <ul class="tag_grid">
+      <li>サービス業</li>
+      <li>店舗運営</li>
+      <li>クリエイティブ</li>
+      <li>テクノロジー</li>
+      <li>その他</li>
+    </ul>
 </div>
 
 <div class="panel" v-show="tab === 2">

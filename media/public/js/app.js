@@ -2670,6 +2670,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     mounted: function mounted() {
@@ -5133,7 +5140,11 @@ var render = function() {
             ])
           }),
           _vm._v(" "),
-          _c("div", { staticClass: "clear" })
+          _c("div", { staticClass: "clear" }),
+          _vm._v(" "),
+          _c("p", { staticClass: "tag_serch" }, [_vm._v("タグで絞り込む")]),
+          _vm._v(" "),
+          _vm._m(4)
         ],
         2
       ),
@@ -5204,7 +5215,7 @@ var render = function() {
           ],
           staticClass: "panel"
         },
-        [_vm._m(4), _vm._v(" "), _c("div", { staticClass: "clear" })]
+        [_vm._m(5), _vm._v(" "), _c("div", { staticClass: "clear" })]
       ),
       _vm._v(" "),
       _c(
@@ -5220,7 +5231,7 @@ var render = function() {
           ],
           staticClass: "panel"
         },
-        [_vm._m(5), _vm._v(" "), _c("div", { staticClass: "clear" })]
+        [_vm._m(6), _vm._v(" "), _c("div", { staticClass: "clear" })]
       ),
       _vm._v(" "),
       _c(
@@ -5236,7 +5247,7 @@ var render = function() {
           ],
           staticClass: "panel"
         },
-        [_vm._m(6), _vm._v(" "), _c("div", { staticClass: "clear" })]
+        [_vm._m(7), _vm._v(" "), _c("div", { staticClass: "clear" })]
       )
     ])
   ])
@@ -5298,6 +5309,22 @@ var staticRenderFns = [
       _c("span", [_vm._v("▶︎")]),
       _c("br"),
       _vm._v("more")
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("ul", { staticClass: "tag_grid" }, [
+      _c("li", [_vm._v("サービス業")]),
+      _vm._v(" "),
+      _c("li", [_vm._v("店舗運営")]),
+      _vm._v(" "),
+      _c("li", [_vm._v("クリエイティブ")]),
+      _vm._v(" "),
+      _c("li", [_vm._v("テクノロジー")]),
+      _vm._v(" "),
+      _c("li", [_vm._v("その他")])
     ])
   },
   function() {
