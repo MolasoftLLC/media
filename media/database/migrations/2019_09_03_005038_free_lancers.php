@@ -15,8 +15,12 @@ class FreeLancers extends Migration
     {
         Schema::create('lancers', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('name');
+            $table->text('tags');
+            $table->text('about');
             $table->text('content');
             $table->string('title');
+            $table->string('img');
             $table->string('occupation');
             $table->timestamps();
         });

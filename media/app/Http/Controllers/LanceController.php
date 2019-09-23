@@ -18,8 +18,8 @@ class LanceController extends Controller
     public function lancer($id)
     {
         // $lancer = Lancer::all()->take(1);
-        $lancer = Lancer::where('id',$id)->get();
-        return $lancer;
+        $person = Lancer::where('id',$id)->get();
+        return $person;
     }
 
     public function it()

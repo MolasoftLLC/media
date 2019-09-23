@@ -17,6 +17,7 @@
 .big{
   font-size: 3em;
   margin: 24px;
+  padding-top: 24px;
 }
 
 p.interview_p{
@@ -28,27 +29,6 @@ p.interview_p{
 
 
 
- p.ontext{
-  position: absolute;
-  bottom: 0px;
-  border: solid 4px #424242;
-  display: block;
-  width: 94%;
-  left: 16px;
-  bottom: 10px;
-  margin: 0 auto;
-  color: #424242;
-  font-weight: bold;
-  line-height: 5em;
-  text-align: center;
-  background: rgba(255, 255, 255, 1);
-  white-space: nowrap; /* 横幅のMAXに達しても改行しない */
-  overflow: hidden; /* ハミ出した部分を隠す */
-  text-overflow: ellipsis; /* 「…」と省略 */
-  -webkit-text-overflow: ellipsis; /* Safari */
-  -o-text-overflow: ellipsis; /* Opera */
-
-  }
 
   p.on_name{
     font-family: 'Caveat', cursive;
@@ -221,9 +201,55 @@ h2.speaker{font-size: 1.4em; font-weight: bold; text-align: center; padding: 32p
   padding: 8px;
 }
 
+.interviewer{
+  max-width: 600px;
+  margin: 0 auto;
+  
+
+}
+
+.interview_container{
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+.interview_container img{
+  max-width: 140px;
+  max-height: 140px;
+  object-fit: cover;
+
+}
+
+.movie{
+  width:100%;
+  padding-bottom: 56.25%;
+  height:0px;
+  position: relative;
+  }
+  .movie iframe{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  }
+
+  .question{
+    margin-top: 42px;
+    margin-bottom: 24px;
+    border-bottom: solid 1px #585858;
+    font-weight: bold;
+    font-size: 1.1em;
+  }
 
 
+  .answer{
+    padding: 16px;
+  }
 
+  .interview_talk{
+    padding: 8px;
+
+  }
 
 
 

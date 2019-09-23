@@ -1,19 +1,20 @@
 <template>
   <div>
+  <div v-for="(profile, id) in person" v-bind:key="id">
   <div class="mainimg_container_person" style="">
+      　
         <img class="mainimg_person" src="../assets/etc/lance_main.jpg" />
         <div class="on_profile">
-            <img id="person" class="mainimg_on_person" src="../assets/person/kenta.jpg" />
+            <img id="person" class="mainimg_on_person" :src="'/images/'+profile.img"  />
             <div class="profile_desc">
-                <div class="inline"><h1 >北中 健太</h1><img src="../assets/icon/twitter.png" alt=""><img style="margin-left:8px;" src="../assets/icon/instagram.png" alt=""></div>
-                <p>カメラマン/バー店主/コミュニティ運営</p>
-                <p>1992年生、和歌山県出身。5年勤めた部品商社を退職後、飲食未経験からミュージック&ゲームバーをオープン。
-                    店舗経営を行いながらクリエイターとしても活動し、現在は写真撮影と映像制作を中心に活動中。
-                    また、社会人のうつ病を防ぐための活動として500人規模のコミュニティ運営も行う
+                <div class="inline"><h1 >{{ profile.name }}</h1>
+                <img src="../assets/icon/twitter.png" alt=""><img style="margin-left:8px;" src="../assets/icon/instagram.png" alt=""></div>
+                <p>{{ profile.tags }}</p>
+                <p class="desc">{{ profile.about }}
                 </p>
                 <div class="in">
-                    <p><a href="#">店舗運営</a></p>
-                    <p><a href="#">クリエイティブ</a></p>
+                    <p><a href="#">{{ profile.title }}</a></p>
+                    <p><a href="#">{{ profile.title }}</a></p>
                 </div>
             </div>
         </div>
@@ -26,16 +27,16 @@
 
             <div class="interview_page">
                 <a name="interview" ></a>
-               
-            
-
-                <div class="panel">
-
-                    <div class="clear"></div>
-
-               
+                <h2 class="free big">Movie</h2>
+                <div class="movie">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/kZj0mYHnhlw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
-
+                <div class="interview_talk">
+                    <h2 class="question">北中さんはなぜこの事業を始めようと思ったんですか？</h2>
+                    <p class="answer">北中：おで…、、お…、、お…、、お…、、お…、、お…、、</p>
+                    <h2 class="question">一番苦労したことは？</h2>
+                    <p class="answer">北中：ん、、、お…、、お…、、お…、、お…、、お…、、お…、、</p>
+                </div>
                 <h2 class="free big">Career</h2>
                 <div class="career">
                     <div class="career_grid">
@@ -63,8 +64,21 @@
                         {{ lancer.content }}
                     </p>
                 </div> -->
+             <h2 class="free big">Interviewer</h2>
+            <section class="interviewer">
+                
+                <div class="interview_container">
+                    <img src="../assets/person/kenta.jpg" alt="">
+                    <div>
+                        <p>記事の作者</p>
+                        <p>記事を書いている人の情報を載せます</p>
+                    </div>
+                </div>
+            </section>
             </div>
+        
         </section>
+        
         <section class="want">
             <img src="../assets/etc/clip.png" alt="">
             <p class="button_fix">講演を聴きたい</p>
@@ -85,6 +99,7 @@
     </div>
   </div>
   </div>
+　</div>
 </template>
 
 <script>
@@ -97,7 +112,8 @@
         },
         data() {
             return {
-                lancers: []
+                lancers: [],
+                person: [],
             }
         },
         methods: {
@@ -107,7 +123,7 @@
                 return axios.get('/api/lancer/'+id)
                 .then(res =>  {
                     console.log(res.data);
-                    this.lancers = res.data
+                    this.person = res.data
                 })
             },
             firstMove(){
@@ -123,7 +139,7 @@
                     return axios.get('/api/lancer/'+id)
                    .then(res =>  {
                         console.log(res.data);
-                        this.lancers = res.data　
+                        this.person = res.data　
                         // this.$set(this.lancers, res.data);
                     }) 
                     

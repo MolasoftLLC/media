@@ -2226,6 +2226,21 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -2234,7 +2249,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     },
     data: function data() {
         return {
-            lancers: []
+            lancers: [],
+            person: []
         };
     },
 
@@ -2246,7 +2262,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             // var id = this.$route.query.itemId
             return axios.get('/api/lancer/' + id).then(function (res) {
                 console.log(res.data);
-                _this.lancers = res.data;
+                _this.person = res.data;
             });
         },
         firstMove: function firstMove() {
@@ -2263,7 +2279,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 var id = this.$route.params['id'];
                 return axios.get('/api/lancer/' + id).then(function (res) {
                     console.log(res.data);
-                    _this2.lancers = res.data;
+                    _this2.person = res.data;
                     // this.$set(this.lancers, res.data);
                 });
             }
@@ -2279,6 +2295,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
 //
 //
 //
@@ -4343,136 +4363,194 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c(
+    "div",
+    _vm._l(_vm.person, function(profile, id) {
+      return _c("div", { key: id }, [
+        _c("div", { staticClass: "mainimg_container_person" }, [
+          _c("img", {
+            staticClass: "mainimg_person",
+            attrs: { src: __webpack_require__("./resources/js/assets/etc/lance_main.jpg") }
+          }),
+          _vm._v(" "),
+          _c("div", { staticClass: "on_profile" }, [
+            _c("img", {
+              staticClass: "mainimg_on_person",
+              attrs: { id: "person", src: "/images/" + profile.img }
+            }),
+            _vm._v(" "),
+            _c("div", { staticClass: "profile_desc" }, [
+              _c("div", { staticClass: "inline" }, [
+                _c("h1", [_vm._v(_vm._s(profile.name))]),
+                _vm._v(" "),
+                _c("img", {
+                  attrs: { src: __webpack_require__("./resources/js/assets/icon/twitter.png"), alt: "" }
+                }),
+                _c("img", {
+                  staticStyle: { "margin-left": "8px" },
+                  attrs: {
+                    src: __webpack_require__("./resources/js/assets/icon/instagram.png"),
+                    alt: ""
+                  }
+                })
+              ]),
+              _vm._v(" "),
+              _c("p", [_vm._v(_vm._s(profile.tags))]),
+              _vm._v(" "),
+              _c("p", { staticClass: "desc" }, [
+                _vm._v(_vm._s(profile.about) + "\n                ")
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "in" }, [
+                _c("p", [
+                  _c("a", { attrs: { href: "#" } }, [
+                    _vm._v(_vm._s(profile.title))
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("p", [
+                  _c("a", { attrs: { href: "#" } }, [
+                    _vm._v(_vm._s(profile.title))
+                  ])
+                ])
+              ])
+            ])
+          ])
+        ]),
+        _vm._v(" "),
+        _vm._m(0, true)
+      ])
+    }),
+    0
+  )
 }
 var staticRenderFns = [
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", [
-      _c("div", { staticClass: "mainimg_container_person" }, [
+    return _c("div", { staticClass: "container", attrs: { id: "app" } }, [
+      _c("div", { staticClass: "container_crip" }, [
         _c("img", {
-          staticClass: "mainimg_person",
-          attrs: { src: __webpack_require__("./resources/js/assets/etc/lance_main.jpg") }
-        }),
-        _vm._v(" "),
-        _c("div", { staticClass: "on_profile" }, [
-          _c("img", {
-            staticClass: "mainimg_on_person",
-            attrs: { id: "person", src: __webpack_require__("./resources/js/assets/person/kenta.jpg") }
-          }),
-          _vm._v(" "),
-          _c("div", { staticClass: "profile_desc" }, [
-            _c("div", { staticClass: "inline" }, [
-              _c("h1", [_vm._v("北中 健太")]),
-              _c("img", {
-                attrs: { src: __webpack_require__("./resources/js/assets/icon/twitter.png"), alt: "" }
-              }),
-              _c("img", {
-                staticStyle: { "margin-left": "8px" },
-                attrs: { src: __webpack_require__("./resources/js/assets/icon/instagram.png"), alt: "" }
+          attrs: { src: __webpack_require__("./resources/js/assets/etc/clip.png"), alt: "" }
+        })
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "interview_grid" }, [
+        _c("section", { staticClass: "grid_main" }, [
+          _c("div", { staticClass: "interview_page" }, [
+            _c("a", { attrs: { name: "interview" } }),
+            _vm._v(" "),
+            _c("h2", { staticClass: "free big" }, [_vm._v("Movie")]),
+            _vm._v(" "),
+            _c("div", { staticClass: "movie" }, [
+              _c("iframe", {
+                attrs: {
+                  width: "560",
+                  height: "315",
+                  src: "https://www.youtube.com/embed/kZj0mYHnhlw",
+                  frameborder: "0",
+                  allow:
+                    "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture",
+                  allowfullscreen: ""
+                }
               })
             ]),
             _vm._v(" "),
-            _c("p", [_vm._v("カメラマン/バー店主/コミュニティ運営")]),
-            _vm._v(" "),
-            _c("p", [
-              _vm._v(
-                "1992年生、和歌山県出身。5年勤めた部品商社を退職後、飲食未経験からミュージック&ゲームバーをオープン。\n                  店舗経営を行いながらクリエイターとしても活動し、現在は写真撮影と映像制作を中心に活動中。\n                  また、社会人のうつ病を防ぐための活動として500人規模のコミュニティ運営も行う\n              "
-              )
+            _c("div", { staticClass: "interview_talk" }, [
+              _c("h2", { staticClass: "question" }, [
+                _vm._v("北中さんはなぜこの事業を始めようと思ったんですか？")
+              ]),
+              _vm._v(" "),
+              _c("p", { staticClass: "answer" }, [
+                _vm._v("北中：おで…、、お…、、お…、、お…、、お…、、お…、、")
+              ]),
+              _vm._v(" "),
+              _c("h2", { staticClass: "question" }, [
+                _vm._v("一番苦労したことは？")
+              ]),
+              _vm._v(" "),
+              _c("p", { staticClass: "answer" }, [
+                _vm._v(
+                  "北中：ん、、、お…、、お…、、お…、、お…、、お…、、お…、、"
+                )
+              ])
             ]),
             _vm._v(" "),
-            _c("div", { staticClass: "in" }, [
-              _c("p", [
-                _c("a", { attrs: { href: "#" } }, [_vm._v("店舗運営")])
+            _c("h2", { staticClass: "free big" }, [_vm._v("Career")]),
+            _vm._v(" "),
+            _c("div", { staticClass: "career" }, [
+              _c("div", { staticClass: "career_grid" }, [
+                _c("section", { staticClass: "age" }, [_vm._v("年度")]),
+                _vm._v(" "),
+                _c("section", { staticClass: "age_content" }, [_vm._v("内容")])
               ]),
               _vm._v(" "),
-              _c("p", [
-                _c("a", { attrs: { href: "#" } }, [_vm._v("クリエイティブ")])
+              _c("div", { staticClass: "career_grid" }, [
+                _c("section", { staticClass: "age" }, [_vm._v("2018年")]),
+                _vm._v(" "),
+                _c("section", { staticClass: "age_content" }, [
+                  _vm._v("起業しました")
+                ])
+              ])
+            ]),
+            _vm._v(" "),
+            _c("h2", { staticClass: "free big" }, [_vm._v("Schedule")]),
+            _vm._v(" "),
+            _c("div", { staticClass: "schedule" }, [
+              _c("img", {
+                attrs: { src: __webpack_require__("./resources/js/assets/etc/sce.png"), alt: "" }
+              })
+            ]),
+            _vm._v(" "),
+            _c("h2", { staticClass: "free big" }, [_vm._v("Interviewer")]),
+            _vm._v(" "),
+            _c("section", { staticClass: "interviewer" }, [
+              _c("div", { staticClass: "interview_container" }, [
+                _c("img", {
+                  attrs: { src: __webpack_require__("./resources/js/assets/person/kenta.jpg"), alt: "" }
+                }),
+                _vm._v(" "),
+                _c("div", [
+                  _c("p", [_vm._v("記事の作者")]),
+                  _vm._v(" "),
+                  _c("p", [_vm._v("記事を書いている人の情報を載せます")])
+                ])
               ])
             ])
           ])
-        ])
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "container", attrs: { id: "app" } }, [
-        _c("div", { staticClass: "container_crip" }, [
-          _c("img", {
-            attrs: { src: __webpack_require__("./resources/js/assets/etc/clip.png"), alt: "" }
-          })
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "interview_grid" }, [
-          _c("section", { staticClass: "grid_main" }, [
-            _c("div", { staticClass: "interview_page" }, [
-              _c("a", { attrs: { name: "interview" } }),
-              _vm._v(" "),
-              _c("div", { staticClass: "panel" }, [
-                _c("div", { staticClass: "clear" })
-              ]),
-              _vm._v(" "),
-              _c("h2", { staticClass: "free big" }, [_vm._v("Career")]),
-              _vm._v(" "),
-              _c("div", { staticClass: "career" }, [
-                _c("div", { staticClass: "career_grid" }, [
-                  _c("section", { staticClass: "age" }, [_vm._v("年度")]),
-                  _vm._v(" "),
-                  _c("section", { staticClass: "age_content" }, [
-                    _vm._v("内容")
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "career_grid" }, [
-                  _c("section", { staticClass: "age" }, [_vm._v("2018年")]),
-                  _vm._v(" "),
-                  _c("section", { staticClass: "age_content" }, [
-                    _vm._v("起業しました")
-                  ])
-                ])
-              ]),
-              _vm._v(" "),
-              _c("h2", { staticClass: "free big" }, [_vm._v("Schedule")]),
-              _vm._v(" "),
-              _c("div", { staticClass: "schedule" }, [
-                _c("img", {
-                  attrs: { src: __webpack_require__("./resources/js/assets/etc/sce.png"), alt: "" }
-                })
-              ])
-            ])
-          ]),
+        _c("section", { staticClass: "want" }, [
+          _c("img", {
+            attrs: { src: __webpack_require__("./resources/js/assets/etc/clip.png"), alt: "" }
+          }),
           _vm._v(" "),
-          _c("section", { staticClass: "want" }, [
-            _c("img", {
-              attrs: { src: __webpack_require__("./resources/js/assets/etc/clip.png"), alt: "" }
-            }),
-            _vm._v(" "),
-            _c("p", { staticClass: "button_fix" }, [_vm._v("講演を聴きたい")])
-          ]),
+          _c("p", { staticClass: "button_fix" }, [_vm._v("講演を聴きたい")])
+        ]),
+        _vm._v(" "),
+        _c("section", { staticClass: "good want" }, [
+          _c("img", {
+            attrs: { src: __webpack_require__("./resources/js/assets/etc/star.png"), alt: "" }
+          }),
           _vm._v(" "),
-          _c("section", { staticClass: "good want" }, [
-            _c("img", {
-              attrs: { src: __webpack_require__("./resources/js/assets/etc/star.png"), alt: "" }
-            }),
-            _vm._v(" "),
-            _c("p", { staticClass: "button_fix" }, [_vm._v("お気に入り")])
-          ]),
+          _c("p", { staticClass: "button_fix" }, [_vm._v("お気に入り")])
+        ]),
+        _vm._v(" "),
+        _c("section", { staticClass: "contact" }, [
+          _c("img", {
+            attrs: { src: __webpack_require__("./resources/js/assets/etc/talk.png"), alt: "" }
+          }),
           _vm._v(" "),
-          _c("section", { staticClass: "contact" }, [
-            _c("img", {
-              attrs: { src: __webpack_require__("./resources/js/assets/etc/talk.png"), alt: "" }
-            }),
-            _vm._v(" "),
-            _c("p", { staticClass: "button_fix" }, [_vm._v("相談したい")])
-          ]),
+          _c("p", { staticClass: "button_fix" }, [_vm._v("相談したい")])
+        ]),
+        _vm._v(" "),
+        _c("section", { staticClass: "contact mail" }, [
+          _c("img", {
+            attrs: { src: __webpack_require__("./resources/js/assets/etc/mail.png"), alt: "" }
+          }),
           _vm._v(" "),
-          _c("section", { staticClass: "contact mail" }, [
-            _c("img", {
-              attrs: { src: __webpack_require__("./resources/js/assets/etc/mail.png"), alt: "" }
-            }),
-            _vm._v(" "),
-            _c("p", { staticClass: "button_fix" }, [_vm._v("問い合わせ")])
-          ])
+          _c("p", { staticClass: "button_fix" }, [_vm._v("問い合わせ")])
         ])
       ])
     ])
@@ -5384,11 +5462,13 @@ var render = function() {
       "div",
       { staticClass: "container container_sub", attrs: { id: "app" } },
       [
+        _vm._m(0),
+        _vm._v(" "),
         _c("a", { attrs: { name: "interview" } }),
         _vm._v(" "),
         _c("div", { staticClass: "header_adjust" }),
         _vm._v(" "),
-        _c("h1", { staticClass: "free" }, [_vm._v("Freelance Intaview")]),
+        _c("h1", { staticClass: "free" }, [_vm._v("More Interview")]),
         _vm._v(" "),
         _c("ul", { staticClass: "tab" }, [
           _c(
@@ -5422,41 +5502,44 @@ var render = function() {
           [
             _vm._l(_vm.lancers, function(lancer, id) {
               return _c("div", { key: id }, [
-                _c(
-                  "div",
-                  { staticClass: "news_img" },
-                  [
-                    _c(
-                      "RouterLink",
-                      { attrs: { to: "/lancer/" + lancer.id } },
-                      [
-                        _c("img", {
-                          attrs: {
-                            src: __webpack_require__("./resources/js/assets/person/kenta.jpg"),
-                            width: "100%"
-                          }
-                        }),
-                        _vm._v(" "),
-                        _c("p", { staticClass: "read_more" }, [
-                          _vm._v("Read more")
-                        ])
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _c("p", { staticClass: "on_name" }, [
-                      _vm._v(_vm._s(lancer.title))
-                    ]),
-                    _vm._v(" "),
-                    _c("p", { staticClass: "on_category" }, [
-                      _vm._v(_vm._s(lancer.content))
-                    ]),
-                    _vm._v(" "),
-                    _c("p", { staticClass: "ontext" }, [
-                      _vm._v("コミュ二ティの運営で鬱病の無い社会を目指す。")
-                    ])
-                  ],
-                  1
-                ),
+                _c("div", { staticClass: "news_img" }, [
+                  lancer.id !== 100
+                    ? _c(
+                        "div",
+                        [
+                          _c(
+                            "RouterLink",
+                            { attrs: { to: "/lancer/" + lancer.id } },
+                            [
+                              _c("img", {
+                                attrs: {
+                                  src: "/images/" + lancer.img,
+                                  width: "100%"
+                                }
+                              }),
+                              _vm._v(" "),
+                              _c("p", { staticClass: "read_more" }, [
+                                _vm._v("Read more")
+                              ])
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c("p", { staticClass: "on_name" }, [
+                            _vm._v(_vm._s(lancer.name))
+                          ]),
+                          _vm._v(" "),
+                          _c("p", { staticClass: "on_category" }, [
+                            _vm._v(_vm._s(lancer.tags))
+                          ]),
+                          _vm._v(" "),
+                          _c("p", { staticClass: "ontext" }, [
+                            _vm._v(_vm._s(lancer.about))
+                          ])
+                        ],
+                        1
+                      )
+                    : _vm._e()
+                ]),
                 _vm._v(" "),
                 id === 2 || id === 5
                   ? _c("div", { staticClass: "clear" })
@@ -5474,7 +5557,16 @@ var render = function() {
     )
   ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "container_crip" }, [
+      _c("img", { attrs: { src: __webpack_require__("./resources/js/assets/etc/clip.png"), alt: "" } })
+    ])
+  }
+]
 render._withStripped = true
 module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {

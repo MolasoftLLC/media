@@ -9,7 +9,7 @@
 
 .mainimg_on{
   position: absolute;
-  top: 50%;
+  top: 36%;
   left: 33%;
   width:80%;  max-width: 600px;
   filter: drop-shadow(0 0 0.75rem #585858);
@@ -50,6 +50,8 @@
 .profile_desc{
   color: #fefefe;
   padding-left: 48px;
+  padding-top: 8%;
+
 }
 
 #person{
@@ -74,6 +76,7 @@
 
 .inline h1 {
   margin: 0;
+  font-size: 2em;
 }
 
 .in{
@@ -83,8 +86,13 @@
 .in p{
   display: inline;
   padding-right: 4px;
+  
 }
 
 .in a{
   color: #fefefe;
+}
+
+p.desc {
+  padding: 12px 0px;
 }

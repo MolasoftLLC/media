@@ -1,10 +1,11 @@
 <template>
   <div class="more_container">
   <div id="app" class="container container_sub">
+    <div class="container_crip"><img src="../assets/etc/clip.png" alt=""></div>
        <a name="interview" ></a>
     <div class="header_adjust"></div>
    
-  <h1 class="free">Freelance Intaview</h1>
+  <h1 class="free">More Interview</h1>
       <ul class="tab">
       <li
         class="tab__item"
@@ -17,14 +18,17 @@
 　<div class="panel" v-show="tab === 1">
     <div v-for="(lancer, id) in lancers" v-bind:key="id">
         <div class="news_img">
+          <!-- 要実装 -->
+        <div v-if="lancer.id !== 100"> 
             <RouterLink :to="'/lancer/' + lancer.id" >
-                <img src="../assets/person/kenta.jpg" width="100%" />
+                <img :src="'/images/'+lancer.img" width="100%" />
                 <p class="read_more">Read more</p>
             </RouterLink>
 
-          <p class="on_name">{{ lancer.title }}</p>
-          <p class="on_category">{{ lancer.content }}</p>
-          <p class="ontext">コミュ二ティの運営で鬱病の無い社会を目指す。</p>
+          <p class="on_name">{{ lancer.name }}</p>
+          <p class="on_category">{{ lancer.tags }}</p>
+          <p class="ontext">{{ lancer.about }}</p>
+        </div>
         </div>
         <div v-if="id===2||id===5" class="clear"></div>
     </div>
