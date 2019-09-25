@@ -2621,6 +2621,18 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     mounted: function mounted() {
@@ -5043,7 +5055,20 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", [
-    _vm._m(0),
+    _c("div", { staticClass: "mainimg_container" }, [
+      _c("video", {
+        staticClass: "mainimg",
+        attrs: { src: "images/sample.mp4", autoplay: "", loop: "", muted: "" },
+        domProps: { muted: true }
+      }),
+      _vm._v(" "),
+      _c("img", {
+        staticClass: "mainimg_on  slideInRight",
+        attrs: { src: __webpack_require__("./resources/js/assets/etc/logo.png") }
+      }),
+      _vm._v(" "),
+      _vm._m(0)
+    ]),
     _vm._v(" "),
     _c("div", { staticClass: "container", attrs: { id: "app" } }, [
       _vm._m(1),
@@ -5242,29 +5267,15 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "mainimg_container" }, [
-      _c("img", {
-        staticClass: "mainimg",
-        attrs: { src: __webpack_require__("./resources/js/assets/etc/lance_main2.jpg") }
-      }),
+    return _c("div", { staticClass: "main_catch" }, [
+      _c("h1", [_vm._v("関西のフリーランスを見つけるメディアサイト")]),
       _vm._v(" "),
-      _c("img", {
-        staticClass: "mainimg_on  slideInRight",
-        attrs: { src: __webpack_require__("./resources/js/assets/etc/logo.png") }
-      }),
+      _c("p", [_vm._v("Scroll")]),
       _vm._v(" "),
-      _c("h1", { staticClass: "main_catch" }, [
-        _vm._v("関西のフリーランスを見つけるメディアサイト")
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "box" }, [
-        _c("p", [_vm._v("Scroll")]),
+      _c("div", { staticClass: "arrowWrap" }, [
+        _c("div", { staticClass: "arrow1" }, [_c("span")]),
         _vm._v(" "),
-        _c("div", { staticClass: "arrowWrap" }, [
-          _c("div", { staticClass: "arrow1" }, [_c("span")]),
-          _vm._v(" "),
-          _c("div", { staticClass: "arrow2" }, [_c("span")])
-        ])
+        _c("div", { staticClass: "arrow2" }, [_c("span")])
       ])
     ])
   },
@@ -22187,13 +22198,6 @@ module.exports = "/images/it.png?59cac4aeac3377b80d3c37312161d3ac";
 /***/ (function(module, exports) {
 
 module.exports = "/images/lance_main.jpg?04a523205f9bdd332638596b7074d7d9";
-
-/***/ }),
-
-/***/ "./resources/js/assets/etc/lance_main2.jpg":
-/***/ (function(module, exports) {
-
-module.exports = "/images/lance_main2.jpg?b56906d87c2a1a88b93ca9d106587c2c";
 
 /***/ }),
 

@@ -1537,6 +1537,10 @@ h2.speaker {
   border-top: solid 1px #fefefe;
 }
 
+.main_catch p {
+  padding-top: 20%;
+}
+
 .mainimg_container_person {
   background-color: #585858;
   position: relative;

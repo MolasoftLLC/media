@@ -1,20 +1,32 @@
 <template>
 <div>
     <div class="mainimg_container" style="">
-    <img class="mainimg" src="../assets/etc/lance_main2.jpg" />
+    <!-- <img class="mainimg" src="../assets/etc/mainimg3.jpg" /> -->
+    <video class="mainimg" src="images/sample.mp4" autoplay loop muted></video>
     <img class="mainimg_on  slideInRight" src="../assets/etc/logo.png" />
-    <h1 class="main_catch">関西のフリーランスを見つけるメディアサイト</h1>
-          <div class="box">
-            <p>Scroll</p> 
-            <div class="arrowWrap">
-                <div class="arrow1">
-                    <span></span>
-                </div>
-                <div class="arrow2">
-                    <span></span>
-                </div>
+    <div class="main_catch">
+        <h1 >関西のフリーランスを見つけるメディアサイト</h1>
+        <!-- <p>人気のタグから探す</p>
+        <ul class="tag_grid" style="padding-top:24px;">
+            <li><a href="">サービス業</a></li>
+            <li><a href="">店舗運営</a></li>
+            <li><a href="">クリエイティブ</a></li>
+            <li><a href="">テクノロジー</a></li>
+            <li><a href="">その他</a></li>
+        </ul> -->
+        <p>Scroll</p> 
+
+        <div class="arrowWrap">
+            <div class="arrow1">
+                <span></span>
+            </div>
+            <div class="arrow2">
+                <span></span>
             </div>
         </div>
+    
+    </div>
+
   </div>
   <div id="app" class="container">
     <div class="container_crip"><img src="../assets/etc/clip.png" alt=""></div>
