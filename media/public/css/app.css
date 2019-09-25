@@ -352,7 +352,6 @@ body {
 }
 
 main {
-  margin-bottom: 6rem;
   margin-top: 7rem;
 }
 
@@ -390,7 +389,9 @@ body {
 .container {
   margin: 42px auto 0;
   padding: 3% 20% 3%;
-  background-color: #fefefe;
+  background: #fefefe;
+  background: -webkit-gradient(linear, left bottom, left top, from(#fefefe), color-stop(24%, #fefefe), color-stop(50%, #9fefff), color-stop(74%, #fefefe));
+  background: linear-gradient(0deg, #fefefe 0%, #fefefe 24%, #9fefff 50%, #fefefe 74%);
   position: relative;
 }
 
@@ -888,7 +889,7 @@ img.main_logo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 5rem;
+  height: 12rem;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -1799,5 +1800,54 @@ p.desc {
     -webkit-transform: translate3d(-50%, 10px, 0);
     transform: translate3d(-50%, 10px, 0);
   }
+}
+
+@-webkit-keyframes slideInRight {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
+  }
+
+  60% {
+    opacity: 0;
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes slideInRight {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
+  }
+
+  60% {
+    opacity: 0;
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+.slideInRight {
+  -webkit-animation-name: slideInRight;
+          animation-name: slideInRight;
+  -webkit-animation-duration: 1.2s;
+          animation-duration: 1.2s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
 }
 

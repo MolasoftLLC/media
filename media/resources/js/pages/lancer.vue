@@ -5,7 +5,7 @@
       　
         <img class="mainimg_person" src="../assets/etc/lance_main.jpg" />
         <div class="on_profile">
-            <img id="person" class="mainimg_on_person animated " data-animate="rollIn" :src="'/images/'+profile.img"  />
+            <img id="person" class="mainimg_on_person slideInRight "  :src="'/images/'+profile.img"  />
             <div class="profile_desc">
                 <div class="inline"><h1 >{{ profile.name }}</h1>
                 <img src="../assets/icon/twitter.png" alt=""><img style="margin-left:8px;" src="../assets/icon/instagram.png" alt=""></div>

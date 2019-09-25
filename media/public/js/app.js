@@ -2366,6 +2366,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     mounted: function mounted() {
@@ -4328,12 +4330,8 @@ var render = function() {
           _vm._v(" "),
           _c("div", { staticClass: "on_profile" }, [
             _c("img", {
-              staticClass: "mainimg_on_person animated ",
-              attrs: {
-                id: "person",
-                "data-animate": "rollIn",
-                src: "/images/" + profile.img
-              }
+              staticClass: "mainimg_on_person slideInRight ",
+              attrs: { id: "person", src: "/images/" + profile.img }
             }),
             _vm._v(" "),
             _c("div", { staticClass: "profile_desc" }, [
@@ -5273,11 +5271,8 @@ var staticRenderFns = [
       }),
       _vm._v(" "),
       _c("img", {
-        staticClass: "mainimg_on first_animated ",
-        attrs: {
-          "data-animate": "fadeInUp",
-          src: __webpack_require__("./resources/js/assets/etc/logo.png")
-        }
+        staticClass: "mainimg_on  slideInRight",
+        attrs: { src: __webpack_require__("./resources/js/assets/etc/logo.png") }
       }),
       _vm._v(" "),
       _c("h1", { staticClass: "main_catch" }, [
@@ -5516,6 +5511,10 @@ var render = function() {
       [
         _vm._m(0),
         _vm._v(" "),
+        _vm._m(1),
+        _vm._v(" "),
+        _vm._m(2),
+        _vm._v(" "),
         _c("a", { attrs: { name: "interview" } }),
         _vm._v(" "),
         _c("div", { staticClass: "header_adjust" }),
@@ -5525,7 +5524,7 @@ var render = function() {
         _c("img", {
           staticClass: "animated",
           attrs: {
-            src: __webpack_require__("./resources/js/assets/etc/nami.png"),
+            src: __webpack_require__("./resources/js/assets/etc/nami2.png"),
             alt: "",
             "data-animate": "rubberBand"
           }
@@ -5608,6 +5607,26 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "container_crip" }, [
       _c("img", { attrs: { src: __webpack_require__("./resources/js/assets/etc/clip.png"), alt: "" } })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "more_left fuwafuwa" }, [
+      _c("span", [_vm._v("◀︎")]),
+      _c("br"),
+      _vm._v("more")
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "more_right  fuwafuwa" }, [
+      _c("span", [_vm._v("▶︎")]),
+      _c("br"),
+      _vm._v("more")
     ])
   }
 ]
@@ -22204,13 +22223,6 @@ module.exports = "/images/logo.png?736eb1c5a29e766c4faa3e251e79e377";
 /***/ (function(module, exports) {
 
 module.exports = "/images/mail.png?97bc3be8fbb783f7ff3c1f86a4b64a58";
-
-/***/ }),
-
-/***/ "./resources/js/assets/etc/nami.png":
-/***/ (function(module, exports) {
-
-module.exports = "/images/nami.png?fd96b4942dd59ccef800e75613e1debd";
 
 /***/ }),
 

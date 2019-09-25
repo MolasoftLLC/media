@@ -2,11 +2,13 @@
   <div class="more_container">
   <div id="app" class="container container_sub">
     <div class="container_crip"><img src="../assets/etc/clip.png" alt=""></div>
+    <div class="more_left fuwafuwa"  ><span>◀︎</span><br>more</div>
+    <div class="more_right  fuwafuwa" ><span>▶︎</span><br>more</div>
        <a name="interview" ></a>
     <div class="header_adjust"></div>
    
   <h1 class="free">More Interview</h1>
-  <img src="../assets/etc/nami.png" alt="" class="animated" data-animate="rubberBand">
+  <img src="../assets/etc/nami2.png" alt="" class="animated" data-animate="rubberBand">
 
 　<div class="panel" v-show="tab === 1">
     <div v-for="(lancer, id) in lancers" v-bind:key="id">
