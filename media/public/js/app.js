@@ -5087,7 +5087,7 @@ var render = function() {
       _c("img", {
         staticClass: "animated",
         attrs: {
-          src: __webpack_require__("./resources/js/assets/etc/nami.png"),
+          src: __webpack_require__("./resources/js/assets/etc/nami2.png"),
           alt: "",
           "data-animate": "rubberBand"
         }
@@ -5109,12 +5109,12 @@ var render = function() {
         [
           _vm._l(_vm.lancers, function(lancer, id) {
             return _c("div", { key: id }, [
-              _c("div", { staticClass: "fuwafuwa" }, [
+              _c("div", [
                 _c(
                   "div",
                   {
                     staticClass: "news_img animated",
-                    attrs: { "data-animate": "rollIn" }
+                    attrs: { "data-animate": "fadeInUp" }
                   },
                   [
                     _c(
@@ -5273,7 +5273,7 @@ var staticRenderFns = [
       }),
       _vm._v(" "),
       _c("img", {
-        staticClass: "mainimg_on animated",
+        staticClass: "mainimg_on first_animated ",
         attrs: {
           "data-animate": "fadeInUp",
           src: __webpack_require__("./resources/js/assets/etc/logo.png")
@@ -5307,7 +5307,7 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "more_left" }, [
+    return _c("div", { staticClass: "more_left fuwafuwa" }, [
       _c("span", [_vm._v("◀︎")]),
       _c("br"),
       _vm._v("more")
@@ -5317,7 +5317,7 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "more_right" }, [
+    return _c("div", { staticClass: "more_right  fuwafuwa" }, [
       _c("span", [_vm._v("▶︎")]),
       _c("br"),
       _vm._v("more")
@@ -22211,6 +22211,13 @@ module.exports = "/images/mail.png?97bc3be8fbb783f7ff3c1f86a4b64a58";
 /***/ (function(module, exports) {
 
 module.exports = "/images/nami.png?fd96b4942dd59ccef800e75613e1debd";
+
+/***/ }),
+
+/***/ "./resources/js/assets/etc/nami2.png":
+/***/ (function(module, exports) {
+
+module.exports = "/images/nami2.png?8ecb4c8970a2cb2e7664358021875645";
 
 /***/ }),
 

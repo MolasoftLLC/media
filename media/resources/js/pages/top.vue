@@ -2,7 +2,7 @@
 <div>
     <div class="mainimg_container" style="">
     <img class="mainimg" src="../assets/etc/lance_main.jpg" />
-    <img class="mainimg_on animated" data-animate="fadeInUp" src="../assets/etc/logo.png" />
+    <img class="mainimg_on first_animated " data-animate="fadeInUp" src="../assets/etc/logo.png" />
     <h1 class="main_catch">関西のフリーランスを見つけるメディアサイト</h1>
           <div class="box">
             <p>Scroll</p> 
@@ -18,8 +18,8 @@
   </div>
   <div id="app" class="container">
     <div class="container_crip"><img src="../assets/etc/clip.png" alt=""></div>
-    <div class="more_left"><span>◀︎</span><br>more</div>
-    <div class="more_right"><span>▶︎</span><br>more</div>
+    <div class="more_left fuwafuwa"  ><span>◀︎</span><br>more</div>
+    <div class="more_right  fuwafuwa" ><span>▶︎</span><br>more</div>
 
        <a name="interview" ></a>
     <div class="header_adjust"></div>
@@ -27,12 +27,12 @@
 
   <h1 class="free">Freelance Interview</h1>
   <p class="free">多種多様な生き方を知る</p>
-  <img src="../assets/etc/nami.png" alt="" class="animated" data-animate="rubberBand">
+  <img src="../assets/etc/nami2.png" alt="" class="animated" data-animate="rubberBand">
 
 　<div class="panel" v-show="tab === 1">
     <div v-for="(lancer, id) in lancers" v-bind:key="id">
-      <div class="fuwafuwa">
-        <div class="news_img animated" data-animate="rollIn">
+      <div >
+        <div class="news_img animated" data-animate="fadeInUp">
             
                 <RouterLink :to="'/lancer/' + lancer.id">
                    <img :src="'/images/'+lancer.img" width="100%" />
