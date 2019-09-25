@@ -570,6 +570,10 @@ img.main_logo {
   padding-top: 2px;
 }
 
+.scroll_none {
+  display: none;
+}
+
 .photo {
   position: relative;
 }

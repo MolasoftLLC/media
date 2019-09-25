@@ -1745,45 +1745,34 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-  computed: {
-    isLogin: function isLogin() {
-      return this.$store.getters['auth/check'];
-    },
-    username: function username() {
-      return this.$store.getters['auth/username'];
-    }
-  }
-});
+  data: function data() {
+    return {
+      scrollY: 0,
+      timer: null
+    };
+  },
 
-/***/ }),
 
-/***/ "./node_modules/babel-loader/lib/index.js?{\"cacheDirectory\":true,\"presets\":[[\"env\",{\"modules\":false,\"targets\":{\"browsers\":[\"> 2%\"],\"uglify\":true}}]],\"plugins\":[\"transform-object-rest-spread\",[\"transform-runtime\",{\"polyfill\":false,\"helpers\":false}]]}!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./resources/js/components/Navbar.vue":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-  computed: {
-    isLogin: function isLogin() {
-      return this.$store.getters['auth/check'];
-    },
-    username: function username() {
-      return this.$store.getters['auth/username'];
+  created: function created() {
+    // ハンドラを登録
+    window.addEventListener('scroll', this.handleScroll);
+  },
+  beforeDestroy: function beforeDestroy() {
+    // ハンドラを解除（コンポーネントやSPAの場合忘れずに！）
+    window.removeEventListener('scroll', this.handleScroll);
+  },
+  methods: {
+    // 違和感のない程度に200ms間隔でscrollデータを更新する例
+    handleScroll: function handleScroll() {
+      if (this.timer === null) {
+        this.timer = setTimeout(function () {
+          this.scrollY = window.scrollY;
+          clearTimeout(this.timer);
+          this.timer = null;
+        }.bind(this), 200);
+      }
     }
   }
 });
@@ -4597,56 +4586,45 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c("div", { attrs: { id: "contact" } }, [
+    _c(
+      "nav",
+      {
+        staticClass: "navbar",
+        class: { scroll_none: _vm.scrollY > 400 },
+        staticStyle: { top: "7rem", height: "7rem", background: "none" }
+      },
+      [_vm._m(0), _vm._v(" "), _c("div", { staticClass: "clear" })]
+    )
+  ])
 }
 var staticRenderFns = [
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", [
-      _c(
-        "nav",
-        {
-          staticClass: "navbar",
-          staticStyle: { top: "7rem", height: "7rem", background: "none" }
-        },
-        [
-          _c("ul", { staticClass: "nav_link" }, [
-            _c("li", { staticClass: "nav_link" }, [
-              _c(
-                "a",
-                { staticClass: "deco_none", attrs: { href: "#interview" } },
-                [
-                  _c("img", {
-                    staticClass: "icon",
-                    attrs: { src: __webpack_require__("./resources/js/assets/icon/file_wh.png") }
-                  }),
-                  _c("br"),
-                  _vm._v("インタビュー記事")
-                ]
-              )
-            ]),
-            _vm._v(" "),
-            _c("li", { staticClass: "nav_link" }, [
-              _c(
-                "a",
-                { staticClass: "deco_none", attrs: { href: "#session" } },
-                [
-                  _c("img", {
-                    staticClass: "icon",
-                    attrs: { src: __webpack_require__("./resources/js/assets/icon/mic_wh.png") }
-                  }),
-                  _c("br"),
-                  _vm._v("講演会")
-                ]
-              )
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "clear" })
-        ]
-      )
+    return _c("ul", { staticClass: "nav_link" }, [
+      _c("li", { staticClass: "nav_link" }, [
+        _c("a", { staticClass: "deco_none", attrs: { href: "#interview" } }, [
+          _c("img", {
+            staticClass: "icon",
+            attrs: { src: __webpack_require__("./resources/js/assets/icon/file_wh.png") }
+          }),
+          _c("br"),
+          _vm._v("インタビュー記事")
+        ])
+      ]),
+      _vm._v(" "),
+      _c("li", { staticClass: "nav_link" }, [
+        _c("a", { staticClass: "deco_none", attrs: { href: "#session" } }, [
+          _c("img", {
+            staticClass: "icon",
+            attrs: { src: __webpack_require__("./resources/js/assets/icon/mic_wh.png") }
+          }),
+          _c("br"),
+          _vm._v("講演会")
+        ])
+      ])
     ])
   }
 ]
@@ -22469,7 +22447,7 @@ module.exports = Component.exports
 var disposed = false
 var normalizeComponent = __webpack_require__("./node_modules/vue-loader/lib/component-normalizer.js")
 /* script */
-var __vue_script__ = __webpack_require__("./node_modules/babel-loader/lib/index.js?{\"cacheDirectory\":true,\"presets\":[[\"env\",{\"modules\":false,\"targets\":{\"browsers\":[\"> 2%\"],\"uglify\":true}}]],\"plugins\":[\"transform-object-rest-spread\",[\"transform-runtime\",{\"polyfill\":false,\"helpers\":false}]]}!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./resources/js/components/Navbar.vue")
+var __vue_script__ = null
 /* template */
 var __vue_template__ = __webpack_require__("./node_modules/vue-loader/lib/template-compiler/index.js?{\"id\":\"data-v-6dde423b\",\"hasScoped\":false,\"buble\":{\"transforms\":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./resources/js/components/Navbar.vue")
 /* template functional */
