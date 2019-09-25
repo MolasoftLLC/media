@@ -5,7 +5,7 @@
       　
         <img class="mainimg_person" src="../assets/etc/lance_main.jpg" />
         <div class="on_profile">
-            <img id="person" class="mainimg_on_person" :src="'/images/'+profile.img"  />
+            <img id="person" class="mainimg_on_person animated " data-animate="rollIn" :src="'/images/'+profile.img"  />
             <div class="profile_desc">
                 <div class="inline"><h1 >{{ profile.name }}</h1>
                 <img src="../assets/icon/twitter.png" alt=""><img style="margin-left:8px;" src="../assets/icon/instagram.png" alt=""></div>
@@ -38,8 +38,8 @@
 
             <div class="interview_page">
                 <a name="interview" ></a>
-                <h2 class="free big">Movie</h2>
-                <div class="movie">
+                <h2 class="free big" >Movie</h2>
+                <div class="movie desc_img animated" data-animate="fadeInUp">
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/kZj0mYHnhlw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
                 <p class="evis">撮影・編集：Studio EVIS <a href="https://studio-evis.net" target="blank">公式HP</a></p>
@@ -50,8 +50,8 @@
                     <p class="answer">北中：ん、、、お…、、お…、、お…、、お…、、お…、、お…、、</p>
                 </div>
                 <h2 class="free big">Career</h2>
-                <div class="career">
-                    <div class="career_grid">
+                <div class="career animated" data-animate="fadeInUp" >
+                    <div class="career_grid" >
                         <section class="age">年度</section>
                         <section class="age_content">内容</section>
                     </div>
@@ -63,7 +63,7 @@
                 </div>
 
                 <h2 class="free big">Schedule</h2>
-                <div class="schedule">
+                <div class="schedule animated" data-animate="fadeInUp" >
                     <img src="../assets/etc/sce.png" alt="">
                 </div>
 
@@ -78,7 +78,7 @@
                 </div> -->
        
             </div>
-         <section class="interviewer">
+         <section class="interviewer animated" data-animate="fadeInUp" >
             <div class="interview_container">
                 <img src="../assets/person/kenta.jpg" alt="">
                 <div class="interview_desc">

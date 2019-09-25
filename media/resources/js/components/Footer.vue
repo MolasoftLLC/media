@@ -1,5 +1,5 @@
 <template v-cloak>
-  <footer class="footer" style="color:#fefefe;">
+  <footer class="footer" style="color:#fefefe;" >
   LanceClip
   </footer>
 </template>

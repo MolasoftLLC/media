@@ -6,18 +6,11 @@
     <div class="header_adjust"></div>
    
   <h1 class="free">More Interview</h1>
-      <ul class="tab">
-      <li
-        class="tab__item"
-        :class="{'tab__item--active': tab === 1 }"
-        @click="tab = 1"
-      >最新記事</li>
-
-    </ul>
+  <img src="../assets/etc/nami.png" alt="" class="animated" data-animate="rubberBand">
 
 　<div class="panel" v-show="tab === 1">
     <div v-for="(lancer, id) in lancers" v-bind:key="id">
-        <div class="news_img">
+        <div class="news_img animated" data-animate="fadeInUp" >
           <!-- 要実装 -->
         <div v-if="lancer.id !== 100"> 
             <RouterLink :to="'/lancer/' + lancer.id" >

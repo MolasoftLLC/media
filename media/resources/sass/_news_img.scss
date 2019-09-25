@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Caveat&display=swap');
 
 .news_img {
-  width: 30%;
+  width: 28%;
   float: left;
  overflow: hidden;
- margin: 1.8% 1.2% ;
+ margin: 1.8% 1.8% ;
  display: block;
  object-fit: cover;
  position: relative;
@@ -18,15 +18,13 @@
   position: absolute;
   bottom: 0px;
   width: 100%;
-  padding: 0px 4px 4px;
-  opacity: 0.9;
+  width: 96%;
+  padding: 12px 8px 24px;
   color: #fefefe;
   font-weight: bold;
-  line-height: 5em;
   text-align: center;
   background: #59b9ec;
   font-weight: bold;
-  line-height: 5em;
   text-align: center;
 
   white-space: nowrap; /* 横幅のMAXに達しても改行しない */
@@ -38,15 +36,12 @@
   }
 
   p.on_name{
-    font-family: 'Caveat', cursive;
     position: absolute;
     bottom: 90px;
     display: block;
-    font-weight: bold;
     left: 16px;
-    font-size: 2em;
+    font-size: 1em;
     color: #fefefe;
-    text-shadow: 2px 2px 2px #000;
   }
 
  .news_img img {

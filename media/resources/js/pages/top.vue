@@ -2,7 +2,7 @@
 <div>
     <div class="mainimg_container" style="">
     <img class="mainimg" src="../assets/etc/lance_main.jpg" />
-    <img class="mainimg_on" src="../assets/etc/logo.png" />
+    <img class="mainimg_on animated" data-animate="fadeInUp" src="../assets/etc/logo.png" />
     <h1 class="main_catch">関西のフリーランスを見つけるメディアサイト</h1>
           <div class="box">
             <p>Scroll</p> 
@@ -27,18 +27,21 @@
 
   <h1 class="free">Freelance Interview</h1>
   <p class="free">多種多様な生き方を知る</p>
-  <img src="../assets/etc/nami.png" alt="">
+  <img src="../assets/etc/nami.png" alt="" class="animated" data-animate="rubberBand">
 
 　<div class="panel" v-show="tab === 1">
     <div v-for="(lancer, id) in lancers" v-bind:key="id">
-        <div class="news_img">
-      
+      <div class="fuwafuwa">
+        <div class="news_img animated" data-animate="rollIn">
+            
                 <RouterLink :to="'/lancer/' + lancer.id">
                    <img :src="'/images/'+lancer.img" width="100%" />
                    <p class="read_more">Read more</p>
                 </RouterLink>
-          <p class="ontext">{{ lancer.tags }}</p>
+           <p class="on_name"></p>
+          <p class="ontext">{{ lancer.name }}<br>{{ lancer.tags }}</p>
         </div>
+     </div>
         <div v-if="id===2||id===5" class="clear"></div>
     </div>
    <!-- <div class="news_img">
@@ -63,8 +66,8 @@
   </div> -->
 
   <div class="clear"></div>
-  　<p class="tag_serch">タグで絞り込む</p>
-　  <ul class="tag_grid">
+  　<p class="tag_serch ">タグで絞り込む</p>
+　  <ul class="tag_grid animated" data-animate="fadeInUp">
       <li><a href=""><img src="../assets/etc/ser.png" alt=""><br>サービス業</a></li>
       <li><a href=""><img src="../assets/etc/shop.png" alt=""><br>店舗運営</a></li>
       <li><a href=""><img src="../assets/etc/pen.png" alt=""><br>クリエイティブ</a></li>

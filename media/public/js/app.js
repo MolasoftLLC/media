@@ -2366,13 +2366,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     mounted: function mounted() {
@@ -2448,6 +2441,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     mounted: function mounted() {
@@ -2467,8 +2461,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
             // var id = this.$route.params['id']
             // var id = this.$route.query.itemId
-            return axios.get('/api/lancer/speaker').then(function (res) {
-                console.log(res.data);
+            return axios.get('/api/speaker').then(function (res) {
                 _this.speakers = res.data;
             });
         },
@@ -2478,7 +2471,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             // var id = this.$route.params['id']
             // var id = this.$route.query.itemId
             return axios.get('/api/lancer/').then(function (resd) {
-                console.log('動いてる');
+
                 console.log(resd.data);
                 _this2.lancers_it = resd.data;
             });
@@ -2493,6 +2486,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
 //
 //
 //
@@ -4332,8 +4328,12 @@ var render = function() {
           _vm._v(" "),
           _c("div", { staticClass: "on_profile" }, [
             _c("img", {
-              staticClass: "mainimg_on_person",
-              attrs: { id: "person", src: "/images/" + profile.img }
+              staticClass: "mainimg_on_person animated ",
+              attrs: {
+                id: "person",
+                "data-animate": "rollIn",
+                src: "/images/" + profile.img
+              }
             }),
             _vm._v(" "),
             _c("div", { staticClass: "profile_desc" }, [
@@ -4410,19 +4410,26 @@ var staticRenderFns = [
             _vm._v(" "),
             _c("h2", { staticClass: "free big" }, [_vm._v("Movie")]),
             _vm._v(" "),
-            _c("div", { staticClass: "movie" }, [
-              _c("iframe", {
-                attrs: {
-                  width: "560",
-                  height: "315",
-                  src: "https://www.youtube.com/embed/kZj0mYHnhlw",
-                  frameborder: "0",
-                  allow:
-                    "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture",
-                  allowfullscreen: ""
-                }
-              })
-            ]),
+            _c(
+              "div",
+              {
+                staticClass: "movie desc_img animated",
+                attrs: { "data-animate": "fadeInUp" }
+              },
+              [
+                _c("iframe", {
+                  attrs: {
+                    width: "560",
+                    height: "315",
+                    src: "https://www.youtube.com/embed/kZj0mYHnhlw",
+                    frameborder: "0",
+                    allow:
+                      "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture",
+                    allowfullscreen: ""
+                  }
+                })
+              ]
+            ),
             _vm._v(" "),
             _c("p", { staticClass: "evis" }, [
               _vm._v("撮影・編集：Studio EVIS "),
@@ -4455,44 +4462,67 @@ var staticRenderFns = [
             _vm._v(" "),
             _c("h2", { staticClass: "free big" }, [_vm._v("Career")]),
             _vm._v(" "),
-            _c("div", { staticClass: "career" }, [
-              _c("div", { staticClass: "career_grid" }, [
-                _c("section", { staticClass: "age" }, [_vm._v("年度")]),
+            _c(
+              "div",
+              {
+                staticClass: "career animated",
+                attrs: { "data-animate": "fadeInUp" }
+              },
+              [
+                _c("div", { staticClass: "career_grid" }, [
+                  _c("section", { staticClass: "age" }, [_vm._v("年度")]),
+                  _vm._v(" "),
+                  _c("section", { staticClass: "age_content" }, [
+                    _vm._v("内容")
+                  ])
+                ]),
                 _vm._v(" "),
-                _c("section", { staticClass: "age_content" }, [_vm._v("内容")])
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "career_grid" }, [
-                _c("section", { staticClass: "age" }, [_vm._v("2018年")]),
-                _vm._v(" "),
-                _c("section", { staticClass: "age_content" }, [
-                  _vm._v("起業しました")
+                _c("div", { staticClass: "career_grid" }, [
+                  _c("section", { staticClass: "age" }, [_vm._v("2018年")]),
+                  _vm._v(" "),
+                  _c("section", { staticClass: "age_content" }, [
+                    _vm._v("起業しました")
+                  ])
                 ])
-              ])
-            ]),
+              ]
+            ),
             _vm._v(" "),
             _c("h2", { staticClass: "free big" }, [_vm._v("Schedule")]),
             _vm._v(" "),
-            _c("div", { staticClass: "schedule" }, [
-              _c("img", {
-                attrs: { src: __webpack_require__("./resources/js/assets/etc/sce.png"), alt: "" }
-              })
-            ])
+            _c(
+              "div",
+              {
+                staticClass: "schedule animated",
+                attrs: { "data-animate": "fadeInUp" }
+              },
+              [
+                _c("img", {
+                  attrs: { src: __webpack_require__("./resources/js/assets/etc/sce.png"), alt: "" }
+                })
+              ]
+            )
           ]),
           _vm._v(" "),
-          _c("section", { staticClass: "interviewer" }, [
-            _c("div", { staticClass: "interview_container" }, [
-              _c("img", {
-                attrs: { src: __webpack_require__("./resources/js/assets/person/kenta.jpg"), alt: "" }
-              }),
-              _vm._v(" "),
-              _c("div", { staticClass: "interview_desc" }, [
-                _c("p", [_vm._v("記事の作者")]),
+          _c(
+            "section",
+            {
+              staticClass: "interviewer animated",
+              attrs: { "data-animate": "fadeInUp" }
+            },
+            [
+              _c("div", { staticClass: "interview_container" }, [
+                _c("img", {
+                  attrs: { src: __webpack_require__("./resources/js/assets/person/kenta.jpg"), alt: "" }
+                }),
                 _vm._v(" "),
-                _c("p", [_vm._v("記事を書いている人の情報を載せます")])
+                _c("div", { staticClass: "interview_desc" }, [
+                  _c("p", [_vm._v("記事の作者")]),
+                  _vm._v(" "),
+                  _c("p", [_vm._v("記事を書いている人の情報を載せます")])
+                ])
               ])
-            ])
-          ])
+            ]
+          )
         ]),
         _vm._v(" "),
         _c("section", { staticClass: "want" }, [
@@ -5054,7 +5084,14 @@ var render = function() {
       _vm._v(" "),
       _c("p", { staticClass: "free" }, [_vm._v("多種多様な生き方を知る")]),
       _vm._v(" "),
-      _c("img", { attrs: { src: __webpack_require__("./resources/js/assets/etc/nami.png"), alt: "" } }),
+      _c("img", {
+        staticClass: "animated",
+        attrs: {
+          src: __webpack_require__("./resources/js/assets/etc/nami.png"),
+          alt: "",
+          "data-animate": "rubberBand"
+        }
+      }),
       _vm._v(" "),
       _c(
         "div",
@@ -5072,24 +5109,39 @@ var render = function() {
         [
           _vm._l(_vm.lancers, function(lancer, id) {
             return _c("div", { key: id }, [
-              _c(
-                "div",
-                { staticClass: "news_img" },
-                [
-                  _c("RouterLink", { attrs: { to: "/lancer/" + lancer.id } }, [
-                    _c("img", {
-                      attrs: { src: "/images/" + lancer.img, width: "100%" }
-                    }),
+              _c("div", { staticClass: "fuwafuwa" }, [
+                _c(
+                  "div",
+                  {
+                    staticClass: "news_img animated",
+                    attrs: { "data-animate": "rollIn" }
+                  },
+                  [
+                    _c(
+                      "RouterLink",
+                      { attrs: { to: "/lancer/" + lancer.id } },
+                      [
+                        _c("img", {
+                          attrs: { src: "/images/" + lancer.img, width: "100%" }
+                        }),
+                        _vm._v(" "),
+                        _c("p", { staticClass: "read_more" }, [
+                          _vm._v("Read more")
+                        ])
+                      ]
+                    ),
                     _vm._v(" "),
-                    _c("p", { staticClass: "read_more" }, [_vm._v("Read more")])
-                  ]),
-                  _vm._v(" "),
-                  _c("p", { staticClass: "ontext" }, [
-                    _vm._v(_vm._s(lancer.tags))
-                  ])
-                ],
-                1
-              ),
+                    _c("p", { staticClass: "on_name" }),
+                    _vm._v(" "),
+                    _c("p", { staticClass: "ontext" }, [
+                      _vm._v(_vm._s(lancer.name)),
+                      _c("br"),
+                      _vm._v(_vm._s(lancer.tags))
+                    ])
+                  ],
+                  1
+                )
+              ]),
               _vm._v(" "),
               id === 2 || id === 5
                 ? _c("div", { staticClass: "clear" })
@@ -5099,7 +5151,7 @@ var render = function() {
           _vm._v(" "),
           _c("div", { staticClass: "clear" }),
           _vm._v(" "),
-          _c("p", { staticClass: "tag_serch" }, [_vm._v("タグで絞り込む")]),
+          _c("p", { staticClass: "tag_serch " }, [_vm._v("タグで絞り込む")]),
           _vm._v(" "),
           _vm._m(4)
         ],
@@ -5221,8 +5273,11 @@ var staticRenderFns = [
       }),
       _vm._v(" "),
       _c("img", {
-        staticClass: "mainimg_on",
-        attrs: { src: __webpack_require__("./resources/js/assets/etc/logo.png") }
+        staticClass: "mainimg_on animated",
+        attrs: {
+          "data-animate": "fadeInUp",
+          src: __webpack_require__("./resources/js/assets/etc/logo.png")
+        }
       }),
       _vm._v(" "),
       _c("h1", { staticClass: "main_catch" }, [
@@ -5272,57 +5327,64 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("ul", { staticClass: "tag_grid" }, [
-      _c("li", [
-        _c("a", { attrs: { href: "" } }, [
-          _c("img", {
-            attrs: { src: __webpack_require__("./resources/js/assets/etc/ser.png"), alt: "" }
-          }),
-          _c("br"),
-          _vm._v("サービス業")
+    return _c(
+      "ul",
+      {
+        staticClass: "tag_grid animated",
+        attrs: { "data-animate": "fadeInUp" }
+      },
+      [
+        _c("li", [
+          _c("a", { attrs: { href: "" } }, [
+            _c("img", {
+              attrs: { src: __webpack_require__("./resources/js/assets/etc/ser.png"), alt: "" }
+            }),
+            _c("br"),
+            _vm._v("サービス業")
+          ])
+        ]),
+        _vm._v(" "),
+        _c("li", [
+          _c("a", { attrs: { href: "" } }, [
+            _c("img", {
+              attrs: { src: __webpack_require__("./resources/js/assets/etc/shop.png"), alt: "" }
+            }),
+            _c("br"),
+            _vm._v("店舗運営")
+          ])
+        ]),
+        _vm._v(" "),
+        _c("li", [
+          _c("a", { attrs: { href: "" } }, [
+            _c("img", {
+              attrs: { src: __webpack_require__("./resources/js/assets/etc/pen.png"), alt: "" }
+            }),
+            _c("br"),
+            _vm._v("クリエイティブ")
+          ])
+        ]),
+        _vm._v(" "),
+        _c("li", [
+          _c("a", { attrs: { href: "" } }, [
+            _c("img", {
+              attrs: { src: __webpack_require__("./resources/js/assets/etc/it.png"), alt: "" }
+            }),
+            _c("br"),
+            _vm._v("テクノロジー")
+          ])
+        ]),
+        _vm._v(" "),
+        _c("li", [
+          _c("a", { attrs: { href: "" } }, [
+            _c("img", {
+              attrs: { src: __webpack_require__("./resources/js/assets/etc/ques.png"), alt: "" }
+            }),
+            _c("br"),
+            _vm._v("その他")
+          ])
         ])
-      ]),
-      _vm._v(" "),
-      _c("li", [
-        _c("a", { attrs: { href: "" } }, [
-          _c("img", {
-            attrs: { src: __webpack_require__("./resources/js/assets/etc/shop.png"), alt: "" }
-          }),
-          _c("br"),
-          _vm._v("店舗運営")
-        ])
-      ]),
-      _vm._v(" "),
-      _c("li", [
-        _c("a", { attrs: { href: "" } }, [
-          _c("img", {
-            attrs: { src: __webpack_require__("./resources/js/assets/etc/pen.png"), alt: "" }
-          }),
-          _c("br"),
-          _vm._v("クリエイティブ")
-        ])
-      ]),
-      _vm._v(" "),
-      _c("li", [
-        _c("a", { attrs: { href: "" } }, [
-          _c("img", {
-            attrs: { src: __webpack_require__("./resources/js/assets/etc/it.png"), alt: "" }
-          }),
-          _c("br"),
-          _vm._v("テクノロジー")
-        ])
-      ]),
-      _vm._v(" "),
-      _c("li", [
-        _c("a", { attrs: { href: "" } }, [
-          _c("img", {
-            attrs: { src: __webpack_require__("./resources/js/assets/etc/ques.png"), alt: "" }
-          }),
-          _c("br"),
-          _vm._v("その他")
-        ])
-      ])
-    ])
+      ]
+    )
   },
   function() {
     var _vm = this
@@ -5460,21 +5522,14 @@ var render = function() {
         _vm._v(" "),
         _c("h1", { staticClass: "free" }, [_vm._v("More Interview")]),
         _vm._v(" "),
-        _c("ul", { staticClass: "tab" }, [
-          _c(
-            "li",
-            {
-              staticClass: "tab__item",
-              class: { "tab__item--active": _vm.tab === 1 },
-              on: {
-                click: function($event) {
-                  _vm.tab = 1
-                }
-              }
-            },
-            [_vm._v("最新記事")]
-          )
-        ]),
+        _c("img", {
+          staticClass: "animated",
+          attrs: {
+            src: __webpack_require__("./resources/js/assets/etc/nami.png"),
+            alt: "",
+            "data-animate": "rubberBand"
+          }
+        }),
         _vm._v(" "),
         _c(
           "div",
@@ -5492,36 +5547,43 @@ var render = function() {
           [
             _vm._l(_vm.lancers, function(lancer, id) {
               return _c("div", { key: id }, [
-                _c("div", { staticClass: "news_img" }, [
-                  lancer.id !== 100
-                    ? _c(
-                        "div",
-                        [
-                          _c(
-                            "RouterLink",
-                            { attrs: { to: "/lancer/" + lancer.id } },
-                            [
-                              _c("img", {
-                                attrs: {
-                                  src: "/images/" + lancer.img,
-                                  width: "100%"
-                                }
-                              }),
-                              _vm._v(" "),
-                              _c("p", { staticClass: "read_more" }, [
-                                _vm._v("Read more")
-                              ])
-                            ]
-                          ),
-                          _vm._v(" "),
-                          _c("p", { staticClass: "ontext" }, [
-                            _vm._v(_vm._s(lancer.tags))
-                          ])
-                        ],
-                        1
-                      )
-                    : _vm._e()
-                ]),
+                _c(
+                  "div",
+                  {
+                    staticClass: "news_img animated",
+                    attrs: { "data-animate": "fadeInUp" }
+                  },
+                  [
+                    lancer.id !== 100
+                      ? _c(
+                          "div",
+                          [
+                            _c(
+                              "RouterLink",
+                              { attrs: { to: "/lancer/" + lancer.id } },
+                              [
+                                _c("img", {
+                                  attrs: {
+                                    src: "/images/" + lancer.img,
+                                    width: "100%"
+                                  }
+                                }),
+                                _vm._v(" "),
+                                _c("p", { staticClass: "read_more" }, [
+                                  _vm._v("Read more")
+                                ])
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c("p", { staticClass: "ontext" }, [
+                              _vm._v(_vm._s(lancer.tags))
+                            ])
+                          ],
+                          1
+                        )
+                      : _vm._e()
+                  ]
+                ),
                 _vm._v(" "),
                 id === 2 || id === 5
                   ? _c("div", { staticClass: "clear" })
@@ -5583,7 +5645,12 @@ var render = function() {
     ),
     _vm._v(" "),
     _c("img", {
-      attrs: { src: __webpack_require__("./resources/js/assets/etc/Freelancesession.jpg"), alt: "" }
+      staticClass: "animated",
+      attrs: {
+        src: __webpack_require__("./resources/js/assets/etc/Freelancesession.jpg"),
+        alt: "",
+        "data-animate": "fadeInUp"
+      }
     }),
     _vm._v(" "),
     _c("ul", { staticClass: "talk_event" }, [
@@ -5595,13 +5662,18 @@ var render = function() {
         _vm._v("関西大学梅田キャンパス スタートアップカフェ大阪")
       ]),
       _vm._v(" "),
+      _c("li", { staticClass: "talk_event speaker" }, [_vm._v("今回の登壇者")]),
+      _vm._v(" "),
       _c(
         "li",
         _vm._l(_vm.speakers, function(speaker, id) {
           return _c("div", { key: id }, [
             _c(
               "div",
-              { staticClass: "news_img" },
+              {
+                staticClass: "news_img animated",
+                attrs: { "data-animate": "rollIn" }
+              },
               [
                 _c("RouterLink", { attrs: { to: "/lancer/" + speaker.id } }, [
                   _c("img", {
@@ -5612,6 +5684,8 @@ var render = function() {
                 ]),
                 _vm._v(" "),
                 _c("p", { staticClass: "ontext" }, [
+                  _vm._v(_vm._s(speaker.name)),
+                  _c("br"),
                   _vm._v(_vm._s(speaker.tags))
                 ])
               ],
@@ -5645,11 +5719,15 @@ var render = function() {
       _vm._v("多種多様な働き方を知り、新しいきっかけを。")
     ]),
     _vm._v(" "),
-    _c("p", { staticClass: "talk_event" }, [
-      _vm._v(
-        " フリーランスに憧れているあなたや、働き方を変えようと思っているあなた。\n  「雇われずに働く」という新時代のライフスタイルの実現に向けて、まずはフリーランスで活躍されている方のリアルの声に耳を傾けてみませんか。"
-      )
-    ])
+    _c(
+      "p",
+      { staticClass: "talk_event", staticStyle: { "padding-bottom": "82px" } },
+      [
+        _vm._v(
+          " フリーランスに憧れているあなたや、働き方を変えようと思っているあなた。\n  「雇われずに働く」という新時代のライフスタイルの実現に向けて、まずはフリーランスで活躍されている方のリアルの声に耳を傾けてみませんか。"
+        )
+      ]
+    )
   ])
 }
 var staticRenderFns = [
@@ -5668,8 +5746,9 @@ var staticRenderFns = [
     return _c(
       "li",
       {
-        staticClass: "talk_event session_entry",
-        staticStyle: { "margin-top": "64px" }
+        staticClass: "talk_event session_entry animated",
+        staticStyle: { "margin-top": "64px" },
+        attrs: { "data-animate": "rubberBand" }
       },
       [
         _c(

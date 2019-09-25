@@ -30,17 +30,6 @@ p.interview_p{
 
 
 
-  p.on_name{
-    font-family: 'Caveat', cursive;
-    position: absolute;
-    bottom: 90px;
-    display: block;
-    font-weight: bold;
-    left: 16px;
-    font-size: 2em;
-    color: #fefefe;
-    text-shadow: 2px 2px 2px #000;
-  }
 
  .news_img img {
   transition: 0.3s;
@@ -93,6 +82,13 @@ p.talk_event{margin-top: 8px; line-height: 1.8em; padding: 12px 112px 0px; color
 h2.talk_event{font-size: 1.2em; color: #1d7eb1; font-weight: bold; border-bottom: solid 1px #1d7eb1; margin:82px 112px 0px; text-align: center;}
 h2.talk{font-size: 1.4em; font-weight: bold;}
 h2.speaker{font-size: 1.4em; font-weight: bold; text-align: center; padding: 32px 16px 16px;}
+
+.speaker{
+  border-bottom: solid 1px #1d7eb1;
+  padding-bottom: 12px;
+  margin-bottom: 12px;
+  padding-top: 42px;
+}
 
 .session_entry{    text-align: center;
   line-height: 3em;
