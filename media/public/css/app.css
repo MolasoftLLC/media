@@ -1348,7 +1348,6 @@ h2.speaker {
   width: 90%;
   max-width: 660px;
   margin: 0 auto;
-  background-color: #fefefe;
 }
 
 .career {
@@ -1506,12 +1505,15 @@ h2.speaker {
 
 .mainimg {
   width: 100%;
-  opacity: 0.6;
+  opacity: 0.8;
+  -ms-filter: blur(3px);
+  -webkit-filter: blur(3px);
+          filter: blur(3px);
 }
 
 .mainimg_on {
   position: absolute;
-  top: 36%;
+  top: 35%;
   left: 33%;
   width: 80%;
   max-width: 600px;
@@ -1529,7 +1531,7 @@ h2.speaker {
   -webkit-filter: drop-shadow(0 0 0.75rem #585858);
           filter: drop-shadow(0 0 0.75rem #585858);
   margin: 0 auto;
-  font-size: 1.3em;
+  font-size: 1.1em;
   text-align: center;
   color: #fefefe;
   border-top: solid 1px #fefefe;

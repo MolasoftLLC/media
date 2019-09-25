@@ -1,7 +1,7 @@
 <template>
 <div>
     <div class="mainimg_container" style="">
-    <img class="mainimg" src="../assets/etc/lance_main.jpg" />
+    <img class="mainimg" src="../assets/etc/lance_main2.jpg" />
     <img class="mainimg_on  slideInRight" src="../assets/etc/logo.png" />
     <h1 class="main_catch">関西のフリーランスを見つけるメディアサイト</h1>
           <div class="box">

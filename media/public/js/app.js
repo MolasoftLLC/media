@@ -4591,7 +4591,7 @@ var render = function() {
       "nav",
       {
         staticClass: "navbar",
-        class: { scroll_none: _vm.scrollY > 400 },
+        class: { scroll_none: _vm.scrollY > 1200 },
         staticStyle: { top: "7rem", height: "7rem", background: "none" }
       },
       [_vm._m(0), _vm._v(" "), _c("div", { staticClass: "clear" })]
@@ -5245,7 +5245,7 @@ var staticRenderFns = [
     return _c("div", { staticClass: "mainimg_container" }, [
       _c("img", {
         staticClass: "mainimg",
-        attrs: { src: __webpack_require__("./resources/js/assets/etc/lance_main.jpg") }
+        attrs: { src: __webpack_require__("./resources/js/assets/etc/lance_main2.jpg") }
       }),
       _vm._v(" "),
       _c("img", {
@@ -22187,6 +22187,13 @@ module.exports = "/images/it.png?59cac4aeac3377b80d3c37312161d3ac";
 /***/ (function(module, exports) {
 
 module.exports = "/images/lance_main.jpg?04a523205f9bdd332638596b7074d7d9";
+
+/***/ }),
+
+/***/ "./resources/js/assets/etc/lance_main2.jpg":
+/***/ (function(module, exports) {
+
+module.exports = "/images/lance_main2.jpg?b56906d87c2a1a88b93ca9d106587c2c";
 
 /***/ }),
 

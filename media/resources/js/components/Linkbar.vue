@@ -1,6 +1,6 @@
 <template>
   <div id="contact">
-  <nav class="navbar" style="top:7rem; height:7rem; background: none;" v-bind:class="{scroll_none: scrollY > 400}">
+  <nav class="navbar" style="top:7rem; height:7rem; background: none;" v-bind:class="{scroll_none: scrollY > 1200}">
    
     <ul class="nav_link">
       <li  class="nav_link"> <a class="deco_none" href="#interview"> <img src="../assets/icon/file_wh.png"   class="icon" /><br>インタビュー記事</a></li>
