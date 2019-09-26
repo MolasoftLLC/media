@@ -1959,6 +1959,15 @@ p.desc {
           animation-timing-function: ease-out;
 }
 
+.tagname:hover + .tagimg2 {
+  -webkit-animation-name: rubber;
+          animation-name: rubber;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+}
+
 p.search {
   text-align: center;
   color: #5bb9ea;

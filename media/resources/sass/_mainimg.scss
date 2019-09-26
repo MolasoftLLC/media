@@ -357,7 +357,18 @@ margin-top: 18px;
 
 }
 
+
+.tagimg, .tagimg2{
+
+}
+
 .tagimg:hover{
+  animation-name: rubber;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+}
+
+.tagname:hover + .tagimg2{
   animation-name: rubber;
   animation-duration: 1s;
   animation-timing-function: ease-out;

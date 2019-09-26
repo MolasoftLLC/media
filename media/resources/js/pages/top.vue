@@ -56,11 +56,11 @@
             <div class="clear"></div>
           　 <p class="tag_serch ">タグで絞り込む</p>
         　   <ul class="tag_grid animated" data-animate="fadeInUp">
-                  <li><RouterLink :to="'/tag/' + 'service'" ><img src="../assets/etc/ser.png" alt="" class="tagimg"><br>サービス業</RouterLink></li>
-                  <li><RouterLink :to="'/tag/' + 'shop'" ><img src="../assets/etc/shop.png" alt="" class="tagimg"> <br>店舗運営</RouterLink></li>
-                  <li><RouterLink :to="'/tag/' + 'creative'" ><img src="../assets/etc/pen.png" alt="" class="tagimg"><br>クリエイティブ</RouterLink></li>
-                  <li><RouterLink :to="'/tag/' + 'it'" ><img src="../assets/etc/it.png" alt="" class="tagimg"><br>テクノロジー</RouterLink></li>
-                  <li><RouterLink :to="'/tag/' + 'etc'" ><img src="../assets/etc/ques.png" alt="" class="tagimg"><br>その他</RouterLink></li>
+                  <li class="tagimg"><RouterLink :to="'/tag/' + 'service'" ><img src="../assets/etc/ser.png" alt="" ><br><span class="tagname">サービス業</span></RouterLink></li>
+                  <li class="tagimg"><RouterLink :to="'/tag/' + 'shop'" ><img src="../assets/etc/shop.png" alt="" > <br>店舗運営</RouterLink></li>
+                  <li class="tagimg"><RouterLink :to="'/tag/' + 'creative'" ><img src="../assets/etc/pen.png" alt="" ><br>クリエイティブ</RouterLink></li>
+                  <li class="tagimg"><RouterLink :to="'/tag/' + 'it'" ><img src="../assets/etc/it.png" alt="" ><br>テクノロジー</RouterLink></li>
+                  <li class="tagimg"><RouterLink :to="'/tag/' + 'etc'" ><img src="../assets/etc/ques.png" alt="" ><br>その他</RouterLink></li>
             </ul>
         </div>
       </div>

@@ -4935,14 +4935,16 @@ var render = function() {
             [
               _c(
                 "li",
+                { staticClass: "tagimg" },
                 [
                   _c("RouterLink", { attrs: { to: "/tag/" + "service" } }, [
                     _c("img", {
-                      staticClass: "tagimg",
                       attrs: { src: __webpack_require__("./resources/js/assets/etc/ser.png"), alt: "" }
                     }),
                     _c("br"),
-                    _vm._v("サービス業")
+                    _c("span", { staticClass: "tagname" }, [
+                      _vm._v("サービス業")
+                    ])
                   ])
                 ],
                 1
@@ -4950,10 +4952,10 @@ var render = function() {
               _vm._v(" "),
               _c(
                 "li",
+                { staticClass: "tagimg" },
                 [
                   _c("RouterLink", { attrs: { to: "/tag/" + "shop" } }, [
                     _c("img", {
-                      staticClass: "tagimg",
                       attrs: { src: __webpack_require__("./resources/js/assets/etc/shop.png"), alt: "" }
                     }),
                     _vm._v(" "),
@@ -4966,10 +4968,10 @@ var render = function() {
               _vm._v(" "),
               _c(
                 "li",
+                { staticClass: "tagimg" },
                 [
                   _c("RouterLink", { attrs: { to: "/tag/" + "creative" } }, [
                     _c("img", {
-                      staticClass: "tagimg",
                       attrs: { src: __webpack_require__("./resources/js/assets/etc/pen.png"), alt: "" }
                     }),
                     _c("br"),
@@ -4981,10 +4983,10 @@ var render = function() {
               _vm._v(" "),
               _c(
                 "li",
+                { staticClass: "tagimg" },
                 [
                   _c("RouterLink", { attrs: { to: "/tag/" + "it" } }, [
                     _c("img", {
-                      staticClass: "tagimg",
                       attrs: { src: __webpack_require__("./resources/js/assets/etc/it.png"), alt: "" }
                     }),
                     _c("br"),
@@ -4996,10 +4998,10 @@ var render = function() {
               _vm._v(" "),
               _c(
                 "li",
+                { staticClass: "tagimg" },
                 [
                   _c("RouterLink", { attrs: { to: "/tag/" + "etc" } }, [
                     _c("img", {
-                      staticClass: "tagimg",
                       attrs: { src: __webpack_require__("./resources/js/assets/etc/ques.png"), alt: "" }
                     }),
                     _c("br"),
