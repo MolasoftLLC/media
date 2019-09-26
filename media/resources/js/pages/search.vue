@@ -4,8 +4,8 @@
         <div id="app" class="container container_sub slideInRight">
             <div class="container_max">
             <div class="container_crip"><img src="../assets/etc/clip.png" alt=""></div>
-            <div class="more_left fuwafuwa"  ><span>◀︎</span><br>more</div>
-            <div class="more_right  fuwafuwa" ><span>▶︎</span><br>more</div>
+            <div class="more_left fuwafuwa"  ><RouterLink :to="'/tag/all'"><span>◀︎</span><br>more</RouterLink></div>
+            <div class="more_right  fuwafuwa" ><RouterLink :to="'/tag/all'"><span>▶︎</span><br>more</RouterLink></div>
             <a name="interview" ></a>
             <div class="header_adjust"></div>
     

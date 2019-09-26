@@ -28,6 +28,13 @@ class LanceController extends Controller
         return $tags;
     }
 
+    public function all()
+    {
+        
+        $lancer = Lancer::all()->take(12);
+        return $lancer;
+    }
+
 
     public function speaker()
     {

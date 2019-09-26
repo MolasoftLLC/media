@@ -41,7 +41,7 @@ const routes = [
     path: '/tag/:tag',
     components:{
       default: search,
-      talkComponents:more,
+      talkComponents:talk,
     }
 },
 

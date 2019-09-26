@@ -4044,9 +4044,31 @@ var render = function() {
         _c("div", { staticClass: "container_max" }, [
           _vm._m(0),
           _vm._v(" "),
-          _vm._m(1),
+          _c(
+            "div",
+            { staticClass: "more_left fuwafuwa" },
+            [
+              _c("RouterLink", { attrs: { to: "/tag/all" } }, [
+                _c("span", [_vm._v("◀︎")]),
+                _c("br"),
+                _vm._v("more")
+              ])
+            ],
+            1
+          ),
           _vm._v(" "),
-          _vm._m(2),
+          _c(
+            "div",
+            { staticClass: "more_right  fuwafuwa" },
+            [
+              _c("RouterLink", { attrs: { to: "/tag/all" } }, [
+                _c("span", [_vm._v("▶︎")]),
+                _c("br"),
+                _vm._v("more")
+              ])
+            ],
+            1
+          ),
           _vm._v(" "),
           _c("a", { attrs: { name: "interview" } }),
           _vm._v(" "),
@@ -4227,26 +4249,6 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "container_crip" }, [
       _c("img", { attrs: { src: __webpack_require__("./resources/js/assets/etc/clip.png"), alt: "" } })
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "more_left fuwafuwa" }, [
-      _c("span", [_vm._v("◀︎")]),
-      _c("br"),
-      _vm._v("more")
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "more_right  fuwafuwa" }, [
-      _c("span", [_vm._v("▶︎")]),
-      _c("br"),
-      _vm._v("more")
     ])
   }
 ]
@@ -5036,9 +5038,31 @@ var render = function() {
       _c("div", { staticClass: "container_max" }, [
         _vm._m(1),
         _vm._v(" "),
-        _vm._m(2),
+        _c(
+          "div",
+          { staticClass: "more_left fuwafuwa" },
+          [
+            _c("RouterLink", { attrs: { to: "/tag/all" } }, [
+              _c("span", [_vm._v("◀︎")]),
+              _c("br"),
+              _vm._v("more")
+            ])
+          ],
+          1
+        ),
         _vm._v(" "),
-        _vm._m(3),
+        _c(
+          "div",
+          { staticClass: "more_right  fuwafuwa" },
+          [
+            _c("RouterLink", { attrs: { to: "/tag/all" } }, [
+              _c("span", [_vm._v("▶︎")]),
+              _c("br"),
+              _vm._v("more")
+            ])
+          ],
+          1
+        ),
         _vm._v(" "),
         _c("a", { attrs: { name: "interview" } }),
         _vm._v(" "),
@@ -5249,26 +5273,6 @@ var staticRenderFns = [
     return _c("div", { staticClass: "container_crip" }, [
       _c("img", { attrs: { src: __webpack_require__("./resources/js/assets/etc/clip.png"), alt: "" } })
     ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "more_left fuwafuwa" }, [
-      _c("span", [_vm._v("◀︎")]),
-      _c("br"),
-      _vm._v("more")
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "more_right  fuwafuwa" }, [
-      _c("span", [_vm._v("▶︎")]),
-      _c("br"),
-      _vm._v("more")
-    ])
   }
 ]
 render._withStripped = true
@@ -5344,9 +5348,31 @@ var render = function() {
         _c("div", { staticClass: "container_max" }, [
           _vm._m(0),
           _vm._v(" "),
-          _vm._m(1),
+          _c(
+            "div",
+            { staticClass: "more_left fuwafuwa" },
+            [
+              _c("RouterLink", { attrs: { to: "/tag/all" } }, [
+                _c("span", [_vm._v("◀︎")]),
+                _c("br"),
+                _vm._v("more")
+              ])
+            ],
+            1
+          ),
           _vm._v(" "),
-          _vm._m(2),
+          _c(
+            "div",
+            { staticClass: "more_right  fuwafuwa" },
+            [
+              _c("RouterLink", { attrs: { to: "/tag/all" } }, [
+                _c("span", [_vm._v("▶︎")]),
+                _c("br"),
+                _vm._v("more")
+              ])
+            ],
+            1
+          ),
           _vm._v(" "),
           _c("a", { attrs: { name: "interview" } }),
           _vm._v(" "),
@@ -5441,26 +5467,6 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "container_crip" }, [
       _c("img", { attrs: { src: __webpack_require__("./resources/js/assets/etc/clip.png"), alt: "" } })
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "more_left fuwafuwa" }, [
-      _c("span", [_vm._v("◀︎")]),
-      _c("br"),
-      _vm._v("more")
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "more_right  fuwafuwa" }, [
-      _c("span", [_vm._v("▶︎")]),
-      _c("br"),
-      _vm._v("more")
     ])
   }
 ]
@@ -22756,7 +22762,7 @@ var routes = [{
   path: '/tag/:tag',
   components: {
     default: __WEBPACK_IMPORTED_MODULE_7__pages_search_vue___default.a,
-    talkComponents: __WEBPACK_IMPORTED_MODULE_6__pages_more_vue___default.a
+    talkComponents: __WEBPACK_IMPORTED_MODULE_5__pages_talk_vue___default.a
   }
 }, {
   path: '/500',

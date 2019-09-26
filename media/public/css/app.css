@@ -437,6 +437,11 @@ body {
   font-size: 4em;
 }
 
+.more_left a {
+  color: #64b7e3;
+  text-decoration: none;
+}
+
 .more_right {
   position: absolute;
   right: 10%;
@@ -447,6 +452,11 @@ body {
 
 .more_right span {
   font-size: 4em;
+}
+
+.more_right a {
+  color: #64b7e3;
+  text-decoration: none;
 }
 
 .tag_grid {
