@@ -1,6 +1,19 @@
 .footer {
   align-items: center;
   display: flex;
-  height: 12rem;
   justify-content: center;
+  text-align: center;
+  padding:48px 0px;
+}
+
+.footer_tag{
+  text-align: center;
+  font-size: 0.9em;
+  a{
+    color: #fefefe;
+  }
+}
+
+.company{
+  color:#fefefe; 
 }

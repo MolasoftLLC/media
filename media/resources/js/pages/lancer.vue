@@ -1,40 +1,42 @@
 <template>
   <div>
+  
   <div v-for="(profile, id) in person" v-bind:key="id">
   <div class="mainimg_container_person" style="">
-      　
-        <img class="mainimg_person" src="../assets/etc/lance_main.jpg" />
-        <div class="on_profile">
-            <img id="person" class="mainimg_on_person slideInRight "  :src="'/images/'+profile.img"  />
-            <div class="profile_desc">
-                <div class="inline"><h1 >{{ profile.name }}</h1>
-                <img src="../assets/icon/twitter.png" alt=""><img style="margin-left:8px;" src="../assets/icon/instagram.png" alt=""></div>
-                <p>{{ profile.tags }}</p>
-                <p class="desc">{{ profile.about }}
-                </p>
-                <div class="in">
-                    <p><a href="#">{{ profile.content }}</a></p>
+            <img class="mainimg_person" src="../assets/etc/lance_main.jpg" />
+            <div class="on_profile container_max">
+                <img id="person" class="mainimg_on_person slideInRight "  :src="'/images/'+profile.img"  />
+                <div class="profile_desc">
+                    <div class="inline"><h1 >{{ profile.name }}</h1>
+                    <img src="../assets/icon/twitter.png" alt=""><img style="margin-left:8px;" src="../assets/icon/instagram.png" alt=""></div>
+                    <p>{{ profile.tags }}</p>
+                    <p class="desc">{{ profile.about }}
+                    </p>
+                    <div class="in">
+                        <p><a href="#">{{ profile.content }}</a></p>
+                    </div>
                 </div>
             </div>
-        </div>
-        
-        <div class="box">
-            <p>Scroll</p> 
-            <div class="arrowWrap">
-                <div class="arrow1">
-                    <span></span>
-                </div>
-                <div class="arrow2">
-                    <span></span>
-                </div>
+            
+            <div class="box">
+                <p>Scroll</p> 
+                <div class="arrowWrap">
+                    <div class="arrow1">
+                        <span></span>
+                    </div>
+                    <div class="arrow2">
+                        <span></span>
+                    </div>
             </div>
         </div>
   </div>
-  <div id="app" class="container">
+    <div id="app" class="container">
     <div class="container_crip"><img src="../assets/etc/clip.png" alt=""></div>
 
     <div class="interview_grid">
+        <div class="container_max">
         <section class="grid_main">
+            
 
             <div class="interview_page">
                 <a name="interview" ></a>
@@ -42,7 +44,7 @@
                 <div class="movie desc_img animated" data-animate="fadeInUp">
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/kZj0mYHnhlw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
-                <p class="evis">撮影・編集：Studio EVIS <a href="https://studio-evis.net" target="blank">公式HP</a></p>
+                <p class="evis">撮影・編集：Studio EVIS <a href="https://studio-evis.net" target="_blank">公式HP</a></p>
                 <div class="interview_talk">
                     <h2 class="question">北中さんはなぜこの事業を始めようと思ったんですか？</h2>
                     <p class="answer">北中：おで…、、お…、、お…、、お…、、お…、、お…、、</p>
@@ -85,6 +87,7 @@
                     <p>記事の作者</p>
                     <p>記事を書いている人の情報を載せます</p>
                 </div>
+                
             </div>
         </section>
         
@@ -110,6 +113,7 @@
     </div>
   </div>
   </div>
+    </div>
 　</div>
 </template>
 

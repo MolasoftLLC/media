@@ -476,6 +476,11 @@ body {
   border-left: 2px solid #64b7e3;
 }
 
+.container_max {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
 .grid {
   display: grid;
   grid-gap: 0 2%;
@@ -893,10 +898,24 @@ img.main_logo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 12rem;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  text-align: center;
+  padding: 48px 0px;
+}
+
+.footer_tag {
+  text-align: center;
+  font-size: 0.9em;
+}
+
+.footer_tag a {
+  color: #fefefe;
+}
+
+.company {
+  color: #fefefe;
 }
 
 .errors {
@@ -1314,10 +1333,8 @@ h2.speaker {
 }
 
 .speaker {
-  border-bottom: solid 1px #1d7eb1;
-  padding-bottom: 12px;
-  margin-bottom: 12px;
-  padding-top: 42px;
+  padding-bottom: 42px;
+  padding-top: 54px;
 }
 
 .session_entry {

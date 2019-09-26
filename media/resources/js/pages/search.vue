@@ -1,6 +1,8 @@
 <template>
     <div class="more_container">
+        
         <div id="app" class="container container_sub slideInRight">
+            <div class="container_max">
             <div class="container_crip"><img src="../assets/etc/clip.png" alt=""></div>
             <div class="more_left fuwafuwa"  ><span>◀︎</span><br>more</div>
             <div class="more_right  fuwafuwa" ><span>▶︎</span><br>more</div>
@@ -29,8 +31,18 @@
                 <div class="clear"></div>
             </div>
             <div class="clear"></div>
+          　 <p class="tag_serch ">タグで絞り込む</p>
+        　   <ul class="tag_grid animated" data-animate="fadeInUp">
+                  <li class="tagimg"><RouterLink :to="'/tag/' + 'service'" ><img src="../assets/etc/ser.png" alt="" ><br><span class="tagname">サービス業</span></RouterLink></li>
+                  <li class="tagimg"><RouterLink :to="'/tag/' + 'shop'" ><img src="../assets/etc/shop.png" alt="" > <br>店舗運営</RouterLink></li>
+                  <li class="tagimg"><RouterLink :to="'/tag/' + 'creative'" ><img src="../assets/etc/pen.png" alt="" ><br>クリエイティブ</RouterLink></li>
+                  <li class="tagimg"><RouterLink :to="'/tag/' + 'it'" ><img src="../assets/etc/it.png" alt="" ><br>テクノロジー</RouterLink></li>
+                  <li class="tagimg"><RouterLink :to="'/tag/' + 'etc'" ><img src="../assets/etc/ques.png" alt="" ><br>その他</RouterLink></li>
+            </ul>
+        </div>
         </div>
     </div> 
+    
 </template>
 
 <script>
@@ -69,10 +81,12 @@
                 if (to.path !== from.path) {
                     
                     var tag = this.$route.params['tag']
+                    this.tag = tag;
                     return axios.get('/api/search/'+tag)
                    .then(res =>  {
                         console.log(res.data);
                         this.tags = res.data　
+                        this.count = res.data.length;
                         // this.$set(this.lancers, res.data);
                     }) 
                     

@@ -28,6 +28,7 @@
     </div>
 
     <div id="app" class="container">
+      <div class="container_max">
         <div class="container_crip"><img src="../assets/etc/clip.png" alt=""></div>
         <div class="more_left fuwafuwa"  ><span>◀︎</span><br>more</div>
         <div class="more_right  fuwafuwa" ><span>▶︎</span><br>more</div>
@@ -63,6 +64,7 @@
                   <li class="tagimg"><RouterLink :to="'/tag/' + 'etc'" ><img src="../assets/etc/ques.png" alt="" ><br>その他</RouterLink></li>
             </ul>
         </div>
+      </div>
       </div>
 </div>
 </template>

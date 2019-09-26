@@ -1,5 +1,6 @@
 <template>
   <div id="app" class="container">
+      <div class="container_max">
     <div class="container_crip"><img src="../assets/etc/clip.png" alt=""></div>
     <a name="session" ></a>
    
@@ -11,6 +12,7 @@
         <li  class="talk_event">2019年9月29日(日) 12:30~13:30</li>
         <li  class="talk_event">関西大学梅田キャンパス スタートアップカフェ大阪</li>
         <li  class="talk_event speaker">今回の登壇者</li>
+        <img src="../assets/etc/nami2.png" alt="" class="animated" data-animate="rubberBand">
         <li>
         <div v-for="(speaker, id) in speakers" v-bind:key="id">
             
@@ -25,7 +27,7 @@
             <div v-if="id===2||id===5" class="clear"></div>
         </div>
         </li>
-        <li  class="talk_event session_entry animated" data-animate="rubberBand" style="margin-top:64px;"><a href="https://0727-2.peatix.com/" target="blank" style="    text-decoration: none;color: #fefefe;">詳細/申込はこちら</a></li>
+        <li  class="talk_event session_entry animated" data-animate="rubberBand" style="margin-top:64px;"><a href="https://0727-2.peatix.com/" target="_blank" style="    text-decoration: none;color: #fefefe;">詳細/申込はこちら</a></li>
     </ul>
     <div style="width: 180px;margin: 32px auto;display: block;">
         <p style="text-align:center; padding:24px;">協賛・協力</p>
@@ -37,6 +39,7 @@
     <h2 class="talk_event">多種多様な働き方を知り、新しいきっかけを。</h2>
     <p class="talk_event" style="padding-bottom:82px;"> フリーランスに憧れているあなたや、働き方を変えようと思っているあなた。
     「雇われずに働く」という新時代のライフスタイルの実現に向けて、まずはフリーランスで活躍されている方のリアルの声に耳を傾けてみませんか。</p>
+  </div>
   </div>
 </template>
 
