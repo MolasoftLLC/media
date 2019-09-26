@@ -1,44 +1,47 @@
 .mainimg_container{
-  background-color: #282828;
-  position: relative;
+
+  
 }
 
 .mainimg{
-  width:100%; opacity:0.8; 
-  -ms-filter: blur(3px);
-  filter: blur(3px);
+  width:100%; 
+  opacity:1; 
+  position: fixed;
+
 }
 
 .mainimg_on{
-  position: absolute;
-  top: 35%;
-  left: 33%;
   width:80%;  max-width: 600px;
   filter: drop-shadow(0 0 0.75rem #585858);
   margin: 0 auto;
 }
 
 .main_catch{
-  position: absolute;
-  top: 50%;
-  left: 33%;
-  width:80%;  max-width: 600px;
+  width:70%;  max-width: 500px;
   filter: drop-shadow(0 0 0.75rem #585858);
   margin: 0 auto;
   font-size: 1.1em;
   text-align: center;
   color: #fefefe;
-  border-top: solid 1px #fefefe;
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
 
   p{
     padding-top: 20%;
   }
 
+  h1{
+    border-top: solid 1px #fefefe;
+  }
+
 }
 
 .mainimg_container_person{
-  background-color: #585858;
-  position: relative;
+
 }
 
 .mainimg_on_person{
@@ -46,25 +49,28 @@
   max-width: 400px;
   border-radius: 200px;
   filter: drop-shadow(0 1 0.4rem #282828);
+  z-index: 0;
   
 }
 
 .on_profile{
-  position: absolute;
-  top: 26%;
-  left: 20%;
   width: 80%;
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  z-index:1;
+  position: relative;
 
 }
 
-.mainimg_person{
+img.mainimg_person{
   width:100%; 
   opacity:0.6; 
   -ms-filter: blur(3px);
   filter: blur(3px);
+  position:fixed;
 }
 
 .profile_desc{
@@ -267,6 +273,31 @@ margin-top: 18px;
   animation-timing-function: ease-out;
 
 }
+
+@keyframes fadeperson {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
+  60%{
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  
+  100% {
+    opacity: 0.6;
+    transform: translateY(0);
+  }
+}
+
+.fadeperson {
+  animation-name: fadeperson;
+  animation-duration: 1.2s;
+  animation-timing-function: ease-out;
+
+}
+
 
 
 @-webkit-keyframes rubber {

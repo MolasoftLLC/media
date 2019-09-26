@@ -1,10 +1,14 @@
 <template>
   <div>
   
-  <div v-for="(profile, id) in person" v-bind:key="id">
-  <div class="mainimg_container_person" style="">
-            <img class="mainimg_person" src="../assets/etc/lance_main.jpg" />
-            <div class="on_profile container_max">
+  <div>
+        
+  <div class="mainimg_container_person" id="mainheight">
+            <img class="mainimg_person fadeperson" id="imgheight" src="../assets/etc/lance_main.jpg"  style="animation-duration:3s;">
+            <div class="on_profile container_max" id="catchheight">
+                <div v-for="(profile, id) in person" v-bind:key="id" style="  display: grid;
+  grid-template-columns: 1fr 1.5fr; max-width:700px;   justify-content: center;
+  align-items: center;">
                 <img id="person" class="mainimg_on_person slideInRight "  :src="'/images/'+profile.img"  />
                 <div class="profile_desc">
                     <div class="inline"><h1 >{{ profile.name }}</h1>
@@ -12,7 +16,7 @@
                     <p>{{ profile.works }}</p>
                     <p class="desc">{{ profile.about }}
                     </p>
-    
+                </div>
                 </div>
             </div>
             
@@ -25,8 +29,8 @@
                     <div class="arrow2">
                         <span></span>
                     </div>
+                 </div>
             </div>
-        </div>
   </div>
     <div id="app" class="container">
     <div class="container_crip"><img src="../assets/etc/clip.png" alt=""></div>
@@ -121,7 +125,7 @@
     export default {
         mounted() {
             this.fetchLancers(),
-            this.firstMove()
+            this.imagehaight()
         },
         data() {
             return {
@@ -139,10 +143,15 @@
                     this.person = res.data
                 })
             },
-            firstMove(){
-                let person = document.getElementById('person');
-                person.classList.add("person_anima");
-            }
+    
+            imagehaight() {
+                let height=$("#mainheight").height();
+                let height2=window.innerHeight-120;
+                console.log(height2);
+                $("#imgheight").css("height", height2).css("min-height", height2+120);
+                $("#catchheight").css("height", height2);//10pxだけ余裕をもたせる
+                console.log(height2);
+            },
         },
         watch: {
             '$route': function (to, from) {

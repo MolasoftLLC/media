@@ -2106,11 +2106,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     mounted: function mounted() {
-        this.fetchLancers(), this.firstMove();
+        this.fetchLancers(), this.imagehaight();
     },
     data: function data() {
         return {
@@ -2130,9 +2134,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 _this.person = res.data;
             });
         },
-        firstMove: function firstMove() {
-            var person = document.getElementById('person');
-            person.classList.add("person_anima");
+        imagehaight: function imagehaight() {
+            var height = $("#mainheight").height();
+            var height2 = window.innerHeight - 120;
+            console.log(height2);
+            $("#imgheight").css("height", height2).css("min-height", height2 + 120);
+            $("#catchheight").css("height", height2); //10pxだけ余裕をもたせる
+            console.log(height2);
         }
     },
     watch: {
@@ -2536,19 +2544,30 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     mounted: function mounted() {
-        this.fetchLancers(), this.fetchLancers_it();
+        this.fetchLancers(), this.imagehaight();
     },
     data: function data() {
         return {
             lancers: [],
             lancers_it: [],
-            tab: 1
+            tab: 1,
+            scrollY: 0,
+            timer: null
         };
     },
 
+    created: function created() {
+        // ハンドラを登録
+        window.addEventListener('scroll', this.handleScroll);
+    },
+    beforeDestroy: function beforeDestroy() {
+        // ハンドラを解除（コンポーネントやSPAの場合忘れずに！）
+        window.removeEventListener('scroll', this.handleScroll);
+    },
     methods: {
         fetchLancers: function fetchLancers() {
             var _this = this;
@@ -2570,6 +2589,28 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 console.log(resd.data);
                 _this2.lancers_it = resd.data;
             });
+        },
+        imagehaight: function imagehaight() {
+            var height = $(".mainimg_container").height();
+            var height2 = window.innerHeight - 120;
+
+            console.log(height);
+            $(".mainimg").css("height", height).css("min-height", height2);
+
+            // $(".hougan").css("height", height).css("min-height", height2);
+
+            $(".main_catch").css("min-height", height2 + 120); //10pxだけ余裕をもたせる
+        },
+
+        // 違和感のない程度に200ms間隔でscrollデータを更新する例
+        handleScroll: function handleScroll() {
+            if (this.timer === null) {
+                this.timer = setTimeout(function () {
+                    this.scrollY = window.scrollY;
+                    clearTimeout(this.timer);
+                    this.timer = null;
+                }.bind(this), 200);
+            }
         }
     }
 });
@@ -4268,54 +4309,87 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    _vm._l(_vm.person, function(profile, id) {
-      return _c("div", { key: id }, [
-        _c("div", { staticClass: "mainimg_container_person" }, [
+  return _c("div", [
+    _c("div", [
+      _c(
+        "div",
+        {
+          staticClass: "mainimg_container_person",
+          attrs: { id: "mainheight" }
+        },
+        [
           _c("img", {
-            staticClass: "mainimg_person",
-            attrs: { src: __webpack_require__("./resources/js/assets/etc/lance_main.jpg") }
+            staticClass: "mainimg_person fadeperson",
+            staticStyle: { "animation-duration": "3s" },
+            attrs: {
+              id: "imgheight",
+              src: __webpack_require__("./resources/js/assets/etc/lance_main.jpg")
+            }
           }),
           _vm._v(" "),
-          _c("div", { staticClass: "on_profile container_max" }, [
-            _c("img", {
-              staticClass: "mainimg_on_person slideInRight ",
-              attrs: { id: "person", src: "/images/" + profile.img }
-            }),
-            _vm._v(" "),
-            _c("div", { staticClass: "profile_desc" }, [
-              _c("div", { staticClass: "inline" }, [
-                _c("h1", [_vm._v(_vm._s(profile.name))]),
-                _vm._v(" "),
-                _c("img", {
-                  attrs: { src: __webpack_require__("./resources/js/assets/icon/twitter.png"), alt: "" }
-                }),
-                _c("img", {
-                  staticStyle: { "margin-left": "8px" },
-                  attrs: {
-                    src: __webpack_require__("./resources/js/assets/icon/instagram.png"),
-                    alt: ""
+          _c(
+            "div",
+            {
+              staticClass: "on_profile container_max",
+              attrs: { id: "catchheight" }
+            },
+            _vm._l(_vm.person, function(profile, id) {
+              return _c(
+                "div",
+                {
+                  key: id,
+                  staticStyle: {
+                    display: "grid",
+                    "grid-template-columns": "1fr 1.5fr",
+                    "max-width": "700px",
+                    "justify-content": "center",
+                    "align-items": "center"
                   }
-                })
-              ]),
-              _vm._v(" "),
-              _c("p", [_vm._v(_vm._s(profile.works))]),
-              _vm._v(" "),
-              _c("p", { staticClass: "desc" }, [
-                _vm._v(_vm._s(profile.about) + "\n                    ")
-              ])
-            ])
-          ]),
+                },
+                [
+                  _c("img", {
+                    staticClass: "mainimg_on_person slideInRight ",
+                    attrs: { id: "person", src: "/images/" + profile.img }
+                  }),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "profile_desc" }, [
+                    _c("div", { staticClass: "inline" }, [
+                      _c("h1", [_vm._v(_vm._s(profile.name))]),
+                      _vm._v(" "),
+                      _c("img", {
+                        attrs: {
+                          src: __webpack_require__("./resources/js/assets/icon/twitter.png"),
+                          alt: ""
+                        }
+                      }),
+                      _c("img", {
+                        staticStyle: { "margin-left": "8px" },
+                        attrs: {
+                          src: __webpack_require__("./resources/js/assets/icon/instagram.png"),
+                          alt: ""
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("p", [_vm._v(_vm._s(profile.works))]),
+                    _vm._v(" "),
+                    _c("p", { staticClass: "desc" }, [
+                      _vm._v(_vm._s(profile.about) + "\n                    ")
+                    ])
+                  ])
+                ]
+              )
+            }),
+            0
+          ),
           _vm._v(" "),
-          _vm._m(0, true)
-        ]),
-        _vm._v(" "),
-        _vm._m(1, true)
-      ])
-    }),
-    0
-  )
+          _vm._m(0)
+        ]
+      ),
+      _vm._v(" "),
+      _vm._m(1)
+    ])
+  ])
 }
 var staticRenderFns = [
   function() {
@@ -5022,7 +5096,16 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", [
-    _vm._m(0),
+    _c("div", { staticClass: "mainimg_container" }, [
+      _c("img", {
+        staticClass: "mainimg slideInRight",
+        class: { scroll_none: _vm.scrollY > 800 },
+        staticStyle: { "animation-duration": "3.6s" },
+        attrs: { src: __webpack_require__("./resources/js/assets/etc/mainimg3.jpg") }
+      }),
+      _vm._v(" "),
+      _vm._m(0)
+    ]),
     _vm._v(" "),
     _c("div", { staticClass: "container", attrs: { id: "app" } }, [
       _c("div", { staticClass: "container_max" }, [
@@ -5232,27 +5315,20 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "mainimg_container" }, [
+    return _c("div", { staticClass: "main_catch mainimg_on" }, [
       _c("img", {
-        staticClass: "mainimg",
-        attrs: { src: __webpack_require__("./resources/js/assets/etc/mainimg3.jpg") }
+        staticClass: "  slideInRight",
+        attrs: { src: __webpack_require__("./resources/js/assets/etc/toplogo.png") }
       }),
       _vm._v(" "),
-      _c("img", {
-        staticClass: "mainimg_on  slideInRight",
-        attrs: { src: __webpack_require__("./resources/js/assets/etc/logo.png") }
-      }),
+      _c("h1", [_vm._v("関西のフリーランスを見つけるメディアサイト")]),
       _vm._v(" "),
-      _c("div", { staticClass: "main_catch" }, [
-        _c("h1", [_vm._v("関西のフリーランスを見つけるメディアサイト")]),
+      _c("p", [_vm._v("Scroll")]),
+      _vm._v(" "),
+      _c("div", { staticClass: "arrowWrap" }, [
+        _c("div", { staticClass: "arrow1" }, [_c("span")]),
         _vm._v(" "),
-        _c("p", [_vm._v("Scroll")]),
-        _vm._v(" "),
-        _c("div", { staticClass: "arrowWrap" }, [
-          _c("div", { staticClass: "arrow1" }, [_c("span")]),
-          _vm._v(" "),
-          _c("div", { staticClass: "arrow2" }, [_c("span")])
-        ])
+        _c("div", { staticClass: "arrow2" }, [_c("span")])
       ])
     ])
   },
@@ -22144,6 +22220,13 @@ module.exports = "/images/startupcafe.png?a94f77c8cfaeed3fdf73beefa27c0a32";
 /***/ (function(module, exports) {
 
 module.exports = "/images/talk.png?be7f0943f8af797c8f4c774af88b170b";
+
+/***/ }),
+
+/***/ "./resources/js/assets/etc/toplogo.png":
+/***/ (function(module, exports) {
+
+module.exports = "/images/toplogo.png?a4fec48aa6303e8f2c54e00d79a524e0";
 
 /***/ }),
 

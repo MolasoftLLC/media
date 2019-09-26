@@ -1,10 +1,11 @@
 <template>
 <div>
     <div class="mainimg_container" style="">
-        <img class="mainimg" src="../assets/etc/mainimg3.jpg" />
+        <img class="mainimg slideInRight" style="animation-duration:3.6s;" src="../assets/etc/mainimg3.jpg" v-bind:class="{scroll_none: scrollY > 800}">
         <!-- <video class="mainimg" src="images/sample.mp4" autoplay loop muted></video> -->
-        <img class="mainimg_on  slideInRight" src="../assets/etc/logo.png" />
-        <div class="main_catch">
+        
+        <div class="main_catch mainimg_on">
+            <img class="  slideInRight"  src="../assets/etc/toplogo.png" />
             <h1 >関西のフリーランスを見つけるメディアサイト</h1>
             <!-- <p>人気のタグから探す</p>
             <ul class="tag_grid" style="padding-top:24px;">
@@ -82,14 +83,24 @@
     export default {
         mounted() {
             this.fetchLancers(),
-            this.fetchLancers_it()
+            this.imagehaight()
         },
         data() {
             return {
                 lancers: [],
                 lancers_it: [],
                 tab: 1,
+                scrollY: 0,
+                timer: null
             }
+        },
+        created: function () {
+            // ハンドラを登録
+            window.addEventListener('scroll', this.handleScroll)
+          },
+        beforeDestroy: function () {
+            // ハンドラを解除（コンポーネントやSPAの場合忘れずに！）
+            window.removeEventListener('scroll', this.handleScroll)
         },
         methods: {
             fetchLancers() {
@@ -110,7 +121,29 @@
                     console.log(resd.data);
                     this.lancers_it = resd.data
                 })
-            }
-        }
+            },
+            imagehaight() {
+                let height=$(".mainimg_container").height();
+                let height2=window.innerHeight-120;
+    
+                console.log(height);
+                $(".mainimg").css("height", height).css("min-height", height2);
+	  
+                // $(".hougan").css("height", height).css("min-height", height2);
+              
+                $(".main_catch").css("min-height", height2+120);//10pxだけ余裕をもたせる
+
+            },
+                // 違和感のない程度に200ms間隔でscrollデータを更新する例
+            handleScroll() {
+              if (this.timer === null) {
+                  this.timer = setTimeout(function () {
+                  this.scrollY = window.scrollY
+                  clearTimeout(this.timer)
+                  this.timer = null
+                }.bind(this), 200)
+              }
+             }
+    }
     }
 </script>

@@ -587,6 +587,8 @@ img.main_logo {
 }
 
 .scroll_none {
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
   display: none;
 }
 
@@ -1526,23 +1528,13 @@ h2.speaker {
   }
 }
 
-.mainimg_container {
-  background-color: #282828;
-  position: relative;
-}
-
 .mainimg {
   width: 100%;
-  opacity: 0.8;
-  -ms-filter: blur(3px);
-  -webkit-filter: blur(3px);
-          filter: blur(3px);
+  opacity: 1;
+  position: fixed;
 }
 
 .mainimg_on {
-  position: absolute;
-  top: 35%;
-  left: 33%;
   width: 80%;
   max-width: 600px;
   -webkit-filter: drop-shadow(0 0 0.75rem #585858);
@@ -1551,27 +1543,38 @@ h2.speaker {
 }
 
 .main_catch {
-  position: absolute;
-  top: 50%;
-  left: 33%;
-  width: 80%;
-  max-width: 600px;
+  width: 70%;
+  max-width: 500px;
   -webkit-filter: drop-shadow(0 0 0.75rem #585858);
           filter: drop-shadow(0 0 0.75rem #585858);
   margin: 0 auto;
   font-size: 1.1em;
   text-align: center;
   color: #fefefe;
-  border-top: solid 1px #fefefe;
+  z-index: 3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .main_catch p {
   padding-top: 20%;
 }
 
-.mainimg_container_person {
-  background-color: #585858;
-  position: relative;
+.main_catch h1 {
+  border-top: solid 1px #fefefe;
 }
 
 .mainimg_on_person {
@@ -1580,24 +1583,34 @@ h2.speaker {
   border-radius: 200px;
   -webkit-filter: drop-shadow(0 1 0.4rem #282828);
           filter: drop-shadow(0 1 0.4rem #282828);
+  z-index: 0;
 }
 
 .on_profile {
-  position: absolute;
-  top: 26%;
-  left: 20%;
   width: 80%;
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  z-index: 1;
+  position: relative;
 }
 
-.mainimg_person {
+img.mainimg_person {
   width: 100%;
   opacity: 0.6;
   -ms-filter: blur(3px);
   -webkit-filter: blur(3px);
           filter: blur(3px);
+  position: fixed;
 }
 
 .profile_desc {
@@ -1883,6 +1896,55 @@ p.desc {
 .slideInRight {
   -webkit-animation-name: slideInRight;
           animation-name: slideInRight;
+  -webkit-animation-duration: 1.2s;
+          animation-duration: 1.2s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+}
+
+@-webkit-keyframes fadeperson {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
+  }
+
+  60% {
+    opacity: 0;
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
+  }
+
+  100% {
+    opacity: 0.6;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes fadeperson {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
+  }
+
+  60% {
+    opacity: 0;
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
+  }
+
+  100% {
+    opacity: 0.6;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+.fadeperson {
+  -webkit-animation-name: fadeperson;
+          animation-name: fadeperson;
   -webkit-animation-duration: 1.2s;
           animation-duration: 1.2s;
   -webkit-animation-timing-function: ease-out;
