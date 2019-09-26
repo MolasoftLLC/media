@@ -2,15 +2,12 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 
 // ページコンポーネントをインポートする
-import PhotoList from './pages/PhotoList.vue'
 import Login from './pages/Login.vue'
-import interview1 from './pages/interview1.vue'
 import lancer from './pages/lancer.vue'
-import interview2 from './pages/interview2.vue'
-import interview3 from './pages/interview3.vue'
 import Top from './pages/top.vue'
 import talk from './pages/talk.vue'
 import more from './pages/more.vue'
+import search from './pages/search.vue'
 import store from './store' //
 import SystemError from './pages/errors/System.vue'
 
@@ -34,13 +31,6 @@ const routes = [
     }
 },
 {
-    path: '/lancers',
-    components:{
-      default: interview1,
-      talkComponents:Top,
-    }
-},
-{
     path: '/lancer/:id',
     components:{
       default: lancer,
@@ -48,12 +38,13 @@ const routes = [
     }
 },
 {
-    path: '/interview3',
+    path: '/tag/:tag',
     components:{
-      default: interview3,
-      talkComponents:Top,
+      default: search,
+      talkComponents:more,
     }
 },
+
 {
     path: '/500',
     component: SystemError

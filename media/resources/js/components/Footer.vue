@@ -1,5 +1,5 @@
 <template v-cloak>
-  <footer class="footer" style="color:#fefefe;" >
+  <footer class="footer slideInRight" style="color:#fefefe; animation-duration: 4s;" >
   LanceClip
   </footer>
 </template>

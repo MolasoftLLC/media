@@ -22,12 +22,10 @@ class LanceController extends Controller
         return $person;
     }
 
-    public function it()
+    public function search($tag)
     {
-        // $lancer = Lancer::all()->take(1);
-        // $lancer_it = Lancer::where('occupation','it')->get();
-        $lancerit = Lancer::all()->take(6);
-        return 1;
+        $tags = Lancer::where('tags',$tag)->get();
+        return $tags;
     }
 
 

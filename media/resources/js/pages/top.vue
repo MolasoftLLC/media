@@ -1,8 +1,8 @@
 <template>
 <div>
     <div class="mainimg_container" style="">
-    <!-- <img class="mainimg" src="../assets/etc/mainimg3.jpg" /> -->
-    <video class="mainimg" src="images/sample.mp4" autoplay loop muted></video>
+    <img class="mainimg" src="../assets/etc/mainimg3.jpg" />
+    <!-- <video class="mainimg" src="images/sample.mp4" autoplay loop muted></video> -->
     <img class="mainimg_on  slideInRight" src="../assets/etc/logo.png" />
     <div class="main_catch">
         <h1 >関西のフリーランスを見つけるメディアサイト</h1>
@@ -80,11 +80,11 @@
   <div class="clear"></div>
   　<p class="tag_serch ">タグで絞り込む</p>
 　  <ul class="tag_grid animated" data-animate="fadeInUp">
-      <li><a href=""><img src="../assets/etc/ser.png" alt=""><br>サービス業</a></li>
-      <li><a href=""><img src="../assets/etc/shop.png" alt=""><br>店舗運営</a></li>
-      <li><a href=""><img src="../assets/etc/pen.png" alt=""><br>クリエイティブ</a></li>
-      <li><a href=""><img src="../assets/etc/it.png" alt=""><br>テクノロジー</a></li>
-      <li><a href=""><img src="../assets/etc/ques.png" alt=""><br>その他</a></li>
+      <li><RouterLink :to="'/tag/' + 'service'" ><img src="../assets/etc/ser.png" alt=""><br>サービス業</RouterLink></li>
+      <li><RouterLink :to="'/tag/' + 'shop'" ><img src="../assets/etc/shop.png" alt=""><br>店舗運営</RouterLink></li>
+      <li><RouterLink :to="'/tag/' + 'creative'" ><img src="../assets/etc/pen.png" alt=""><br>クリエイティブ</RouterLink></li>
+      <li><RouterLink :to="'/tag/' + 'it'" ><img src="../assets/etc/it.png" alt=""><br>テクノロジー</RouterLink></li>
+      <li><RouterLink :to="'/tag/' + 'etc'" ><img src="../assets/etc/ques.png" alt=""><br>その他</RouterLink></li>
     </ul>
 </div>
 

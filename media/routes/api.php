@@ -15,10 +15,7 @@ use Illuminate\Http\Request;
 
 Route::group(['middleware' => 'api'], function() {
     Route::get('lancer', 'LanceController@index');
-});
-Route::group(['middleware' => 'api'], function() {
-Route::get('/lancer/{id?}', 'LanceController@lancer');
-});
-Route::group(['middleware' => 'api'], function() {
-Route::get('speaker', 'LanceController@speaker');
+    Route::get('/lancer/{id?}', 'LanceController@lancer');
+    Route::get('speaker', 'LanceController@speaker');
+    Route::get('/search/{tag?}', 'LanceController@search');
 });
