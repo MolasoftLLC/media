@@ -8,12 +8,13 @@
             <div class="header_adjust"></div>
     
             <h1 class="free">Search</h1>
-            <p class="search">{{ tag }}の検索結果</p>
-            <img src="../assets/etc/nami2.png" alt="" class="animated" data-animate="rubberBand">
+            <p class="search">{{ tag }}での検索結果</p>
+            <p class="search" style="padding:12px;">{{count}}人がクリップされました！</p>
+            <img src="../assets/etc/nami2.png" alt="" class="rubber">
 
             <div class="panel" v-show="tab === 1">
                 <div v-for="(lancer, id) in tags" v-bind:key="id">
-                    <div class="news_img animated" data-animate="fadeInUp" >
+                    <div class="news_img slideInRight" >
                     <!-- 要実装 -->
                         <div v-if="lancer.id !== 100"> 
                             <RouterLink :to="'/lancer/' + lancer.id" >
@@ -43,7 +44,9 @@
             return {
                 tags: [],
                 tab: 1,
-                tag: 'all'
+                tag: 'all',
+                count: 0
+
             }
         },
         methods: {
@@ -55,7 +58,9 @@
                 return axios.get('/api/search/'+tag)
                 .then(res =>  {
                     console.log(res.data);
-                    this.tags = res.data
+                    this.tags = res.data;
+                    this.count = res.data.length;
+
                 })
             },
         },

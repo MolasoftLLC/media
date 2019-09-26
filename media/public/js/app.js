@@ -2274,6 +2274,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -2284,7 +2285,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         return {
             tags: [],
             tab: 1,
-            tag: 'all'
+            tag: 'all',
+            count: 0
+
         };
     },
 
@@ -2299,6 +2302,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             return axios.get('/api/search/' + tag).then(function (res) {
                 console.log(res.data);
                 _this.tags = res.data;
+                _this.count = res.data.length;
             });
         }
     },
@@ -2413,84 +2417,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -4085,16 +4011,16 @@ var render = function() {
         _c("h1", { staticClass: "free" }, [_vm._v("Search")]),
         _vm._v(" "),
         _c("p", { staticClass: "search" }, [
-          _vm._v(_vm._s(_vm.tag) + "の検索結果")
+          _vm._v(_vm._s(_vm.tag) + "での検索結果")
+        ]),
+        _vm._v(" "),
+        _c("p", { staticClass: "search", staticStyle: { padding: "12px" } }, [
+          _vm._v(_vm._s(_vm.count) + "人がクリップされました！")
         ]),
         _vm._v(" "),
         _c("img", {
-          staticClass: "animated",
-          attrs: {
-            src: __webpack_require__("./resources/js/assets/etc/nami2.png"),
-            alt: "",
-            "data-animate": "rubberBand"
-          }
+          staticClass: "rubber",
+          attrs: { src: __webpack_require__("./resources/js/assets/etc/nami2.png"), alt: "" }
         }),
         _vm._v(" "),
         _c(
@@ -4113,43 +4039,36 @@ var render = function() {
           [
             _vm._l(_vm.tags, function(lancer, id) {
               return _c("div", { key: id }, [
-                _c(
-                  "div",
-                  {
-                    staticClass: "news_img animated",
-                    attrs: { "data-animate": "fadeInUp" }
-                  },
-                  [
-                    lancer.id !== 100
-                      ? _c(
-                          "div",
-                          [
-                            _c(
-                              "RouterLink",
-                              { attrs: { to: "/lancer/" + lancer.id } },
-                              [
-                                _c("img", {
-                                  attrs: {
-                                    src: "/images/" + lancer.img,
-                                    width: "100%"
-                                  }
-                                }),
-                                _vm._v(" "),
-                                _c("p", { staticClass: "read_more" }, [
-                                  _vm._v("Read more")
-                                ])
-                              ]
-                            ),
-                            _vm._v(" "),
-                            _c("p", { staticClass: "ontext" }, [
-                              _vm._v(_vm._s(lancer.tags))
-                            ])
-                          ],
-                          1
-                        )
-                      : _vm._e()
-                  ]
-                ),
+                _c("div", { staticClass: "news_img slideInRight" }, [
+                  lancer.id !== 100
+                    ? _c(
+                        "div",
+                        [
+                          _c(
+                            "RouterLink",
+                            { attrs: { to: "/lancer/" + lancer.id } },
+                            [
+                              _c("img", {
+                                attrs: {
+                                  src: "/images/" + lancer.img,
+                                  width: "100%"
+                                }
+                              }),
+                              _vm._v(" "),
+                              _c("p", { staticClass: "read_more" }, [
+                                _vm._v("Read more")
+                              ])
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c("p", { staticClass: "ontext" }, [
+                            _vm._v(_vm._s(lancer.tags))
+                          ])
+                        ],
+                        1
+                      )
+                    : _vm._e()
+                ]),
                 _vm._v(" "),
                 id === 2 || id === 5
                   ? _c("div", { staticClass: "clear" })
@@ -4944,8 +4863,6 @@ var render = function() {
       _vm._v(" "),
       _c("a", { attrs: { name: "interview" } }),
       _vm._v(" "),
-      _c("div", { staticClass: "header_adjust" }),
-      _vm._v(" "),
       _c("h1", { staticClass: "free" }, [_vm._v("Freelance Interview")]),
       _vm._v(" "),
       _c("p", { staticClass: "free" }, [_vm._v("多種多様な生き方を知る")]),
@@ -4961,17 +4878,7 @@ var render = function() {
       _vm._v(" "),
       _c(
         "div",
-        {
-          directives: [
-            {
-              name: "show",
-              rawName: "v-show",
-              value: _vm.tab === 1,
-              expression: "tab === 1"
-            }
-          ],
-          staticClass: "panel"
-        },
+        { staticClass: "panel" },
         [
           _vm._l(_vm.lancers, function(lancer, id) {
             return _c("div", { key: id }, [
@@ -5031,6 +4938,7 @@ var render = function() {
                 [
                   _c("RouterLink", { attrs: { to: "/tag/" + "service" } }, [
                     _c("img", {
+                      staticClass: "tagimg",
                       attrs: { src: __webpack_require__("./resources/js/assets/etc/ser.png"), alt: "" }
                     }),
                     _c("br"),
@@ -5045,8 +4953,10 @@ var render = function() {
                 [
                   _c("RouterLink", { attrs: { to: "/tag/" + "shop" } }, [
                     _c("img", {
+                      staticClass: "tagimg",
                       attrs: { src: __webpack_require__("./resources/js/assets/etc/shop.png"), alt: "" }
                     }),
+                    _vm._v(" "),
                     _c("br"),
                     _vm._v("店舗運営")
                   ])
@@ -5059,6 +4969,7 @@ var render = function() {
                 [
                   _c("RouterLink", { attrs: { to: "/tag/" + "creative" } }, [
                     _c("img", {
+                      staticClass: "tagimg",
                       attrs: { src: __webpack_require__("./resources/js/assets/etc/pen.png"), alt: "" }
                     }),
                     _c("br"),
@@ -5073,6 +4984,7 @@ var render = function() {
                 [
                   _c("RouterLink", { attrs: { to: "/tag/" + "it" } }, [
                     _c("img", {
+                      staticClass: "tagimg",
                       attrs: { src: __webpack_require__("./resources/js/assets/etc/it.png"), alt: "" }
                     }),
                     _c("br"),
@@ -5087,6 +4999,7 @@ var render = function() {
                 [
                   _c("RouterLink", { attrs: { to: "/tag/" + "etc" } }, [
                     _c("img", {
+                      staticClass: "tagimg",
                       attrs: { src: __webpack_require__("./resources/js/assets/etc/ques.png"), alt: "" }
                     }),
                     _c("br"),
@@ -5099,107 +5012,6 @@ var render = function() {
           )
         ],
         2
-      ),
-      _vm._v(" "),
-      _c(
-        "div",
-        {
-          directives: [
-            {
-              name: "show",
-              rawName: "v-show",
-              value: _vm.tab === 2,
-              expression: "tab === 2"
-            }
-          ],
-          staticClass: "panel"
-        },
-        _vm._l(_vm.lancers_it, function(lancer_it, id) {
-          return _c("div", { key: id }, [
-            _c(
-              "div",
-              { staticClass: "news_img" },
-              [
-                _c("RouterLink", { attrs: { to: "/lancer/" + lancer_it.id } }, [
-                  _c("img", {
-                    attrs: {
-                      src: __webpack_require__("./resources/js/assets/person/kenta.jpg"),
-                      width: "100%"
-                    }
-                  }),
-                  _vm._v(" "),
-                  _c("p", { staticClass: "read_more" }, [_vm._v("Read more")])
-                ]),
-                _vm._v(" "),
-                _c("p", { staticClass: "on_name" }, [
-                  _vm._v(_vm._s(lancer_it.title))
-                ]),
-                _vm._v(" "),
-                _c("p", { staticClass: "on_category" }, [
-                  _vm._v(_vm._s(lancer_it.content))
-                ]),
-                _vm._v(" "),
-                _c("p", { staticClass: "ontext" }, [
-                  _vm._v("コミュ二ティの運営で鬱病の無い社会を目指す。")
-                ])
-              ],
-              1
-            ),
-            _vm._v(" "),
-            id === 2 || id === 5
-              ? _c("div", { staticClass: "clear" })
-              : _vm._e()
-          ])
-        }),
-        0
-      ),
-      _vm._v(" "),
-      _c(
-        "div",
-        {
-          directives: [
-            {
-              name: "show",
-              rawName: "v-show",
-              value: _vm.tab === 3,
-              expression: "tab === 3"
-            }
-          ],
-          staticClass: "panel"
-        },
-        [_vm._m(4), _vm._v(" "), _c("div", { staticClass: "clear" })]
-      ),
-      _vm._v(" "),
-      _c(
-        "div",
-        {
-          directives: [
-            {
-              name: "show",
-              rawName: "v-show",
-              value: _vm.tab === 4,
-              expression: "tab === 4"
-            }
-          ],
-          staticClass: "panel"
-        },
-        [_vm._m(5), _vm._v(" "), _c("div", { staticClass: "clear" })]
-      ),
-      _vm._v(" "),
-      _c(
-        "div",
-        {
-          directives: [
-            {
-              name: "show",
-              rawName: "v-show",
-              value: _vm.tab === 5,
-              expression: "tab === 5"
-            }
-          ],
-          staticClass: "panel"
-        },
-        [_vm._m(6), _vm._v(" "), _c("div", { staticClass: "clear" })]
       )
     ])
   ])
@@ -5259,66 +5071,6 @@ var staticRenderFns = [
       _c("span", [_vm._v("▶︎")]),
       _c("br"),
       _vm._v("more")
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "news_img" }, [
-      _c("img", {
-        attrs: { src: __webpack_require__("./resources/js/assets/person/yukigao.jpg"), width: "100%" }
-      }),
-      _vm._v(" "),
-      _c("p", { staticClass: "read_more" }, [_vm._v("Read more")]),
-      _vm._v(" "),
-      _c("p", { staticClass: "on_name" }, [_vm._v("Yukigao")]),
-      _vm._v(" "),
-      _c("p", { staticClass: "on_category" }, [_vm._v("陶芸家")]),
-      _vm._v(" "),
-      _c("p", { staticClass: "ontext" }, [
-        _vm._v("29歳で会社員を辞めて陶芸の道へ。")
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "news_img" }, [
-      _c("img", {
-        attrs: { src: __webpack_require__("./resources/js/assets/person/kenta.jpg"), width: "100%" }
-      }),
-      _vm._v(" "),
-      _c("p", { staticClass: "read_more" }, [_vm._v("Read more")]),
-      _vm._v(" "),
-      _c("p", { staticClass: "on_name" }, [_vm._v("Kenta Kitanaka")]),
-      _vm._v(" "),
-      _c("p", { staticClass: "on_category" }, [_vm._v("ミュージックバー運営")]),
-      _vm._v(" "),
-      _c("p", { staticClass: "ontext" }, [
-        _vm._v("コミュ二ティの運営で鬱病の無い社会を目指す。")
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "news_img" }, [
-      _c("img", {
-        attrs: { src: __webpack_require__("./resources/js/assets/person/mukae.jpg"), width: "100%" }
-      }),
-      _vm._v(" "),
-      _c("p", { staticClass: "read_more" }, [_vm._v("Read more")]),
-      _vm._v(" "),
-      _c("p", { staticClass: "on_name" }, [_vm._v("Seigo Mukae")]),
-      _vm._v(" "),
-      _c("p", { staticClass: "on_category" }, [_vm._v("イベントプランナー")]),
-      _vm._v(" "),
-      _c("p", { staticClass: "ontext" }, [
-        _vm._v("楽しいことは探さず、作る派。")
-      ])
     ])
   }
 ]
@@ -5535,8 +5287,6 @@ var render = function() {
     _vm._m(0),
     _vm._v(" "),
     _c("a", { attrs: { name: "session" } }),
-    _vm._v(" "),
-    _c("div", { staticClass: "header_adjust" }),
     _vm._v(" "),
     _c("h1", { staticClass: "free" }, [_vm._v("Talk session")]),
     _vm._v(" "),
@@ -22214,20 +21964,6 @@ module.exports = "/images/kenta.jpg?e87d4e41dd1ac0a47d30074a52defb47";
 
 /***/ }),
 
-/***/ "./resources/js/assets/person/mukae.jpg":
-/***/ (function(module, exports) {
-
-module.exports = "/images/mukae.jpg?30a7da5d254ab4b55d3ea5a3205151e7";
-
-/***/ }),
-
-/***/ "./resources/js/assets/person/yukigao.jpg":
-/***/ (function(module, exports) {
-
-module.exports = "/images/yukigao.jpg?6861b42a307315ec667687e93e5adb7b";
-
-/***/ }),
-
 /***/ "./resources/js/bootstrap.js":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -23120,7 +22856,7 @@ var UNPROCESSABLE_ENTITY = 422;
 /***/ "./resources/sass/app.scss":
 /***/ (function(module, exports) {
 
-throw new Error("Module build failed: ModuleBuildError: Module build failed: \n@import \"search\";\n^\n      File to import not found or unreadable: search.\n      in /Users/mukae9/Documents/httdocs/freemedia/git/free/media/resources/sass/app.scss (line 23, column 1)\n    at /Users/mukae9/Documents/httdocs/freemedia/git/free/media/node_modules/webpack/lib/NormalModule.js:195:19\n    at /Users/mukae9/Documents/httdocs/freemedia/git/free/media/node_modules/loader-runner/lib/LoaderRunner.js:367:11\n    at /Users/mukae9/Documents/httdocs/freemedia/git/free/media/node_modules/loader-runner/lib/LoaderRunner.js:233:18\n    at context.callback (/Users/mukae9/Documents/httdocs/freemedia/git/free/media/node_modules/loader-runner/lib/LoaderRunner.js:111:13)\n    at Object.callback (/Users/mukae9/Documents/httdocs/freemedia/git/free/media/node_modules/sass-loader/lib/loader.js:55:13)\n    at Object.done [as callback] (/Users/mukae9/Documents/httdocs/freemedia/git/free/media/node_modules/neo-async/async.js:8067:18)\n    at options.error (/Users/mukae9/Documents/httdocs/freemedia/git/free/media/node_modules/node-sass/lib/index.js:294:32)");
+// removed by extract-text-webpack-plugin
 
 /***/ }),
 
