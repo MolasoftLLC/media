@@ -21,7 +21,7 @@
                       <img :src="'/images/'+speaker.img" width="100%" />
                       <p class="read_more">Read more</p>
                   </RouterLink>
-                  <p class="ontext">{{ speaker.name }}<br>{{ speaker.tags }}</p>
+                  <p class="ontext">{{ speaker.name }}<br>{{ speaker.works }}</p>
               </div>
             
             <div v-if="id===2||id===5" class="clear"></div>

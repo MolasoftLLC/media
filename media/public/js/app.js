@@ -2106,8 +2106,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -4302,18 +4300,10 @@ var render = function() {
                 })
               ]),
               _vm._v(" "),
-              _c("p", [_vm._v(_vm._s(profile.tags))]),
+              _c("p", [_vm._v(_vm._s(profile.works))]),
               _vm._v(" "),
               _c("p", { staticClass: "desc" }, [
                 _vm._v(_vm._s(profile.about) + "\n                    ")
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "in" }, [
-                _c("p", [
-                  _c("a", { attrs: { href: "#" } }, [
-                    _vm._v(_vm._s(profile.content))
-                  ])
-                ])
               ])
             ])
           ]),
@@ -5115,7 +5105,7 @@ var render = function() {
                       _c("p", { staticClass: "ontext" }, [
                         _vm._v(_vm._s(lancer.name)),
                         _c("br"),
-                        _vm._v(_vm._s(lancer.tags))
+                        _vm._v(_vm._s(lancer.works))
                       ])
                     ],
                     1
@@ -5434,7 +5424,7 @@ var render = function() {
                               ),
                               _vm._v(" "),
                               _c("p", { staticClass: "ontext" }, [
-                                _vm._v(_vm._s(lancer.tags))
+                                _vm._v(_vm._s(lancer.works))
                               ])
                             ],
                             1
@@ -5555,7 +5545,7 @@ var render = function() {
                   _c("p", { staticClass: "ontext" }, [
                     _vm._v(_vm._s(speaker.name)),
                     _c("br"),
-                    _vm._v(_vm._s(speaker.tags))
+                    _vm._v(_vm._s(speaker.works))
                   ])
                 ],
                 1

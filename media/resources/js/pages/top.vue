@@ -49,7 +49,7 @@
                           <p class="read_more">Read more</p>
                         </RouterLink>
                         <p class="on_name"></p>
-                        <p class="ontext">{{ lancer.name }}<br>{{ lancer.tags }}</p>
+                        <p class="ontext">{{ lancer.name }}<br>{{ lancer.works }}</p>
                     </div>
                 </div>
                 <div v-if="id===2||id===5" class="clear"></div>

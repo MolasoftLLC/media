@@ -9,12 +9,10 @@
                 <div class="profile_desc">
                     <div class="inline"><h1 >{{ profile.name }}</h1>
                     <img src="../assets/icon/twitter.png" alt=""><img style="margin-left:8px;" src="../assets/icon/instagram.png" alt=""></div>
-                    <p>{{ profile.tags }}</p>
+                    <p>{{ profile.works }}</p>
                     <p class="desc">{{ profile.about }}
                     </p>
-                    <div class="in">
-                        <p><a href="#">{{ profile.content }}</a></p>
-                    </div>
+    
                 </div>
             </div>
             
