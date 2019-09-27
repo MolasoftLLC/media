@@ -73,6 +73,39 @@ img.main_logo  {
 }
 
 .scroll_none{
-  animation-duration: 4s;
-  display: none;
+  animation-name: scroll_none;
+  animation-duration: 2s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes scroll_none{
+
+  0%{
+    opacity: 0.9;
+  }
+
+  100%{
+    opacity: 0;
+  }
+
+}
+
+.scroll_on{
+  animation-name: scroll_on;
+  animation-duration: 1.4s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes scroll_on{
+
+  0%{
+    opacity: 0;
+  }
+
+  100%{
+    opacity: 0.9;
+  }
+
 }

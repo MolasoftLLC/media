@@ -20,7 +20,7 @@
                 <img :src="'/images/'+lancer.img" width="100%" />
                 <p class="read_more">Read more</p>
             </RouterLink>
-          <p class="ontext">{{ lancer.works }}</p>
+          <p class="ontext">{{ lancer.name }}<br>{{ lancer.works }}</p>
         </div>
         </div>
         <div v-if="id===2||id===5" class="clear"></div>

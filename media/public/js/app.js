@@ -2119,10 +2119,20 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     data: function data() {
         return {
             lancers: [],
-            person: []
+            person: [],
+            scrollY: 0,
+            timer: null
         };
     },
 
+    created: function created() {
+        // ハンドラを登録
+        window.addEventListener('scroll', this.handleScroll);
+    },
+    beforeDestroy: function beforeDestroy() {
+        // ハンドラを解除（コンポーネントやSPAの場合忘れずに！）
+        window.removeEventListener('scroll', this.handleScroll);
+    },
     methods: {
         fetchLancers: function fetchLancers() {
             var _this = this;
@@ -2141,6 +2151,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             $("#imgheight").css("height", height2).css("min-height", height2 + 120);
             $("#catchheight").css("height", height2); //10pxだけ余裕をもたせる
             console.log(height2);
+        },
+        handleScroll: function handleScroll() {
+            if (this.timer === null) {
+                this.timer = setTimeout(function () {
+                    this.scrollY = window.scrollY;
+                    clearTimeout(this.timer);
+                    this.timer = null;
+                }.bind(this), 200);
+            }
         }
     },
     watch: {
@@ -4167,7 +4186,9 @@ var render = function() {
                             ),
                             _vm._v(" "),
                             _c("p", { staticClass: "ontext" }, [
-                              _vm._v(_vm._s(lancer.tags))
+                              _vm._v(_vm._s(lancer.name)),
+                              _c("br"),
+                              _vm._v(_vm._s(lancer.works))
                             ])
                           ],
                           1
@@ -4315,6 +4336,10 @@ var render = function() {
         "div",
         {
           staticClass: "mainimg_container_person",
+          class: {
+            scroll_none: _vm.scrollY > 400,
+            scroll_on: _vm.scrollY < 400
+          },
           attrs: { id: "mainheight" }
         },
         [
@@ -5096,16 +5121,22 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", [
-    _c("div", { staticClass: "mainimg_container" }, [
-      _c("img", {
-        staticClass: "mainimg slideInRight",
-        class: { scroll_none: _vm.scrollY > 800 },
-        staticStyle: { "animation-duration": "3.6s" },
-        attrs: { src: __webpack_require__("./resources/js/assets/etc/mainimg3.jpg") }
-      }),
-      _vm._v(" "),
-      _vm._m(0)
-    ]),
+    _c(
+      "div",
+      {
+        staticClass: "mainimg_container",
+        class: { scroll_none: _vm.scrollY > 400, scroll_on: _vm.scrollY < 400 }
+      },
+      [
+        _c("img", {
+          staticClass: "mainimg slideInRight",
+          staticStyle: { "animation-duration": "3.6s" },
+          attrs: { src: __webpack_require__("./resources/js/assets/etc/mainimg3.jpg") }
+        }),
+        _vm._v(" "),
+        _vm._m(0)
+      ]
+    ),
     _vm._v(" "),
     _c("div", { staticClass: "container", attrs: { id: "app" } }, [
       _c("div", { staticClass: "container_max" }, [
@@ -5500,6 +5531,8 @@ var render = function() {
                               ),
                               _vm._v(" "),
                               _c("p", { staticClass: "ontext" }, [
+                                _vm._v(_vm._s(lancer.name)),
+                                _c("br"),
                                 _vm._v(_vm._s(lancer.works))
                               ])
                             ],

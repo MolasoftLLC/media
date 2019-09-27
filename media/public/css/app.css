@@ -390,8 +390,8 @@ body {
   margin: 42px auto 0;
   padding: 3% 20% 3%;
   background: #fefefe;
-  background: -webkit-gradient(linear, left bottom, left top, from(#fefefe), color-stop(24%, #fefefe), color-stop(50%, #9fefff), color-stop(74%, #fefefe));
-  background: linear-gradient(0deg, #fefefe 0%, #fefefe 24%, #9fefff 50%, #fefefe 74%);
+  background: -webkit-gradient(linear, left bottom, left top, from(#fefefe), color-stop(24%, #fefefe), color-stop(50%, #bdf7ffc9), color-stop(74%, #fefefe));
+  background: linear-gradient(0deg, #fefefe 0%, #fefefe 24%, #bdf7ffc9 50%, #fefefe 74%);
   position: relative;
 }
 
@@ -587,9 +587,65 @@ img.main_logo {
 }
 
 .scroll_none {
-  -webkit-animation-duration: 4s;
-          animation-duration: 4s;
-  display: none;
+  -webkit-animation-name: scroll_none;
+          animation-name: scroll_none;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes scroll_none {
+  0% {
+    opacity: 0.9;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes scroll_none {
+  0% {
+    opacity: 0.9;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.scroll_on {
+  -webkit-animation-name: scroll_on;
+          animation-name: scroll_on;
+  -webkit-animation-duration: 1.4s;
+          animation-duration: 1.4s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes scroll_on {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0.9;
+  }
+}
+
+@keyframes scroll_on {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0.9;
+  }
 }
 
 .photo {

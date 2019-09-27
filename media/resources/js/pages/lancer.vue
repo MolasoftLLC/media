@@ -3,8 +3,8 @@
   
   <div>
         
-  <div class="mainimg_container_person" id="mainheight">
-            <img class="mainimg_person fadeperson" id="imgheight" src="../assets/etc/lance_main.jpg"  style="animation-duration:3s;">
+  <div class="mainimg_container_person" id="mainheight" v-bind:class="{scroll_none: scrollY > 400,  scroll_on: scrollY < 400}">
+            <img class="mainimg_person fadeperson" id="imgheight" src="../assets/etc/lance_main.jpg"  style="animation-duration:3s;" >
             <div class="on_profile container_max" id="catchheight">
                 <div v-for="(profile, id) in person" v-bind:key="id" style="  display: grid;
   grid-template-columns: 1fr 1.5fr; max-width:700px;   justify-content: center;
@@ -131,7 +131,17 @@
             return {
                 lancers: [],
                 person: [],
+                scrollY: 0,
+                timer: null
             }
+        },
+        created: function () {
+            // ハンドラを登録
+            window.addEventListener('scroll', this.handleScroll)
+          },
+        beforeDestroy: function () {
+            // ハンドラを解除（コンポーネントやSPAの場合忘れずに！）
+            window.removeEventListener('scroll', this.handleScroll)
         },
         methods: {
             fetchLancers() {
@@ -152,6 +162,15 @@
                 $("#catchheight").css("height", height2);//10pxだけ余裕をもたせる
                 console.log(height2);
             },
+            handleScroll() {
+              if (this.timer === null) {
+                  this.timer = setTimeout(function () {
+                  this.scrollY = window.scrollY
+                  clearTimeout(this.timer)
+                  this.timer = null
+                }.bind(this), 200)
+              }
+             }
         },
         watch: {
             '$route': function (to, from) {
