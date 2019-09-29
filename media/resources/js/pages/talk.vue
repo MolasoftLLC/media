@@ -7,7 +7,7 @@
     <h1 class="free">Talk session</h1>
     <p class="free" style="padding-bottom: 12px;">フリーランサー・起業家の生の声を聴く</p>
 
-    <img src="../assets/etc/Freelancesession.jpg" alt="" class="animated" data-animate="fadeInUp">
+    <img src="../assets/etc/clip3.jpg" alt="" class="animated" data-animate="fadeInUp">
     <ul class="talk_event">
         <li  class="talk_event">2019年9月29日(日) 12:30~13:30</li>
         <li  class="talk_event">関西大学梅田キャンパス スタートアップカフェ大阪</li>

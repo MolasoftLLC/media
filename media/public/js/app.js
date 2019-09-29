@@ -5543,7 +5543,7 @@ var render = function() {
       _c("img", {
         staticClass: "animated",
         attrs: {
-          src: __webpack_require__("./resources/js/assets/etc/Freelancesession.jpg"),
+          src: __webpack_require__("./resources/js/assets/etc/clip3.jpg"),
           alt: "",
           "data-animate": "fadeInUp"
         }
@@ -22088,13 +22088,6 @@ createApp();
 
 /***/ }),
 
-/***/ "./resources/js/assets/etc/Freelancesession.jpg":
-/***/ (function(module, exports) {
-
-module.exports = "/images/Freelancesession.jpg?c00afcbbfd88bfdab0dbfc07eb0f8783";
-
-/***/ }),
-
 /***/ "./resources/js/assets/etc/clip.png":
 /***/ (function(module, exports) {
 
@@ -22106,6 +22099,13 @@ module.exports = "/images/clip.png?e7f2acb5556f4c1ddff2c8ffa4e76ae8";
 /***/ (function(module, exports) {
 
 module.exports = "/images/clip1.jpg?fcd18c9e0200e2342bc277abc0aed666";
+
+/***/ }),
+
+/***/ "./resources/js/assets/etc/clip3.jpg":
+/***/ (function(module, exports) {
+
+module.exports = "/images/clip3.jpg?d0b20b84ed981ce09c0acd02a4c8b6ef";
 
 /***/ }),
 
