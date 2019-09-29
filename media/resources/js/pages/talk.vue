@@ -13,9 +13,9 @@
         <li  class="talk_event">関西大学梅田キャンパス スタートアップカフェ大阪</li>
         <li  class="talk_event speaker">今回の登壇者</li>
         <img src="../assets/etc/nami2.png" alt="" class="animated" data-animate="rubberBand">
-        <li>
+        
         <div v-for="(speaker, id) in speakers" v-bind:key="id">
-            
+        <li>  
               <div class="news_img animated" data-animate="rollIn">
                   <RouterLink :to="'/lancer/' + speaker.id">
                       <img :src="'/images/'+speaker.img" width="100%" />
@@ -25,8 +25,9 @@
               </div>
             
             <div v-if="id===2||id===5" class="clear"></div>
-        </div>
         </li>
+        </div>
+        
         <li  class="talk_event session_entry animated" data-animate="rubberBand" style="margin-top:64px;"><a href="https://0727-2.peatix.com/" target="_blank" style="    text-decoration: none;color: #fefefe;">詳細/申込はこちら</a></li>
     </ul>
     <div style="width: 180px;margin: 32px auto;display: block;">
@@ -45,34 +46,19 @@
 
 <script>
     export default {
-        mounted() {
-            this.fetchLancers(),
-            this.fetchLancers_it()
+        created() {
+            this.fetchSpeakers()
         },
         data() {
             return {
                 speakers: [],
-                lancers_it: [],
-                tab: 1,
             }
         },
         methods: {
-            fetchLancers() {
-                // var id = this.$route.params['id']
-                // var id = this.$route.query.itemId
+            fetchSpeakers() {
                 return axios.get('/api/speaker')
                 .then(res =>  {
                     this.speakers = res.data
-                })
-            },
-            fetchLancers_it() {
-                // var id = this.$route.params['id']
-                // var id = this.$route.query.itemId
-                return axios.get('/api/lancer/')
-                .then(resd =>  {
-                 　  
-                    console.log(resd.data);
-                    this.lancers_it = resd.data
                 })
             }
         }

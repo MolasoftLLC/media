@@ -2222,48 +2222,14 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-    mounted: function mounted() {
+    created: function created() {
         this.fetchLancers();
     },
     data: function data() {
         return {
-            lancers: [],
-            tab: 1
+            lancers: []
         };
     },
 
@@ -2271,10 +2237,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         fetchLancers: function fetchLancers() {
             var _this = this;
 
-            // var id = this.$route.params['id']
-            // var id = this.$route.query.itemId
             return axios.get('/api/lancer/').then(function (res) {
-                console.log(res.data);
                 _this.lancers = res.data;
             });
         }
@@ -2439,38 +2402,24 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-    mounted: function mounted() {
-        this.fetchLancers(), this.fetchLancers_it();
+    created: function created() {
+        this.fetchSpeakers();
     },
     data: function data() {
         return {
-            speakers: [],
-            lancers_it: [],
-            tab: 1
+            speakers: []
         };
     },
 
     methods: {
-        fetchLancers: function fetchLancers() {
+        fetchSpeakers: function fetchSpeakers() {
             var _this = this;
 
-            // var id = this.$route.params['id']
-            // var id = this.$route.query.itemId
             return axios.get('/api/speaker').then(function (res) {
                 _this.speakers = res.data;
-            });
-        },
-        fetchLancers_it: function fetchLancers_it() {
-            var _this2 = this;
-
-            // var id = this.$route.params['id']
-            // var id = this.$route.query.itemId
-            return axios.get('/api/lancer/').then(function (resd) {
-
-                console.log(resd.data);
-                _this2.lancers_it = resd.data;
             });
         }
     }
@@ -5131,7 +5080,7 @@ var render = function() {
         _c("img", {
           staticClass: "mainimg slideInRight",
           staticStyle: { "animation-duration": "3.6s" },
-          attrs: { src: __webpack_require__("./resources/js/assets/etc/mainimg3.jpg") }
+          attrs: { src: __webpack_require__("./resources/js/assets/etc/clip1.jpg") }
         }),
         _vm._v(" "),
         _vm._m(0)
@@ -5488,17 +5437,7 @@ var render = function() {
           _vm._v(" "),
           _c(
             "div",
-            {
-              directives: [
-                {
-                  name: "show",
-                  rawName: "v-show",
-                  value: _vm.tab === 1,
-                  expression: "tab === 1"
-                }
-              ],
-              staticClass: "panel"
-            },
+            { staticClass: "panel" },
             [
               _vm._l(_vm.lancers, function(lancer, id) {
                 return _c("div", { key: id }, [
@@ -5610,66 +5549,78 @@ var render = function() {
         }
       }),
       _vm._v(" "),
-      _c("ul", { staticClass: "talk_event" }, [
-        _c("li", { staticClass: "talk_event" }, [
-          _vm._v("2019年9月29日(日) 12:30~13:30")
-        ]),
-        _vm._v(" "),
-        _c("li", { staticClass: "talk_event" }, [
-          _vm._v("関西大学梅田キャンパス スタートアップカフェ大阪")
-        ]),
-        _vm._v(" "),
-        _c("li", { staticClass: "talk_event speaker" }, [
-          _vm._v("今回の登壇者")
-        ]),
-        _vm._v(" "),
-        _c("img", {
-          staticClass: "animated",
-          attrs: {
-            src: __webpack_require__("./resources/js/assets/etc/nami2.png"),
-            alt: "",
-            "data-animate": "rubberBand"
-          }
-        }),
-        _vm._v(" "),
-        _c(
-          "li",
+      _c(
+        "ul",
+        { staticClass: "talk_event" },
+        [
+          _c("li", { staticClass: "talk_event" }, [
+            _vm._v("2019年9月29日(日) 12:30~13:30")
+          ]),
+          _vm._v(" "),
+          _c("li", { staticClass: "talk_event" }, [
+            _vm._v("関西大学梅田キャンパス スタートアップカフェ大阪")
+          ]),
+          _vm._v(" "),
+          _c("li", { staticClass: "talk_event speaker" }, [
+            _vm._v("今回の登壇者")
+          ]),
+          _vm._v(" "),
+          _c("img", {
+            staticClass: "animated",
+            attrs: {
+              src: __webpack_require__("./resources/js/assets/etc/nami2.png"),
+              alt: "",
+              "data-animate": "rubberBand"
+            }
+          }),
+          _vm._v(" "),
           _vm._l(_vm.speakers, function(speaker, id) {
             return _c("div", { key: id }, [
-              _c(
-                "div",
-                {
-                  staticClass: "news_img animated",
-                  attrs: { "data-animate": "rollIn" }
-                },
-                [
-                  _c("RouterLink", { attrs: { to: "/lancer/" + speaker.id } }, [
-                    _c("img", {
-                      attrs: { src: "/images/" + speaker.img, width: "100%" }
-                    }),
+              _c("li", [
+                _c(
+                  "div",
+                  {
+                    staticClass: "news_img animated",
+                    attrs: { "data-animate": "rollIn" }
+                  },
+                  [
+                    _c(
+                      "RouterLink",
+                      { attrs: { to: "/lancer/" + speaker.id } },
+                      [
+                        _c("img", {
+                          attrs: {
+                            src: "/images/" + speaker.img,
+                            width: "100%"
+                          }
+                        }),
+                        _vm._v(" "),
+                        _c("p", { staticClass: "read_more" }, [
+                          _vm._v("Read more")
+                        ])
+                      ]
+                    ),
                     _vm._v(" "),
-                    _c("p", { staticClass: "read_more" }, [_vm._v("Read more")])
-                  ]),
-                  _vm._v(" "),
-                  _c("p", { staticClass: "ontext" }, [
-                    _vm._v(_vm._s(speaker.name)),
-                    _c("br"),
-                    _vm._v(_vm._s(speaker.works))
-                  ])
-                ],
-                1
-              ),
-              _vm._v(" "),
-              id === 2 || id === 5
-                ? _c("div", { staticClass: "clear" })
-                : _vm._e()
+                    _c("p", { staticClass: "ontext" }, [
+                      _vm._v(_vm._s(speaker.name)),
+                      _c("br"),
+                      _vm._v(_vm._s(speaker.works))
+                    ])
+                  ],
+                  1
+                ),
+                _vm._v(" "),
+                id === 2 || id === 5
+                  ? _c("div", { staticClass: "clear" })
+                  : _vm._e()
+              ])
             ])
           }),
-          0
-        ),
-        _vm._v(" "),
-        _vm._m(1)
-      ]),
+          _vm._v(" "),
+          _vm._m(1)
+        ],
+        2
+      ),
       _vm._v(" "),
       _vm._m(2),
       _vm._v(" "),
@@ -22151,6 +22102,13 @@ module.exports = "/images/clip.png?e7f2acb5556f4c1ddff2c8ffa4e76ae8";
 
 /***/ }),
 
+/***/ "./resources/js/assets/etc/clip1.jpg":
+/***/ (function(module, exports) {
+
+module.exports = "/images/clip1.jpg?fcd18c9e0200e2342bc277abc0aed666";
+
+/***/ }),
+
 /***/ "./resources/js/assets/etc/evis.png":
 /***/ (function(module, exports) {
 
@@ -22183,13 +22141,6 @@ module.exports = "/images/logo.png?736eb1c5a29e766c4faa3e251e79e377";
 /***/ (function(module, exports) {
 
 module.exports = "/images/mail.png?97bc3be8fbb783f7ff3c1f86a4b64a58";
-
-/***/ }),
-
-/***/ "./resources/js/assets/etc/mainimg3.jpg":
-/***/ (function(module, exports) {
-
-module.exports = "/images/mainimg3.jpg?261233c4d9b16e3572b8cd26be801d48";
 
 /***/ }),
 
