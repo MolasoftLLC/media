@@ -1148,7 +1148,6 @@ img.main_logo {
   -o-object-fit: cover;
      object-fit: cover;
   position: relative;
-  border-radius: 200px;
   background: #fefefe;
   padding: 8px;
 }
@@ -1159,7 +1158,7 @@ p.ontext {
   width: 100%;
   width: 96%;
   padding: 12px 8px 24px;
-  color: #59b9ec;
+  color: #585858;
   font-weight: bold;
   text-align: center;
   background-color: #fefefe;
@@ -1190,7 +1189,6 @@ p.on_name {
   transition: 0.3s;
   -webkit-transition: 0.3s;
   overflow: hidden;
-  border-radius: 200px;
 }
 
 .news_img img:hover {
