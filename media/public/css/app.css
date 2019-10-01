@@ -1149,7 +1149,7 @@ img.main_logo {
      object-fit: cover;
   position: relative;
   border-radius: 200px;
-  background: #59b9ec;
+  background: #fefefe;
   padding: 8px;
 }
 
@@ -1159,10 +1159,10 @@ p.ontext {
   width: 100%;
   width: 96%;
   padding: 12px 8px 24px;
-  color: #fefefe;
+  color: #59b9ec;
   font-weight: bold;
   text-align: center;
-  background: #59b9ec;
+  background-color: #fefefe;
   font-weight: bold;
   text-align: center;
   white-space: nowrap;
