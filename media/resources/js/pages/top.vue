@@ -86,6 +86,7 @@
         mounted() {
             this.fetchLancers(),
             this.imagehaight()
+            this.videoGo()
         },
         data() {
             return {
@@ -145,6 +146,19 @@
                   this.timer = null
                 }.bind(this), 200)
               }
+             },
+            videoGo() {
+             let video = document.getElementById('video');
+                console.log(video);
+                // 自動再生する
+                video.autoplay = true;
+                
+                // 繰り返し再生する
+                video.loop = true;
+                
+                // 無音で再生する
+                video.muted = true;
+	
              }
     }
     }
