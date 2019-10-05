@@ -1,7 +1,9 @@
 <template>
 <div>
-    <div class="mainimg_container" style="" v-bind:class="{scroll_none: scrollY > 400,  scroll_on: scrollY < 400}">
-        <img class="mainimg slideInRight" style="animation-duration:3.6s;" src="../assets/etc/clip1.jpg" >
+    <div  style="" v-bind:class="{scroll_none: scrollY > 400,  scroll_on: scrollY < 400}">
+        <div class="slideInRight mainimg_container">
+            <img class="mainimg slideInRight" style="animation-duration:3.6s;" src="../assets/etc/clip1.jpg" >
+        </div>
         <!-- <video class="mainimg" src="images/sample.mp4" autoplay loop muted></video> -->
         
         <div class="main_catch mainimg_on">

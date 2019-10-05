@@ -2513,6 +2513,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     mounted: function mounted() {
@@ -5073,23 +5075,14 @@ var render = function() {
     _c(
       "div",
       {
-        staticClass: "mainimg_container",
         class: { scroll_none: _vm.scrollY > 400, scroll_on: _vm.scrollY < 400 }
       },
-      [
-        _c("img", {
-          staticClass: "mainimg slideInRight",
-          staticStyle: { "animation-duration": "3.6s" },
-          attrs: { src: __webpack_require__("./resources/js/assets/etc/clip1.jpg") }
-        }),
-        _vm._v(" "),
-        _vm._m(0)
-      ]
+      [_vm._m(0), _vm._v(" "), _vm._m(1)]
     ),
     _vm._v(" "),
     _c("div", { staticClass: "container", attrs: { id: "app" } }, [
       _c("div", { staticClass: "container_max" }, [
-        _vm._m(1),
+        _vm._m(2),
         _vm._v(" "),
         _c("a", { attrs: { name: "interview" } }),
         _vm._v(" "),
@@ -5256,6 +5249,18 @@ var render = function() {
   ])
 }
 var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "slideInRight mainimg_container" }, [
+      _c("img", {
+        staticClass: "mainimg slideInRight",
+        staticStyle: { "animation-duration": "3.6s" },
+        attrs: { src: __webpack_require__("./resources/js/assets/etc/clip1.jpg") }
+      })
+    ])
+  },
   function() {
     var _vm = this
     var _h = _vm.$createElement
