@@ -23106,7 +23106,7 @@ var UNPROCESSABLE_ENTITY = 422;
 /***/ "./resources/sass/app.scss":
 /***/ (function(module, exports) {
 
-throw new Error("Module build failed: ModuleBuildError: Module build failed: \n  text-align: center;\n ^\n      Invalid CSS after \"  text-align\": expected \"}\", was \": center;\"\n      in /Users/mukae9/Documents/httdocs/freemedia/git/free/media/resources/sass/_interview.scss (line 68, column 3)\n    at /Users/mukae9/Documents/httdocs/freemedia/git/free/media/node_modules/webpack/lib/NormalModule.js:195:19\n    at /Users/mukae9/Documents/httdocs/freemedia/git/free/media/node_modules/loader-runner/lib/LoaderRunner.js:367:11\n    at /Users/mukae9/Documents/httdocs/freemedia/git/free/media/node_modules/loader-runner/lib/LoaderRunner.js:233:18\n    at context.callback (/Users/mukae9/Documents/httdocs/freemedia/git/free/media/node_modules/loader-runner/lib/LoaderRunner.js:111:13)\n    at Object.callback (/Users/mukae9/Documents/httdocs/freemedia/git/free/media/node_modules/sass-loader/lib/loader.js:55:13)\n    at Object.done [as callback] (/Users/mukae9/Documents/httdocs/freemedia/git/free/media/node_modules/neo-async/async.js:8067:18)\n    at options.error (/Users/mukae9/Documents/httdocs/freemedia/git/free/media/node_modules/node-sass/lib/index.js:294:32)");
+// removed by extract-text-webpack-plugin
 
 /***/ }),
 
