@@ -5123,15 +5123,6 @@ var render = function() {
         _vm._v(" "),
         _c("p", { staticClass: "free" }, [_vm._v("多種多様な生き方を知る")]),
         _vm._v(" "),
-        _c("img", {
-          staticClass: "animated",
-          attrs: {
-            src: __webpack_require__("./resources/js/assets/etc/nami2.png"),
-            alt: "",
-            "data-animate": "rubberBand"
-          }
-        }),
-        _vm._v(" "),
         _c(
           "div",
           { staticClass: "panel" },

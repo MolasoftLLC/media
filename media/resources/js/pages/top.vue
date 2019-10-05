@@ -39,7 +39,7 @@
 
         <h1 class="free">Freelance Interview</h1>
         <p class="free">多種多様な生き方を知る</p>
-        <img src="../assets/etc/nami2.png" alt="" class="animated" data-animate="rubberBand">
+        <!-- <img src="../assets/etc/nami2.png" alt="" class="animated" data-animate="rubberBand"> -->
 
       　<div class="panel" >
             <div v-for="(lancer, id) in lancers" v-bind:key="id">
