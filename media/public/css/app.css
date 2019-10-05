@@ -389,6 +389,7 @@ body {
 .container {
   margin: 42px auto 0;
   padding: 3% 3% 3%;
+  background: #fefefe;
   position: relative;
 }
 
