@@ -5085,6 +5085,7 @@ var render = function() {
         _c("video", {
           staticClass: "mainimg",
           attrs: {
+            id: "video",
             src: "images/sample.mp4",
             autoplay: "",
             loop: "",
