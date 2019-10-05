@@ -4294,15 +4294,6 @@ var render = function() {
           attrs: { id: "mainheight" }
         },
         [
-          _c("img", {
-            staticClass: "mainimg_person fadeperson",
-            staticStyle: { "animation-duration": "3s" },
-            attrs: {
-              id: "imgheight",
-              src: __webpack_require__("./resources/js/assets/etc/lance_main.jpg")
-            }
-          }),
-          _vm._v(" "),
           _c(
             "div",
             {
@@ -22071,13 +22062,6 @@ module.exports = "/images/evis.png?09fac4640e8491e1e21fadf9aab4e951";
 /***/ (function(module, exports) {
 
 module.exports = "/images/it.png?59cac4aeac3377b80d3c37312161d3ac";
-
-/***/ }),
-
-/***/ "./resources/js/assets/etc/lance_main.jpg":
-/***/ (function(module, exports) {
-
-module.exports = "/images/lance_main.jpg?04a523205f9bdd332638596b7074d7d9";
 
 /***/ }),
 

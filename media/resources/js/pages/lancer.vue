@@ -4,7 +4,7 @@
   <div>
         
   <div class="mainimg_container_person" id="mainheight" v-bind:class="{scroll_none: scrollY > 400,  scroll_on: scrollY < 400}">
-            <img class="mainimg_person fadeperson" id="imgheight" src="../assets/etc/lance_main.jpg"  style="animation-duration:3s;" >
+            <!-- <img class="mainimg_person fadeperson" id="imgheight" src="../assets/etc/lance_main.jpg"  style="animation-duration:3s;" > -->
             <div class="on_profile container_max" id="catchheight">
                 <div v-for="(profile, id) in person" v-bind:key="id" style="  display: grid;
   grid-template-columns: 1fr 1.5fr; max-width:700px;   justify-content: center;
