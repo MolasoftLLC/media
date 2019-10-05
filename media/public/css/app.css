@@ -1151,6 +1151,7 @@ img.main_logo {
   background: #fefefe;
   -webkit-box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.4);
           box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.4);
+  border-radius: 400px;
 }
 
 p.ontext {
@@ -1311,7 +1312,6 @@ p.interview_p {
   transition: 0.3s;
   -webkit-transition: 0.3s;
   overflow: hidden;
-  border-radius: 400px;
 }
 
 .news_img img:hover {
