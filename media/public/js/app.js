@@ -5068,7 +5068,20 @@ var render = function() {
       {
         class: { scroll_none: _vm.scrollY > 400, scroll_on: _vm.scrollY < 400 }
       },
-      [_vm._m(0)]
+      [
+        _c("video", {
+          staticClass: "mainimg",
+          attrs: {
+            src: "images/sample.mp4",
+            autoplay: "",
+            loop: "",
+            muted: ""
+          },
+          domProps: { muted: true }
+        }),
+        _vm._v(" "),
+        _vm._m(0)
+      ]
     ),
     _vm._v(" "),
     _c("div", { staticClass: "container", attrs: { id: "app" } }, [

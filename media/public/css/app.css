@@ -1158,22 +1158,16 @@ p.ontext {
   width: 100%;
   width: 100%;
   padding: 12px 8px 24px;
-  color: #585858;
+  color: #fefefe;
   font-weight: bold;
   text-align: center;
-  background-color: #fefefe;
+  background-color: #2f94d4;
   font-weight: bold;
   text-align: center;
+  opacity: 0.9;
   white-space: nowrap;
-  /* 横幅のMAXに達しても改行しない */
   overflow: hidden;
-  /* ハミ出した部分を隠す */
   text-overflow: ellipsis;
-  /* 「…」と省略 */
-  -webkit-text-overflow: ellipsis;
-  /* Safari */
-  -o-text-overflow: ellipsis;
-  /* Opera */
 }
 
 p.on_name {
