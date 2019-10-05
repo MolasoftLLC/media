@@ -5077,12 +5077,12 @@ var render = function() {
       {
         class: { scroll_none: _vm.scrollY > 400, scroll_on: _vm.scrollY < 400 }
       },
-      [_vm._m(0), _vm._v(" "), _vm._m(1)]
+      [_vm._m(0)]
     ),
     _vm._v(" "),
     _c("div", { staticClass: "container", attrs: { id: "app" } }, [
       _c("div", { staticClass: "container_max" }, [
-        _vm._m(2),
+        _vm._m(1),
         _vm._v(" "),
         _c("a", { attrs: { name: "interview" } }),
         _vm._v(" "),
@@ -5249,18 +5249,6 @@ var render = function() {
   ])
 }
 var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "slideInRight mainimg_container" }, [
-      _c("img", {
-        staticClass: "mainimg slideInRight",
-        staticStyle: { "animation-duration": "3.6s" },
-        attrs: { src: __webpack_require__("./resources/js/assets/etc/clip1.jpg") }
-      })
-    ])
-  },
   function() {
     var _vm = this
     var _h = _vm.$createElement
@@ -22062,13 +22050,6 @@ createApp();
 /***/ (function(module, exports) {
 
 module.exports = "/images/clip.png?e7f2acb5556f4c1ddff2c8ffa4e76ae8";
-
-/***/ }),
-
-/***/ "./resources/js/assets/etc/clip1.jpg":
-/***/ (function(module, exports) {
-
-module.exports = "/images/clip1.jpg?fcd18c9e0200e2342bc277abc0aed666";
 
 /***/ }),
 
