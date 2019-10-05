@@ -1589,7 +1589,7 @@ h2.speaker {
 
 .mainimg {
   width: 100%;
-  opacity: 0.6;
+  opacity: 0.9;
   position: fixed;
   -o-object-fit: cover;
      object-fit: cover;
