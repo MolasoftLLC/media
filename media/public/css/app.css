@@ -1149,6 +1149,8 @@ img.main_logo {
      object-fit: cover;
   position: relative;
   background: #fefefe;
+  -webkit-box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.4);
+          box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.4);
 }
 
 p.ontext {
