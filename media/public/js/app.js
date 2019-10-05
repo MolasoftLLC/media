@@ -5091,32 +5091,6 @@ var render = function() {
       _c("div", { staticClass: "container_max" }, [
         _vm._m(1),
         _vm._v(" "),
-        _c(
-          "div",
-          { staticClass: "more_left fuwafuwa" },
-          [
-            _c("RouterLink", { attrs: { to: "/tag/all" } }, [
-              _c("span", [_vm._v("◀︎")]),
-              _c("br"),
-              _vm._v("more")
-            ])
-          ],
-          1
-        ),
-        _vm._v(" "),
-        _c(
-          "div",
-          { staticClass: "more_right  fuwafuwa" },
-          [
-            _c("RouterLink", { attrs: { to: "/tag/all" } }, [
-              _c("span", [_vm._v("▶︎")]),
-              _c("br"),
-              _vm._v("more")
-            ])
-          ],
-          1
-        ),
-        _vm._v(" "),
         _c("a", { attrs: { name: "interview" } }),
         _vm._v(" "),
         _c("h1", { staticClass: "free" }, [_vm._v("Freelance Interview")]),
