@@ -389,9 +389,6 @@ body {
 .container {
   margin: 42px auto 0;
   padding: 3% 3% 3%;
-  background: #fefefe;
-  background: -webkit-gradient(linear, left bottom, left top, from(#fefefe), color-stop(24%, #fefefe), color-stop(50%, #bdf7ffc9), color-stop(74%, #fefefe));
-  background: linear-gradient(0deg, #fefefe 0%, #fefefe 24%, #bdf7ffc9 50%, #fefefe 74%);
   position: relative;
 }
 
