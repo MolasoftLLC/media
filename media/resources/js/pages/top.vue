@@ -53,7 +53,7 @@
                         <p class="ontext">{{ lancer.name }}<br>{{ lancer.works }}</p>
                     </div>
                 </div>
-                <div v-if="id===2||id===5" class="clear"></div>
+                <div v-if="id===3||id===6" class="clear"></div>
             </div>
             <div class="clear"></div>
           　 <p class="tag_serch ">タグで絞り込む</p>

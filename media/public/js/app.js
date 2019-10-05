@@ -5166,7 +5166,7 @@ var render = function() {
                   )
                 ]),
                 _vm._v(" "),
-                id === 2 || id === 5
+                id === 3 || id === 6
                   ? _c("div", { staticClass: "clear" })
                   : _vm._e()
               ])
