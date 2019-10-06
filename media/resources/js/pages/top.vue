@@ -4,7 +4,7 @@
         <!-- <div class="slideInRight mainimg_container">
             <img class="mainimg slideInRight" style="animation-duration:3.6s;" src="../assets/etc/clip1.jpg" >
         </div> -->
-        <video id="video" class="mainimg" src="images/sample.mp4" autoplay loop muted></video>
+        <!-- <video id="video" class="mainimg" src="images/sample.mp4" autoplay loop muted></video> -->
         
         <div class="main_catch mainimg_on">
             <img class="  slideInRight"  src="../assets/etc/toplogo.png" />
